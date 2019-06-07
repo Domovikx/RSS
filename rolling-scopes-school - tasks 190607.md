@@ -34,3 +34,13 @@ Full name and contacts of the mentor who will interview you can be found in this
   - adds/corrects/explains/gives the right answer, if necessary.
 
 ### The interview should be passed before 16 June 2019. Take into account that mentor can be busy (vacation, business trip, workload and etc.), so contact him as soon as possible.
+
+---
+
+   * Data types in JS. Type coercion. <br>
+   Типы данных в JS <br>
+   Шесть типов данных - https://learn.javascript.ru/types-intro
+   
+   * What is hoisting? <br>
+   Что такое подъем? <br>
+   [Поднятие](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5)
