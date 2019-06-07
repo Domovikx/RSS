@@ -47,7 +47,8 @@ Full name and contacts of the mentor who will interview you can be found in this
 
 * Let vs var. Const.<br>
 https://learn.javascript.ru/let-const <br>
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let <br>
+https://nuancesprog.ru/p/3274/
 
 * Passing data by value and by reference. Exapmles. <br>
 Передача данных по значению и по ссылке. Exapmles. <br>
