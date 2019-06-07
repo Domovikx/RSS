@@ -111,9 +111,14 @@ https://learn.javascript.ru/event-delegation
 * Write a function F so new F === F <br>
 не понятно
 
-* Function.prototype.bind polyfill.
+* Function.prototype.bind polyfill. <br>
+тоже не понятно, возможно это: <br> 
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 
-* Object.create polyfill.
+* Object.create polyfill.<br>
+тоже не понимаю пока, это оно или нет:
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create <br>
+https://learn.javascript.ru/new-prototype - не для этого, но возможно пригодится
 
 * Event loop. <br>
 [JavaScript event loop в картинках](https://medium.com/@pavelbely/javascript-event-loop-%D0%B2-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%D1%85-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-a19e4d99f242) <br>
