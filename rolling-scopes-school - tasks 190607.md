@@ -56,6 +56,55 @@ https://metanit.com/web/javascript/3.7.php
 
 * {a: 10} == {a: 10}. What will the code return? <br>
 false <br>
-мой ответ это два объекта, две коробочки
+потому что это два разных объекта
 
-* What is `this`?
+* What is `this`? <br>
+https://learn.javascript.ru/object-methods <br>
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
+
+* Apply, call, bind. What are they used for? What are the differences?
+
+* Closure. Give an example.
+
+* Sum(1)(2); <br>
+function sum(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+
+* Prototype. Differences between __proto__ and prototype. Example of inheritance.
+
+* How to create an object without a prototype?
+
+* Array methods that loop over the elements.
+
+* “hello world”.repeating(3) -> hello world hello world hello world. How to implement? <br>
+http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html <br>
+"hello world ".repeat(3).slice(0, -1); самое короткое решение
+
+* Browser events. Browser default actions abortion. <br>
+https://learn.javascript.ru/introduction-browser-events <br>
+https://developer.mozilla.org/ru/docs/Web/Events
+
+* Event bubbling and event capturing.<br>
+https://learn.javascript.ru/event-bubbling <br>
+[Events bubbling и events capturing](https://habr.com/ru/post/126471/)
+
+* Event delegation. Example. <br>
+Событие делегирования. Пример. <br>
+https://learn.javascript.ru/event-delegation
+
+* Write a function F so new F === F <br>
+не понятно
+
+* Function.prototype.bind polyfill.
+
+* Object.create polyfill.
+
+* Event loop. <br>
+[JavaScript event loop в картинках](https://medium.com/@pavelbely/javascript-event-loop-%D0%B2-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%D1%85-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-a19e4d99f242) <br>
+тоже пока не понимаю
+
+* Promises. <br>
+https://learn.javascript.ru/promise
