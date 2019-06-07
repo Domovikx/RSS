@@ -72,7 +72,16 @@ function sum(a) {
   return function(b) {
     return a + b;
   };
-}
+} <br>
+function sum (n) { <br>
+    var v = function (x) {
+        return sum (n + x);
+    };<br>
+    v.valueOf = v.toString = function () {
+        return n;
+    };<br>
+    return v;
+}<br>
 
 * Prototype. Differences between __proto__ and prototype. Example of inheritance.
 
