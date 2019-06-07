@@ -77,7 +77,9 @@ function sum(a) {
 
 * How to create an object without a prototype?
 
-* Array methods that loop over the elements.
+* Array methods that loop over the elements. <br>
+Методы массива, которые зацикливаются на элементах. - не понял, что надо сделать <br>
+возможно тут про это: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 * “hello world”.repeating(3) -> hello world hello world hello world. How to implement? <br>
 http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html <br>
