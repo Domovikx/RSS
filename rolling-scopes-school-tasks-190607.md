@@ -48,6 +48,14 @@ Full name and contacts of the mentor who will interview you can be found in this
    Типы данных в JS <br>
    Шесть типов данных - https://learn.javascript.ru/types-intro
    
+   <b>number, string, boolean, null, undefined, object</b> <br>
+   для определения типа оператор - [typeof(x)](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/typeof)
+   
+   ![img](https://pbs.twimg.com/media/Cuaymi4UEAAVi2d.jpg)
+   
+   Type coercion. <br>
+   http://qaru.site/questions/86563/what-exactly-is-type-coercion-in-javascript
+   
 1. What is hoisting? <br>
    Что такое подъем? <br>
    [Поднятие](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5) <br>
