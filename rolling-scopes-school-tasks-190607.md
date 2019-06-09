@@ -82,7 +82,11 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
 
 1. Apply, call, bind. What are they used for? What are the differences?
 
-1. Closure. Give an example.
+1. Closure. Give an example. <br>
+Замыкания. <br>
+https://www.youtube.com/watch?v=UsFPvkWeUgw <br>
+https://learn.javascript.ru/closures <br>
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures <br>
 
 1. Sum(1)(2); <br>
 ```
@@ -92,7 +96,6 @@ function sum(a) {
   };
 } 
 ```
-
 ```
 function sum (n) { 
     let v = function (x) {
@@ -104,8 +107,11 @@ function sum (n) {
     return v;
 }
 ```
+[Преобразование объектов: toString и valueOf - learn.javascript.ru/object-conversion](https://learn.javascript.ru/object-conversion) <br>
+[Метод valueOf() возвращает примитивное значение указанного объекта.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) <br>
+[Метод toString() возвращает строку, представляющую исходный код функции.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)
 
-1. Prototype. Differences between __proto__ and prototype. Example of inheritance.
+10. Prototype. Differences between __proto__ and prototype. Example of inheritance.
 
 1. How to create an object without a prototype?
 
