@@ -112,9 +112,32 @@ function sum (n) {
 
 10. Prototype. Differences between __proto__ and prototype. Example of inheritance.
 
-1. How to create an object without a prototype?
+11. How to create an object without a prototype? <br>
+Как создать объект без прототипа <br>
+https://habr.com/ru/post/17613/ <br>
+самое простое - Литеральная нотация <br>
+Создаем наш объект с использованием литеральной нотации <br>
+```
+MyObject = {
+    id : 1,
+    name : "Sample",
+    boolval : true,
+    getName : function()
+    {
+        return this.name;
+    }
+} 
+```
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create <br>
+JavaScript предоставляет разработчикам возможность создавать объекты и работать с ними. Для этого существуют следующие приёмы: <br>
+Оператор new <br>
+Литеральная нотация <br>
+Конструкторы объектов <br>
+Ассоциативные массивы <br>
 
-1. Array methods that loop over the elements. <br>
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects <br>
+
+12. Array methods that loop over the elements. <br>
 Методы массива, которые зацикливаются на элементах. - не понял, что надо сделать <br>
 возможно тут про это: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
