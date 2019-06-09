@@ -1,4 +1,6 @@
-### Question examples:
+<details>
+<summary>Question examples... ↴</summary>
+
    * Data types in JS. Type coercion.
    * What is hoisting?
    * Let vs var. Const.
@@ -20,9 +22,6 @@
    * `Object.create` polyfill.
    * Event loop.
    * Promises.
-
-<details>
-<summary>дополнительно...</summary>
   
 Full name and contacts of the mentor who will interview you can be found in this
   
