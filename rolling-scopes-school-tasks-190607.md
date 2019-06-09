@@ -128,7 +128,8 @@ https://metanit.com/web/javascript/3.7.php
 
 1. What is `this`? <br>
 https://learn.javascript.ru/object-methods <br>
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this <br>
+https://www.youtube.com/watch?v=PBI5hEnMStc <br>
 
 1. Apply, call, bind. What are they used for? What are the differences?
 
