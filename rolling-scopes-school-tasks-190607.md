@@ -64,8 +64,59 @@ Full name and contacts of the mentor who will interview you can be found in this
 1. Let vs var. Const.<br>
 https://learn.javascript.ru/let-const <br>
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let <br>
-https://nuancesprog.ru/p/3274/
-
+https://nuancesprog.ru/p/3274/ <br>
+  У объявлений переменной через let есть три основных отличия от var: <br>
+    - Область видимости переменной let – блок {...}
+      ```
+      var apples = 5;
+        if (true) {
+          var apples = 10;
+          alert(apples); // 10 (внутри блока)
+        }
+      alert(apples); // 10 (снаружи блока то же самое)
+      ```
+      ```
+      let apples = 5; // (*)
+      if (true) {
+        let apples = 10;
+        alert(apples); // 10 (внутри блока)
+      }
+      alert(apples); // 5 (снаружи блока значение не изменилось)
+      ```
+      ```
+      if (true) {
+        let apples = 10;
+        alert(apples); // 10 (внутри блока)
+      }
+      alert(apples); // ошибка!
+      ```
+    - Переменная let видна только после объявления.
+      ```
+      alert(a); // undefined
+      var a = 5;
+      ```
+      ```
+      alert(a); // ошибка, нет такой переменной
+      let a = 5;
+      ```
+      ```
+      let x;
+      let x; // ошибка: переменная x уже объявлена
+      ```
+      ```
+      // каждый цикл имеет свою переменную i
+      for(let i = 0; i<10; i++) { /* … */ }
+      for(let i = 0; i<10; i++) { /* … */ }
+      alert( i ); // ошибка: глобальной i нет
+      ```
+            
+      
+    - При использовании в цикле, для каждой итерации создаётся своя переменная.
+  Объявление const задаёт константу, то есть переменную, которую нельзя менять:
+      ```
+      const apple = 5;
+      apple = 10; // ошибка
+      ```
 1. Passing data by value and by reference. Exapmles. <br>
 Передача данных по значению и по ссылке. Exapmles. <br>
 https://learn.javascript.ru/object-reference <br>
