@@ -49,24 +49,30 @@ Full name and contacts of the mentor who will interview you can be found in this
    
    <b>number, string, boolean, null, undefined, object</b> <br>
    для определения типа оператор - [typeof(x)](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/typeof)
-   
-   ![img](https://pbs.twimg.com/media/Cuaymi4UEAAVi2d.jpg)
-   
+      
    Type coercion. <br>
+   Тип принуждения (Оказание давления) (Приведение типов данных) <br>
+   ![img](https://pbs.twimg.com/media/Cuaymi4UEAAVi2d.jpg)<br>
+   Тип принуждения означает, что, когда операнды оператора являются разными типами, один из них будет преобразован в "эквивалентное" значение другого типа операнда. <br>
+   Например: boolean == integer. <br>
+   Логический операнд будет преобразован в целое число: false становится 0, true становится 1. 
    http://qaru.site/questions/86563/what-exactly-is-type-coercion-in-javascript
    
-1. What is hoisting? <br>
+2. What is hoisting? <br>
    Что такое подъем? <br>
    [Поднятие](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5) <br>
 [Разбираемся с “поднятием” (hoisting) в JavaScript](https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-hoisting-%D0%B2-javascript-7d2d27bc51f1) <br>
 [Область видимости в JavaScript и «поднятие» переменных и объявлений функций - habr.com/ru/post/127482](https://habr.com/ru/post/127482/)
 
-1. Let vs var. Const.<br>
-https://learn.javascript.ru/let-const <br>
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let <br>
-https://nuancesprog.ru/p/3274/ <br>
-  У объявлений переменной через let есть три основных отличия от var: <br>
-    - Область видимости переменной let – блок {...}
+3. Let vs var. Const.<br>
+
+   Объявление <b>const</b> задаёт константу, то есть переменную, которую нельзя менять:    
+      ```
+      const apple = 5;
+      apple = 10; // ошибка
+      ```
+   У объявлений переменной через <b>let</b> есть три основных отличия от <b>var</b>: <br>
+    - Область видимости переменной <b>let</b> – блок {...}
       ```
       var apples = 5;
         if (true) {
@@ -90,7 +96,7 @@ https://nuancesprog.ru/p/3274/ <br>
       }
       alert(apples); // ошибка!
       ```
-    - Переменная let видна только после объявления.
+    - Переменная <b>let</b> видна только после объявления.
       ```
       alert(a); // undefined
       var a = 5;
@@ -103,20 +109,24 @@ https://nuancesprog.ru/p/3274/ <br>
       let x;
       let x; // ошибка: переменная x уже объявлена
       ```
+      
+    - При использовании в цикле, для каждой итерации создаётся своя переменная.
+      Переменная <b>var</b> – одна на все итерации цикла и видна даже после цикла:
+      ```
+      for(var i=0; i<10; i++) { /* … */ }
+      alert(i); // 10
+      ```     
+      Каждому повторению цикла соответствует своя независимая переменная <b>let</b>.
       ```
       // каждый цикл имеет свою переменную i
       for(let i = 0; i<10; i++) { /* … */ }
       for(let i = 0; i<10; i++) { /* … */ }
       alert( i ); // ошибка: глобальной i нет
-      ```
-            
+      ```      
       
-    - При использовании в цикле, для каждой итерации создаётся своя переменная.
-  Объявление const задаёт константу, то есть переменную, которую нельзя менять:
-      ```
-      const apple = 5;
-      apple = 10; // ошибка
-      ```
+      https://learn.javascript.ru/let-const <br>
+      https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let <br>
+          
 1. Passing data by value and by reference. Exapmles. <br>
 Передача данных по значению и по ссылке. Exapmles. <br>
 https://learn.javascript.ru/object-reference <br>
