@@ -314,25 +314,42 @@ http://qaru.site/questions/218785/variadic-curried-sum-function
 
 ***
 ### 11. How to create an object without a prototype?   
-Как создать объект без прототипа    
-
-JavaScript предоставляет разработчикам возможность создавать объекты и работать с ними.   
-Для этого существуют следующие приёмы:  
+Как создать объект без прототипа:    
 - Литеральная нотация  
 ```JS
-MyObject = {
+Man = {
     id : 1,
     name : "Сеня",
     drinkingBeer : true
 } 
 ```
 - Оператор new 
-- Конструкторы объектов   
+Конструкторы объектов   
+```JS
+function Man(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  let phrase = "Привет";
+  function getFullName() {
+    return firstName + " " + lastName;
+  }
+  this.sayHi = () => {
+    let say = phrase + ", " + getFullName();
+  return say;
+  }
+}
+let firstFriend = new Man('Иван', 'Иванович');
+console.log(firstFriend);
+let secondFriend = new Man('Петр', 'Петрович');
+console.log(secondFriend);
+console.log(secondFriend.sayHi()); // Привет, Петр Петрович
+```
 - Ассоциативные массивы   
 
 https://habr.com/ru/post/17613/   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects   
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create   
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+https://metanit.com/web/javascript/4.5.php
 
 ***
 ### 12. Array methods that loop over the elements.   
