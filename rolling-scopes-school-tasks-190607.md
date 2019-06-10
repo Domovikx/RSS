@@ -52,6 +52,7 @@ Full name and contacts of the mentor who will interview you can be found in this
       
    Type coercion. <br>
    Тип принуждения (Оказание давления) (Приведение типов данных) <br>
+   <a name="type_coercion"></a>
    ![img](https://pbs.twimg.com/media/Cuaymi4UEAAVi2d.jpg)<br>
    Тип принуждения означает, что, когда операнды оператора являются разными типами, один из них будет преобразован в "эквивалентное" значение другого типа операнда. <br>
    Например: boolean == integer. <br>
@@ -176,7 +177,7 @@ https://metanit.com/web/javascript/3.7.php
 
 5. {a: 10} == {a: 10}. What will the code return? <br>
   false <br>
-  потому что это два разных объекта  
+  потому что это объект не сравнивается ни с чем ([см.Таблица сравнения типов](#type_coercion)).
 
 6. **What is `this`?** <br>
 https://learn.javascript.ru/object-methods <br>
