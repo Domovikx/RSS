@@ -335,7 +335,7 @@ function Man(firstName, lastName) {
   }
   this.sayHi = () => {
     let say = phrase + ", " + getFullName();
-  return say;
+    return say;
   }
 }
 let firstFriend = new Man('Иван', 'Иванович');
