@@ -94,12 +94,8 @@ Full name and contacts of the mentor who will interview you can be found in this
    }
    hoisting();
    console.log(a); // 2
-   ```
-   
-   
-   
-   
-   
+   ``` 
+      
    [Поднятие](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5) <br>
 [Разбираемся с “поднятием” (hoisting) в JavaScript](https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-hoisting-%D0%B2-javascript-7d2d27bc51f1) <br>
 [Область видимости в JavaScript и «поднятие» переменных и объявлений функций - habr.com/ru/post/127482](https://habr.com/ru/post/127482/)
@@ -197,15 +193,22 @@ Full name and contacts of the mentor who will interview you can be found in this
     ```
     Клонирование объектов
     ```
-    var user = { name: "Вася", age: 30 };
-    var clone = {}; 
-    for (var key in user) {
+    let user = { name: "Вася", age: 30 };
+    let clone = {}; 
+    for (let key in user) {
       clone[key] = user[key];
     }
     clone.name = "Петя";
       // user {name: "Вася", age: 30}
       // clone {name: "Петя", age: 30}
     ```
+    ```
+    array передача по ссылке 
+    ```
+    ```
+    array копирование 
+    ```
+    
     
 https://metanit.com/web/javascript/3.7.php <br>
 https://learn.javascript.ru/object-reference <br>
