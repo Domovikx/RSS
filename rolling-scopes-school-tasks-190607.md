@@ -111,7 +111,10 @@ const apple = 5;
 apple = 10; // ошибка
 ```
 У объявлений переменной через <b>let</b> есть три основных отличия от <b>var</b>:   
-#### Область видимости переменной <b>let</b> – блок {...}   
+
+<details>
+<summary>1. Область видимости переменной <b>let</b> – блок {...} ↴</summary>
+  
 ```JS
 var apples = 5;
 if (true) {
@@ -135,7 +138,10 @@ if (true) {
 }
 alert(apples); // ошибка!
 ```
-#### 2. Переменная <b>let</b> видна только после объявления.
+</details>
+<details>
+<summary>2. Переменная <b>let</b> видна только после объявления. ↴</summary>
+
 ```JS
 alert(a); // undefined
 var a = 5;
@@ -148,7 +154,10 @@ let a = 5;
 let x;
 let x; // ошибка: переменная x уже объявлена
 ```  
-#### 3. При использовании в цикле, для каждой итерации создаётся своя переменная.   
+</details>
+<details>
+<summary>3. При использовании в цикле, для каждой итерации создаётся своя переменная. ↴</summary>
+ 
 Переменная <b>var</b> – одна на все итерации цикла и видна даже после цикла:   
 ```JS
 for(var i=0; i<10; i++) { /* … */ }
@@ -160,7 +169,8 @@ alert(i); // 10
 for(let i = 0; i<10; i++) { /* … */ }
 for(let i = 0; i<10; i++) { /* … */ }
 alert( i ); // ошибка: глобальной i нет
-```      
+```
+</details>
 https://learn.javascript.ru/let-const   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let   
           
@@ -209,8 +219,7 @@ Array передача по ссылке
 Array копирование 
 ```JS
 //
-```
-    
+```    
 https://metanit.com/web/javascript/3.7.php   
 https://learn.javascript.ru/object-reference   
 
@@ -238,6 +247,7 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures <br>
 *** 
 ### 9. Sum(1)(2);   
 ```JS
+sum(1)(2); // 3
 function sum(a) {
   return function(b) {
     return a + b;
@@ -245,6 +255,7 @@ function sum(a) {
 } 
 ```
 ```JS
+sum(1)(1)(1)(1); // 4
 function sum (n) { 
     let v = function (x) {
         return sum (n + x);
