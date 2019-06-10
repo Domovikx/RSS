@@ -42,6 +42,11 @@ Full name and contacts of the mentor who will interview you can be found in this
 </details>
 
 ## Ответы:
+
+Руководство по написанию JavaScript-кода от Airbnb:   
+https://github.com/airbnb/javascript   
+https://github.com/leonidlebedev/javascript-airbnb (rus)  
+
 ### 1. Data types in JS. Type coercion.
 Типы данных в JS  
 Шесть типов данных: <b>number, string, boolean, null, undefined, object</b>   
@@ -323,8 +328,12 @@ Man = {
     drinkingBeer : true
 } 
 ```
-- Оператор new 
-Конструкторы объектов   
+- Оператор new или {} 
+let user = new Object();
+let user = {};
+
+
+- Конструкторы объектов      
 ```JS
 function Man(firstName, lastName) {
   this.firstName = firstName;
@@ -350,6 +359,7 @@ https://habr.com/ru/post/17613/
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 https://metanit.com/web/javascript/4.5.php
+https://metanit.com/web/javascript/4.1.php
 
 ***
 ### 12. Array methods that loop over the elements.   
