@@ -43,7 +43,7 @@ Full name and contacts of the mentor who will interview you can be found in this
 
 ## Ответы:
 
-1. Data types in JS. Type coercion. <br>
+1. **Data types in JS. Type coercion.** <br>
    Типы данных в JS <br>
    Шесть типов данных - https://learn.javascript.ru/types-intro
    
@@ -58,13 +58,32 @@ Full name and contacts of the mentor who will interview you can be found in this
    Логический операнд будет преобразован в целое число: false становится 0, true становится 1. 
    http://qaru.site/questions/86563/what-exactly-is-type-coercion-in-javascript
    
-2. What is hoisting? <br>
+2. **What is hoisting?** <br>
    Что такое подъем? <br>
+   Поднятие или hoisting — это механизм в JavaScript в котором переменные и объявления функций передвигаются вверх своей области видимости перед тем, как код будет выполнен.
+   
+   ES 5
+   ```
+   console.log(a); // undefined 
+   var a = 7;
+   console.log(a); // 7 
+   a = 5;
+   console.log(a); // 5
+   ```
+   
+   ES 6
+   ```
+   console.log(b); // b is not defined
+   let b = 7;
+   ```
    [Поднятие](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5) <br>
 [Разбираемся с “поднятием” (hoisting) в JavaScript](https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-hoisting-%D0%B2-javascript-7d2d27bc51f1) <br>
 [Область видимости в JavaScript и «поднятие» переменных и объявлений функций - habr.com/ru/post/127482](https://habr.com/ru/post/127482/)
 
-3. Let vs var. Const.<br>
+   True JS 5. Hoisting - https://www.youtube.com/watch?v=e6YB6ehg5g8   
+   True JS 21. Области видимости внутри функции, hoisting - https://www.youtube.com/watch?v=3UXqvjmJkA0
+
+3. **Let vs var. Const.**<br>
 
    Объявление <b>const</b> задаёт константу, то есть переменную, которую нельзя менять:    
       ```
@@ -127,23 +146,23 @@ Full name and contacts of the mentor who will interview you can be found in this
       https://learn.javascript.ru/let-const <br>
       https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let <br>
           
-1. Passing data by value and by reference. Exapmles. <br>
+4. **Passing data by value and by reference. Exapmles.** <br>
 Передача данных по значению и по ссылке. Exapmles. <br>
 https://learn.javascript.ru/object-reference <br>
 https://metanit.com/web/javascript/3.7.php
 
-1. {a: 10} == {a: 10}. What will the code return? <br>
+5. {a: 10} == {a: 10}. What will the code return? <br>
   false <br>
   потому что это два разных объекта  
 
-1. What is `this`? <br>
+6. **What is `this`?** <br>
 https://learn.javascript.ru/object-methods <br>
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this <br>
 https://www.youtube.com/watch?v=PBI5hEnMStc <br>
 
-1. Apply, call, bind. What are they used for? What are the differences?
+7. **Apply, call, bind. What are they used for? What are the differences?**
 
-1. Closure. Give an example. <br>
+8. **Closure. Give an example.** <br>
 Замыкания. <br>
 https://www.youtube.com/watch?v=UsFPvkWeUgw <br>
 https://learn.javascript.ru/closures <br>
