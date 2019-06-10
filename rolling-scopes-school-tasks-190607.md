@@ -328,10 +328,22 @@ Man = {
     drinkingBeer : true
 } 
 ```
-- Оператор new или {} 
-let user = new Object();
-let user = {};
 
+- Оператор new или {} 
+```JS
+// let myCar = new Object(); // так делать плохо
+let myCar = {}; // а так хорошо
+myCar.make = "Ford";
+myCar.model = "Mustang";
+myCar.year = 1969;
+```
+
+- Ассоциативные массивы
+```JS   
+let person = {};   
+person['firstName'] = 'Вася'; // то же что и person.name = 'Вася'   
+person['lastName'] = 'Васильев';   
+```
 
 - Конструкторы объектов      
 ```JS
@@ -353,7 +365,6 @@ let secondFriend = new Man('Петр', 'Петрович');
 console.log(secondFriend);
 console.log(secondFriend.sayHi()); // Привет, Петр Петрович
 ```
-- Ассоциативные массивы   
 
 https://habr.com/ru/post/17613/   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects   
