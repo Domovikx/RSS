@@ -245,9 +245,31 @@ https://www.youtube.com/watch?v=PBI5hEnMStc
 ***
 ### 8. Closure. Give an example.   
 Замыкания.   
-https://www.youtube.com/watch?v=UsFPvkWeUgw <br>
-https://learn.javascript.ru/closures <br>
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures <br>
+Функция внутри функции   
+
+```JS
+let counter = (function () {
+  let current = 0;
+  return function () {
+    current++;
+    return current;
+  }
+})();
+console.log(counter()); // 1
+console.log(counter()); // 2
+```
+
+Замыкания — это функции, ссылающиеся на независимые (свободные) переменные. Другими словами, функция, определённая в замыкании, «запоминает» окружение, в котором она была создана.   
+Независимые переменные — это все переменные, которые не были переданы как параметры и не были объявлены как локальные.    
+
+Контекст выполнения бывает либо глобальным, с которого начинается исполнения скрипта, либо контекстом выполнения вызова, который начинается с момента входа в тело функции.   
+
+- https://medium.com/@sshambir/%D0%BE%D1%81%D0%B2%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-5b83267ef7d1
+- https://htmlacademy.ru/blog/useful/javascript/lets-learn-javascript-closures   
+- https://www.youtube.com/watch?v=UsFPvkWeUgw   
+- https://learn.javascript.ru/closures   
+- https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures   
+- https://habr.com/ru/post/38642/
 
 *** 
 ### 9. Sum(1)(2);   
@@ -263,30 +285,16 @@ function sum(a) {
 <details>
 <summary>умные решения... ↴</summary>
 
-```JS
-sum(1)(1)(1)(1); // 4
-function sum (n) { 
-    let v = function (x) {
-        return sum (n + x);
-    };
-    v.valueOf = v.toString = function () {
-        return n;
-    };
-    return v;
-}
-```
-```JS
-// интересное решение
-function add(a) {
-  let curry = (b) => {
-    a += b;
-    return curry;
-  }
-  curry.toString = () => a
-  return curry;
-}
-console.log(add(1));
-console.log(add(1)(2));
+```JS 
+// пример замыкания из википедии
+const add = x => y => {
+  const z = x + y;
+  console.log(x + '+' + y + '=' + z);
+  return add(z);
+};
+const res = add(1)(4)(6);
+// 1+4=5
+// 5+6=11
 ```
 ```JS
 // умное универсальное решение
