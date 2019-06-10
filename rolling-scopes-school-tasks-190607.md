@@ -226,7 +226,7 @@ http://qaru.site/questions/10741/copying-array-by-value-in-javascript
 ***
 ### 5. {a: 10} == {a: 10}. What will the code return?   
 false   
-потому что это объект не сравнивается ни с чем ([см.Таблица сравнения типов](#type_coercion)).
+потому что это объект, объект не сравнивается ни с чем ([см.Таблица сравнения типов](#type_coercion)).
 
 ***
 ### 6. What is `this`?   
@@ -254,6 +254,10 @@ function sum(a) {
   };
 } 
 ```
+
+<details>
+<summary>умные решения... ↴</summary>
+
 ```JS
 sum(1)(1)(1)(1); // 4
 function sum (n) { 
@@ -266,9 +270,44 @@ function sum (n) {
     return v;
 }
 ```
+```JS
+// интересное решение
+function add(a) {
+  let curry = (b) => {
+    a += b;
+    return curry;
+  }
+  curry.toString = () => a
+  return curry;
+}
+console.log(add(1));
+console.log(add(1)(2));
+```
+```JS
+// умное универсальное решение
+function sum(...params) {
+  let s = params.reduce((a, b) => a + b);
+  function innerSum(...innerParams) {
+    return sum(...innerParams.concat(s));
+  };
+  innerSum.toString = innerSum.valueOf = function() {
+    return s;
+  }
+  return innerSum;
+}
+console.log(sum(1, 2)(3, 4)(5, 6));
+console.log(sum(1)(2)(3)(4)(5)(6));
+console.log(sum(1)(2, 3)(4, 5, 6));
+```
+
+</details>  
+
 [Преобразование объектов: toString и valueOf - learn.javascript.ru/object-conversion](https://learn.javascript.ru/object-conversion) <br>
 [Метод valueOf() возвращает примитивное значение указанного объекта.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)    
 [Метод toString() возвращает строку, представляющую исходный код функции.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)
+
+https://stackoverflow.com/questions/5832891/variadic-curried-sum-function   
+http://qaru.site/questions/218785/variadic-curried-sum-function   
 
 ***
 ### 10. Prototype. Differences between __proto__ and prototype. Example of inheritance.
