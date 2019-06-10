@@ -314,30 +314,25 @@ http://qaru.site/questions/218785/variadic-curried-sum-function
 
 ***
 ### 11. How to create an object without a prototype?   
-Как создать объект без прототипа   
-https://habr.com/ru/post/17613/   
-самое простое - Литеральная нотация   
-Создаем наш объект с использованием литеральной нотации   
+Как создать объект без прототипа    
+
+JavaScript предоставляет разработчикам возможность создавать объекты и работать с ними.   
+Для этого существуют следующие приёмы:  
+- Литеральная нотация  
 ```JS
 MyObject = {
     id : 1,
-    name : "Sample",
-    boolval : true,
-    getName : function()
-    {
-        return this.name;
-    }
+    name : "Сеня",
+    drinkingBeer : true
 } 
 ```
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create   
-JavaScript предоставляет разработчикам возможность создавать объекты и работать с ними.   
-Для этого существуют следующие приёмы:   
-- Оператор new   
-- Литеральная нотация   
+- Оператор new 
 - Конструкторы объектов   
 - Ассоциативные массивы   
 
+https://habr.com/ru/post/17613/   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects   
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create   
 
 ***
 ### 12. Array methods that loop over the elements.   
@@ -346,8 +341,19 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects
 
 ***
 ### 13. “hello world”.repeating(3) -> hello world hello world hello world. How to implement?   
+```JS
+function repeat(str, count){
+  let arr = new Array(count);
+  arr.fill(str);
+  return arr.join(" ");
+}
+console.log(repeat("hello world", 3)); // 'hello world hello world hello world'
+```
+```JS
+// самое короткое решение  
+"hello world ".repeat(3).slice(0, -1);  
+```
 http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html   
-"hello world ".repeat(3).slice(0, -1); самое короткое решение   
 
 ***
 ### 14. Browser events. Browser default actions abortion.   
