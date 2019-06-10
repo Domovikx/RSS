@@ -205,16 +205,23 @@ clone.name = "Петя";
 // user {name: "Вася", age: 30}
 // clone {name: "Петя", age: 30}
 ```
-Array передача по ссылке 
+Копирование Array по ссылке 
 ```JS
-//
+let arr1 = ['a','b'];
+let arr2 = arr1;
+arr2.push('c'); 
+console.log(arr1, arr2); // ["a", "b", "c"] ["a", "b", "c"]
 ```
-Array копирование 
+Копирование Array по значению
 ```JS
-//
+let arr1 = ['a','b'];
+let arr2 = [...arr1];
+arr2.push('c'); 
+console.log(arr1, arr2); // ["a", "b"] ["a", "b", "c"]
 ```    
 https://metanit.com/web/javascript/3.7.php   
 https://learn.javascript.ru/object-reference   
+http://qaru.site/questions/10741/copying-array-by-value-in-javascript
 
 ***
 ### 5. {a: 10} == {a: 10}. What will the code return?   
