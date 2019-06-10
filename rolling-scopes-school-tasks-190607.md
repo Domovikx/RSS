@@ -76,6 +76,29 @@ Full name and contacts of the mentor who will interview you can be found in this
    console.log(b); // b is not defined
    let b = 7;
    ```
+   ```
+   let a = 1;
+   function hoisting(){
+      let a = 2; // объявление внутри функции
+      console.log(a); // 2
+   }
+   hoisting();
+   console.log(a); // 1
+   ```
+   ```
+   let a = 1;
+   function hoisting(){
+      a = 2; // переопределение значения
+      console.log(a); // 2
+   }
+   hoisting();
+   console.log(a); // 2
+   ```
+   
+   
+   
+   
+   
    [Поднятие](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5) <br>
 [Разбираемся с “поднятием” (hoisting) в JavaScript](https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-hoisting-%D0%B2-javascript-7d2d27bc51f1) <br>
 [Область видимости в JavaScript и «поднятие» переменных и объявлений функций - habr.com/ru/post/127482](https://habr.com/ru/post/127482/)
