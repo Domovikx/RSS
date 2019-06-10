@@ -111,10 +111,7 @@ const apple = 5;
 apple = 10; // ошибка
 ```
 У объявлений переменной через <b>let</b> есть три основных отличия от <b>var</b>:   
-
-<details>
-<summary>1. Область видимости переменной <b>let</b> – блок {...} ↴</summary>
-  
+1. Область видимости переменной <b>let</b> – блок {...}   
 ```JS
 var apples = 5;
 if (true) {
@@ -138,10 +135,8 @@ if (true) {
 }
 alert(apples); // ошибка!
 ```
-</details>
-<details>
-<summary>2. Переменная <b>let</b> видна только после объявления. ↴</summary>
 
+2. Переменная <b>let</b> видна только после объявления.   
 ```JS
 alert(a); // undefined
 var a = 5;
@@ -154,10 +149,8 @@ let a = 5;
 let x;
 let x; // ошибка: переменная x уже объявлена
 ```  
-</details>
-<details>
-<summary>3. При использовании в цикле, для каждой итерации создаётся своя переменная. ↴</summary>
- 
+
+3. При использовании в цикле, для каждой итерации создаётся своя переменная.    
 Переменная <b>var</b> – одна на все итерации цикла и видна даже после цикла:   
 ```JS
 for(var i=0; i<10; i++) { /* … */ }
@@ -170,7 +163,7 @@ for(let i = 0; i<10; i++) { /* … */ }
 for(let i = 0; i<10; i++) { /* … */ }
 alert( i ); // ошибка: глобальной i нет
 ```
-</details>
+
 https://learn.javascript.ru/let-const   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let   
           
