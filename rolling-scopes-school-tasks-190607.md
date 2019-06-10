@@ -171,9 +171,44 @@ Full name and contacts of the mentor who will interview you can be found in this
       https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let <br>
           
 4. **Passing data by value and by reference. Exapmles.** <br>
-Передача данных по значению и по ссылке. Exapmles. <br>
+    Передача данных по значению и по ссылке. Примеры. <br>
+    <b>number, string, boolean</b> передаются по значению, функция получает копию данного значения. <br>
+    ```
+    let a = 5, b = 7; 
+    b = a;
+    console.log(a, b); // 5 5
+    a = 4;
+    console.log(a, b); // 4 5
+    ```
+    ```
+    let a = 'a', b = 'b'; 
+    b = a;
+    console.log(a, b); // a a
+    a = 'a2';
+    console.log(a, b); // a2 a 
+    ```
+    <b>object, array</b> передаются по ссылке. <br>
+    ```
+    let user = { name: "Вася" }; // в переменной - ссылка на объект
+    let admin = user; // скопировали ссылку
+    console.log(user, admin, admin.name); // {name: "Вася"} {name: "Вася"} "Вася"
+    admin.name = 'Сеня'; // передаем новое значение
+    console.log(user.name); // Сеня
+    ```
+    Клонирование объектов
+    ```
+    var user = { name: "Вася", age: 30 };
+    var clone = {}; 
+    for (var key in user) {
+      clone[key] = user[key];
+    }
+    clone.name = "Петя";
+      // user {name: "Вася", age: 30}
+      // clone {name: "Петя", age: 30}
+    ```
+    
+https://metanit.com/web/javascript/3.7.php <br>
 https://learn.javascript.ru/object-reference <br>
-https://metanit.com/web/javascript/3.7.php
 
 5. {a: 10} == {a: 10}. What will the code return? <br>
   false <br>
