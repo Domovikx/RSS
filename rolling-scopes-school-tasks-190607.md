@@ -110,6 +110,8 @@ console.log(a); // 2
 True JS 5. Hoisting - https://www.youtube.com/watch?v=e6YB6ehg5g8   
 True JS 21. Области видимости внутри функции, hoisting - https://www.youtube.com/watch?v=3UXqvjmJkA0
 
+тут есть задачи - http://jsflow.org/docs/create-exec-phase/ 
+
 ***
 ### 3. Let vs Var. Const.
 Объявление <b>const</b> задаёт константу, то есть переменную, которую нельзя менять:    
@@ -237,8 +239,17 @@ false
 
 ***
 ### 6. What is `this`?   
+<b>Контекст</b> - окружение исполнения.   
+<b>this это ссылка на - элемент на котором произходит событие</b>. 
+
+1. Вне функции, this - указывает на объект window (по умолчанию)    
+2. Если просто запустить функцию на выполнение, то this - указывает на объект window   
+3. Если функция запускается по событию, то this - указывает на элемент на котором произошло событие   
+
+http://qaru.site/questions/1228/how-does-the-this-keyword-work   
 https://learn.javascript.ru/object-methods   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this   
+
 https://www.youtube.com/watch?v=PBI5hEnMStc   
 
 ***
@@ -250,28 +261,39 @@ https://www.youtube.com/watch?v=PBI5hEnMStc
 Функция внутри функции   
 
 ```JS
-let counter = (function () {
-  let current = 0;
-  return function () {
-    current++;
-    return current;
+// глобальный контекст выполления 
+function count() {
+  // локальный контекст count() - это наша обертка
+  let c = 0; // независимая переменная
+  function operation() { // локальный контекст operation()
+    c++;
+    return c; // возвращаем значение
   }
-})();
-console.log(counter()); // 1
-console.log(counter()); // 2
+  return operation;
+}
+let countFirst = count();
+let countSecond = count();
+console.log('countFirst: ', countFirst(), countFirst(), countFirst());
+console.log('countSecond: ', countSecond(), countSecond());
 ```
 
-Замыкания — это функции, ссылающиеся на независимые (свободные) переменные. Другими словами, функция, определённая в замыкании, «запоминает» окружение, в котором она была создана.   
+Функция = это набор кода + набор видимых для нее переменных + окружение фукнции.      
+Замыкания - это функции, ссылающиеся на независимые (свободные) переменные.   
 Независимые переменные — это все переменные, которые не были переданы как параметры и не были объявлены как локальные.    
 
-Контекст выполнения бывает либо глобальным, с которого начинается исполнения скрипта, либо контекстом выполнения вызова, который начинается с момента входа в тело функции.   
+Пример контекста и независимых переменных   
+![img](https://assets.htmlacademy.ru/img/blog/195/global-execution-context@1x.png);
+
+- https://www.youtube.com/watch?v=RPuFz93Gvpk
+- https://www.youtube.com/watch?v=UsFPvkWeUgw
+- https://www.youtube.com/watch?v=2zQapitrXSY
 
 - https://medium.com/@sshambir/%D0%BE%D1%81%D0%B2%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-5b83267ef7d1
-- https://htmlacademy.ru/blog/useful/javascript/lets-learn-javascript-closures   
-- https://www.youtube.com/watch?v=UsFPvkWeUgw   
+- https://htmlacademy.ru/blog/useful/javascript/lets-learn-javascript-closures      
 - https://learn.javascript.ru/closures   
 - https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures   
 - https://habr.com/ru/post/38642/
+- https://medium.com/webbdev/closures-9a20e84b62cd
 
 *** 
 ### 9. Sum(1)(2);   
@@ -384,7 +406,8 @@ https://metanit.com/web/javascript/4.1.php
 
 ***
 ### 12. Array methods that loop over the elements.   
-Методы массива, которые зацикливаются на элементах. - не понял, что надо сделать   
+Методы массива, которые зацикливаются на элементах.   
+не понял, что надо сделать   
 возможно тут про это: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ***
@@ -400,6 +423,10 @@ console.log(repeat("hello world", 3)); // 'hello world hello world hello world'
 ```JS
 // самое короткое решение  
 "hello world ".repeat(3).slice(0, -1);  
+```
+```JS
+// можно и так
+((str = "hello world") => { console.log(`${str} ${str} ${str}`);})();
 ```
 http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html   
 
@@ -420,7 +447,7 @@ https://learn.javascript.ru/event-delegation
 
 ***
 ### 17. Write a function F so new F === F    
-не понятно
+вообще не понимаю   
 
 ***
 ### 18. Function.prototype.bind polyfill.    
