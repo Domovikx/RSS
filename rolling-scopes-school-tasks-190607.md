@@ -294,10 +294,6 @@ bind - создаёт "обёртку" над функцией, которая �
     showDetails.apply(car2, ['green', 400]); // Renault green 400$
 ```
 
-
-
-
-
 https://www.youtube.com/watch?v=OaR9Go75hOY   
 https://www.youtube.com/watch?v=UGapN-hrekw   
 
@@ -336,6 +332,7 @@ console.log('c :', c); // c : 10
 Пример контекста и независимых переменных   
 ![img](https://assets.htmlacademy.ru/img/blog/195/global-execution-context@1x.png);
 
+https://www.youtube.com/watch?v=BIHziPMbaJw
 https://www.youtube.com/watch?v=RPuFz93Gvpk   
 https://www.youtube.com/watch?v=UsFPvkWeUgw   
 https://www.youtube.com/watch?v=2zQapitrXSY   
@@ -400,6 +397,8 @@ http://qaru.site/questions/218785/variadic-curried-sum-function
 
 ***
 ### 10. Prototype. Differences between __proto__ and prototype. Example of inheritance.
+Прототип. Различия между __proto__ и prototype. Пример наследования.
+
 
 ***
 ### 11. How to create an object without a prototype?   
