@@ -398,8 +398,14 @@ http://qaru.site/questions/218785/variadic-curried-sum-function
 
 ***
 ### 10. Prototype. Differences between __proto__ and prototype. Example of inheritance.
-Прототип. Различия между __proto__ и prototype. Пример наследования.
+Прототип. Различия между __proto__ и prototype. Пример наследования.   
 
+Всё, кроме примитивов - объекты   
+Функции - это вызываемые объекты   
+Конструкторы - функции которые предназначены для создания и инициализации новых объектов    
+Любая функция имеет свойство prototype   
+
+https://www.youtube.com/watch?v=42ihcHT-jfM
 
 ***
 ### 11. How to create an object without a prototype?   
