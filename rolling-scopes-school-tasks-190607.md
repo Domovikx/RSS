@@ -283,16 +283,16 @@ console.log('countSecond: ', countSecond(), countSecond());
 Пример контекста и независимых переменных   
 ![img](https://assets.htmlacademy.ru/img/blog/195/global-execution-context@1x.png);
 
-- https://www.youtube.com/watch?v=RPuFz93Gvpk
-- https://www.youtube.com/watch?v=UsFPvkWeUgw
-- https://www.youtube.com/watch?v=2zQapitrXSY
+https://www.youtube.com/watch?v=RPuFz93Gvpk   
+https://www.youtube.com/watch?v=UsFPvkWeUgw   
+https://www.youtube.com/watch?v=2zQapitrXSY   
 
-- https://medium.com/@sshambir/%D0%BE%D1%81%D0%B2%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-5b83267ef7d1
-- https://htmlacademy.ru/blog/useful/javascript/lets-learn-javascript-closures      
-- https://learn.javascript.ru/closures   
-- https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures   
-- https://habr.com/ru/post/38642/
-- https://medium.com/webbdev/closures-9a20e84b62cd
+https://medium.com/@sshambir/%D0%BE%D1%81%D0%B2%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-5b83267ef7d1
+https://htmlacademy.ru/blog/useful/javascript/lets-learn-javascript-closures      
+https://learn.javascript.ru/closures   
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures   
+https://habr.com/ru/post/38642/   
+https://medium.com/webbdev/closures-9a20e84b62cd   
 
 *** 
 ### 9. Sum(1)(2);   
