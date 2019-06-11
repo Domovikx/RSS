@@ -239,37 +239,55 @@ false
 
 ***
 ### 6. What is `this`?   
-<b>Контекст</b> - окружение исполнения.   
-<b>this это ссылка на - элемент на котором произходит событие</b>. 
 
-1. Вне функции, this - указывает на объект window (по умолчанию)    
-2. Если просто запустить функцию на выполнение, то this - указывает на объект window   
-3. Если функция запускается по событию, то this - указывает на элемент на котором произошло событие   
+1. Ключевое слово <b>this</b> - всегда динамичное.   
+2. Оно указывает на <b>тот объект</b> в контексте которого оно было вызвано.   
+<b>Контекст</b> - окружение исполнения.   
+
+```JS
+function whereIsThis() {
+  console.log('this :', this);
+}
+let myObject = {
+  nameObject: 'myObject',
+  runThis: whereIsThis      
+}
+// тут вызовем из глобального контекста
+whereIsThis(); // this : Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+// а тут вызовем из объекта
+myObject.runThis(); // this : {nameObject: "myObject", runThis: ƒ}
+```
+
+<b>this это ссылка на - объект (элемент) в котором произходит вызов (действие, событие)</b>. 
+
+https://www.youtube.com/watch?v=UGapN-hrekw
+https://www.youtube.com/watch?v=PBI5hEnMStc  
 
 http://qaru.site/questions/1228/how-does-the-this-keyword-work   
 https://learn.javascript.ru/object-methods   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this   
 
-https://www.youtube.com/watch?v=PBI5hEnMStc   
-
 ***
 ### 7. Apply, call, bind. What are they used for? What are the differences?   
 
+https://sneakbug8.ru/bind-vs-apply-and-call   
+
 ***
 ### 8. Closure. Give an example.   
-Замыкания.   
+Замыкание (... области видимости функции)   
 
-Функция = это набор кода + набор видимых для нее переменных + окружение фукнции.      
+Функция = блок кода + набор доступных переменных, также надо учитывать окружение фукнции.      
 Замыкания - это функции, ссылающиеся на независимые (свободные) переменные (free variables).   
 Независимые переменные (free variables) - это все переменные, 
 которые не были переданы как параметры и не были объявлены как локальные. 
 
 ```JS
-// глобальный контекст выполления 
+// глобальный контекст выполнения 
+let c = 10; // глобальная переменная, для примера
 function count() {
-  // локальный контекст count() - это наша обертка
+  // контекст функции count() - это обертка
   let c = 0; // Локальная «свободная» переменная (free variable), которая попадает в замыкание
-  function operation() { // локальный контекст operation()
+  function operation() { // контекст функции operation()
     c++;
     return c; // возвращаем значение
   }
@@ -277,8 +295,9 @@ function count() {
 }
 let countFirst = count();
 let countSecond = count();
-console.log('countFirst: ', countFirst(), countFirst(), countFirst());
-console.log('countSecond: ', countSecond(), countSecond());
+console.log('countFirst: ', countFirst(), countFirst(), countFirst()); // countFirst:  1 2 3
+console.log('countSecond: ', countSecond(), countSecond()); // countSecond:  1 2
+console.log('c :', c); // c : 10
 ```   
 
 Пример контекста и независимых переменных   
