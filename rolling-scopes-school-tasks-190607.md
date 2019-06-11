@@ -269,8 +269,41 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
 
 ***
 ### 7. Apply, call, bind. What are they used for? What are the differences?   
+Применить, звать, связать. Для чего они используются? Какие есть отличия?   
 
-https://sneakbug8.ru/bind-vs-apply-and-call   
+Все три функции являются методами (функциями, прикрепленными к объекту функции), 
+которые вызывают функцию с заданым (установленным, кастомным) this контекстом.
+
+call - вызов функции с подменой контекста - this внутри функции   
+apply - вызов функции с переменным количеством аргументов и с подменой контекста   
+bind - создаёт "обёртку" над функцией, которая подменяет контекст этой функции   
+```JS
+    let car1 = { model: 'Renault' }
+    let car2 = { model: 'BMW' }
+    function showDetails(color, price) {
+      console.log(`${this.model} ${color} ${price}$`);
+    }
+
+    let bound = showDetails.bind(car1, 'yellow', 100);
+    bound(); // Renault yellow 100$
+
+    bound = showDetails.bind(car2);
+    bound('white', 200); // Renault white 200$
+
+    showDetails.call(car1, 'red', 300); // Renault red 300$
+    showDetails.apply(car2, ['green', 400]); // Renault green 400$
+```
+
+
+
+
+
+https://www.youtube.com/watch?v=OaR9Go75hOY   
+https://www.youtube.com/watch?v=UGapN-hrekw   
+
+https://sneakbug8.ru/bind-vs-apply-and-call     
+[medium.com/@stasonmars/подробно-о-методах-apply-call-и-bind-необходимых-каждому-javascript-разработчику-ddd5f9b06290](https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE-%D0%BE-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0%D1%85-apply-call-%D0%B8-bind-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D1%8B%D1%85-%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%D1%83-javascript-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D1%83-ddd5f9b06290)       
+https://ru.stackoverflow.com/questions/426699/bind-call-apply-%D0%B2-%D1%87%D1%91%D0%BC-%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0
 
 ***
 ### 8. Closure. Give an example.   
@@ -466,7 +499,13 @@ https://learn.javascript.ru/event-delegation
 
 ***
 ### 17. Write a function F so new F === F    
-вообще не понимаю   
+
+```JS
+function F() {
+  return F;
+}
+new F() === F // true
+```
 
 ***
 ### 18. Function.prototype.bind polyfill.    
