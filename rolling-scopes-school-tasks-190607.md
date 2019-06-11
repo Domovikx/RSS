@@ -260,8 +260,8 @@ myObject.runThis(); // this : {nameObject: "myObject", runThis: ƒ}
 
 <b>this это ссылка на - объект (элемент) в котором произходит вызов (действие, событие)</b>. 
 
-https://www.youtube.com/watch?v=UGapN-hrekw
-https://www.youtube.com/watch?v=PBI5hEnMStc  
+https://www.youtube.com/watch?v=UGapN-hrekw   
+https://www.youtube.com/watch?v=PBI5hEnMStc   
 
 http://qaru.site/questions/1228/how-does-the-this-keyword-work   
 https://learn.javascript.ru/object-methods   
