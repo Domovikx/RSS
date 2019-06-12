@@ -455,7 +455,7 @@ Foo.prototype.calculate = function (z) {
   return this.x + this.y + z;
 }; 
 let b = new Foo(20);
-let c = new Foo(30); 
+let c = new Foo(30);
 b.calculate(30); // 60
 c.calculate(40); // 80
  
@@ -474,6 +474,8 @@ console.log(
 Каждый объект созданный конструктором содержит ссылку на `prototype` своего конструктора, эта ссылка хранится в свойстве `__proto__`.   
 Сначала поиск свойства осуществляется в объекте, если оно не найдено, то поиск продолжается в цепочке прототипов.   
 
+Наследование:   
+
 Примечания:   
 Всё, кроме примитивов - объекты   
 Функции - это вызываемые объекты   
@@ -487,6 +489,7 @@ http://dmitrysoshnikov.com/ecmascript/javascript-the-core/ (best)
 https://techshowers.wordpress.com/2013/07/01/javascript-prototype-vs-__proto__/     
 https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript    
 http://qaru.site/questions/26391/good-example-of-javascripts-prototype-based-inheritance
+
 <details> 
   
 ![](http://risovach.ru/upload/2016/01/mem/klichko_103711688_orig_.jpg)
@@ -605,8 +608,7 @@ https://learn.javascript.ru/event-bubbling
 https://learn.javascript.ru/event-delegation
 
 ***
-### 17. Write a function F so new F === F    
-
+### 17. Write a function F so new F === F   
 ```JS
 function F() {
   return F;
