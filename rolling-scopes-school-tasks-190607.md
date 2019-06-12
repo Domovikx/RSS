@@ -405,10 +405,8 @@ http://qaru.site/questions/218785/variadic-curried-sum-function
 Конструкторы - функции которые предназначены для создания и инициализации новых объектов    
 Любая функция имеет свойство prototype   
 
-https://www.youtube.com/watch?v=0vs6WkNyzec
-https://www.youtube.com/watch?v=42ihcHT-jfM
-
-
+https://www.youtube.com/watch?v=0vs6WkNyzec    
+https://www.youtube.com/watch?v=42ihcHT-jfM    
 
 ***
 ### 11. How to create an object without a prototype?   
