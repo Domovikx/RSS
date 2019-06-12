@@ -397,16 +397,71 @@ https://stackoverflow.com/questions/5832891/variadic-curried-sum-function
 http://qaru.site/questions/218785/variadic-curried-sum-function   
 
 ***
-### 10. Prototype. Differences between __proto__ and prototype. Example of inheritance.
-Прототип. Различия между __proto__ и prototype. Пример наследования.   
+### 10. Prototype. Differences between `__proto__` and `prototype`. Example of inheritance.
+Прототип. Различия между `__proto__` и `prototype`. Пример наследования.   
 
+Чтобы разобраться сделаем объект и посмотрим что внутри:
+```JS
+let foo = {
+  x: 10,
+  y: 20
+};
+foo;
+/*
+{x: 10, y: 20} ↴
+x: 10
+y: 20
+__proto__: Object // Вот оно, неявное смойство которое ссылается на верховный объект-прототип
+*/
+```
+![](http://dmitrysoshnikov.com/wp-content/uploads/basic-object.png)
+
+В каждом объекте есть набор явных свойств и одно неявное свойство - `__proto__` которое ссылается на другой верховный объект-прототип. Прототип может быть либо объектом, либо null значением.
+
+Если прототип не указан явно для объекта, то `__proto__` принимается значение по умолчанию - Object.prototype. Object.prototype - это объект который также имеет свойство `__proto__`, является конечным звеном цепи прототипов и имеет значение null.
+
+```JS
+let a = {
+  x: 10,
+  calculate: function (z) {
+    return this.x + this.y + z;
+  }
+}; 
+let b = {
+  y: 20,
+  __proto__: a
+}; 
+let c = {
+  y: 30,
+  __proto__: a
+}; 
+b.calculate(30); // 60
+c.calculate(40); // 80
+```
+![](http://dmitrysoshnikov.com/wp-content/uploads/prototype-chain.png)
+
+Любая функция имеет свойство `prototype`   
+
+Примечания:   
 Всё, кроме примитивов - объекты   
 Функции - это вызываемые объекты   
-Конструкторы - функции которые предназначены для создания и инициализации новых объектов    
-Любая функция имеет свойство prototype   
+Конструкторы - функции которые используются вместе с оператором new и предназначены для создания и инициализации новых объектов   
+Цепочка прототипов - это конечная цепочка объектов, которая используется для реализации наследования и общих свойств.   
+
 
 https://www.youtube.com/watch?v=0vs6WkNyzec    
 https://www.youtube.com/watch?v=42ihcHT-jfM    
+
+http://dmitrysoshnikov.com/ecmascript/javascript-the-core/ (best)   
+
+https://techshowers.wordpress.com/2013/07/01/javascript-prototype-vs-__proto__/     
+https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript    
+
+<details> 
+  
+![](http://risovach.ru/upload/2016/01/mem/klichko_103711688_orig_.jpg)
+
+</details>  
 
 ***
 ### 11. How to create an object without a prototype?   
