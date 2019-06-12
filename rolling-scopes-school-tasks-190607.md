@@ -474,8 +474,8 @@ https://metanit.com/web/javascript/4.1.php
 ***
 ### 13. “hello world”.repeating(3) -> hello world hello world hello world. How to implement?   
 ```JS
-function repeat(str, count){
-  let arr = new Array(count);
+function repeat(str, iteration){
+  let arr = new Array(iteration);
   arr.fill(str);
   return arr.join(" ");
 }
@@ -487,7 +487,15 @@ console.log(repeat("hello world", 3)); // 'hello world hello world hello world'
 ```
 ```JS
 // можно и так
-((str = "hello world") => { console.log(`${str} ${str} ${str}`);})();
+    function repeat(str = "hello world", iteration = 3) {
+      let newStr = str;
+      for (let i = 1; i < iteration; i++) {
+        newStr += (' ' + str);
+      }
+      return newStr;
+    }
+    console.log(repeat());
+    console.log(repeat('a'));
 ```
 http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html   
 
