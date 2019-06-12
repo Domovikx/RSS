@@ -440,15 +440,45 @@ c.calculate(40); // 80
 ```
 ![](http://dmitrysoshnikov.com/wp-content/uploads/prototype-chain.png)
 
-Любая функция имеет свойство `prototype`   
+<details>
+<summary>Холмс что-же такое prototype? ...элементарно Ватсон!</summary>
+
+![](http://img.playground.ru/images/7/8/229166_elementarno-vatson.jpg)
+</details>
+
+```JS
+function Foo(y) {
+  this.y = y;
+}
+Foo.prototype.x = 10; 
+Foo.prototype.calculate = function (z) {
+  return this.x + this.y + z;
+}; 
+let b = new Foo(20);
+let c = new Foo(30); 
+b.calculate(30); // 60
+c.calculate(40); // 80
+ 
+console.log( 
+  b.__proto__ === Foo.prototype, // true
+  c.__proto__ === Foo.prototype, // true  
+    b.constructor === Foo, // true
+    c.constructor === Foo, // true
+    Foo.prototype.constructor === Foo, // true 
+      b.calculate === b.__proto__.calculate, // true
+      b.__proto__.calculate === Foo.prototype.calculate // true 
+);
+```
+![](http://dmitrysoshnikov.com/wp-content/uploads/constructor-proto-chain.png)
+Каждый конструктор имеет специальное свойство: `prototype`   
+Каждый объект созданный конструктором содержит ссылку на `prototype` своего конструктора, эта ссылка хранится в свойстве `__proto__`.   
+Сначала поиск свойства осуществляется в объекте, если оно не найдено, то поиск продолжается в цепочке прототипов.   
 
 Примечания:   
 Всё, кроме примитивов - объекты   
 Функции - это вызываемые объекты   
 Конструкторы - функции которые используются вместе с оператором new и предназначены для создания и инициализации новых объектов   
 Цепочка прототипов - это конечная цепочка объектов, которая используется для реализации наследования и общих свойств.   
-
-
 https://www.youtube.com/watch?v=0vs6WkNyzec    
 https://www.youtube.com/watch?v=42ihcHT-jfM    
 
@@ -456,16 +486,21 @@ http://dmitrysoshnikov.com/ecmascript/javascript-the-core/ (best)
 
 https://techshowers.wordpress.com/2013/07/01/javascript-prototype-vs-__proto__/     
 https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript    
-
+http://qaru.site/questions/26391/good-example-of-javascripts-prototype-based-inheritance
 <details> 
   
 ![](http://risovach.ru/upload/2016/01/mem/klichko_103711688_orig_.jpg)
-
 </details>  
 
 ***
 ### 11. How to create an object without a prototype?   
 Как создать объект без прототипа:    
+- Для этого надо создать объект без использования констркутора, тоесть просто создать {}.
+```JS
+let empty = {};
+console.log(empty.constructor);
+empty; 
+```
 - Литеральная нотация  
 ```JS
 Man = {
@@ -511,6 +546,8 @@ let secondFriend = new Man('Петр', 'Петрович');
 console.log(secondFriend);
 console.log(secondFriend.sayHi()); // Привет, Петр Петрович
 ```
+
+http://adripofjavascript.com/blog/drips/creating-objects-without-prototypes.html   
 
 https://habr.com/ru/post/17613/   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects   
