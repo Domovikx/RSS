@@ -631,10 +631,28 @@ Event.preventDefault() - https://developer.mozilla.org/en-US/docs/Web/API/Event/
 
 ***
 ### 15. Event bubbling and event capturing.  
-Всплытие и захват событий   
+Всплытие и захват (перехват) событий   
 
-https://learn.javascript.ru/event-bubbling    
-[Events bubbling и events capturing](https://habr.com/ru/post/126471/)   
+Всплытие: 
+```html
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P</p>
+  </div>
+</form>
+<!-- 
+P → DIV → FORM (bubbling)
+Событие всплывает наверх начиная с элемента на котором происходит действие.
+-->
+```
+
+<img src="https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg" width="400" height="" alt="">
+
+Метод EventTarget.addEventListener() - https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener   
+
+https://habr.com/ru/post/126471/ (best)   
+https://learn.javascript.ru/event-bubbling     
+https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing    
 
 ***
 ### 16. Event delegation. Example.    
