@@ -646,6 +646,22 @@ P → DIV → FORM (bubbling)
 -->
 ```
 
+Перехват событий
+```html
+<form>FORM
+  <div>DIV
+    <p>P</p>
+  </div>
+</form>
+<script>
+  for(let elem of document.querySelectorAll('*')) {
+    elem.addEventListener("click", e => alert(`Capturing: ${elem.tagName}`), true);
+    elem.addEventListener("click", e => alert(`Bubbling: ${elem.tagName}`));
+  }
+</script>
+```
+Перехват событий будет происходит в три этапа: 
+Погружение - Цель - Всплытие
 <img src="https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg" width="400" height="" alt="">
 
 Метод EventTarget.addEventListener() - https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener   
@@ -673,6 +689,12 @@ function F() {
 }
 new F() === F // true
 ```
+
+<details> 
+<summary>Автор этой функции ↴</summary>
+  
+![](http://zw.ciit.zp.ua/zwimg/7/79/Gg_58uWnFwY.jpg)
+</details> 
 
 ***
 ### 18. Function.prototype.bind polyfill.    
