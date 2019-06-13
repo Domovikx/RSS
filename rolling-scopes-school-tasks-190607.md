@@ -303,7 +303,7 @@ https://ru.stackoverflow.com/questions/426699/bind-call-apply-%D0%B2-%D1%87%D1%9
 
 ***
 ### 8. Closure. Give an example.   
-Замыкание - это функция ссылающаяся на переменные, объявленные вне этой функции. 
+Замыкание - это функция ссылающаяся на (free variabl) свободную переменную, объявленную вне этой функции. 
 
 Функция = блок кода + набор доступных переменных, также надо учитывать окружение фукнции.      
 Замыкания - это функции, ссылающиеся на независимые (свободные) переменные (free variables).   
@@ -469,12 +469,11 @@ console.log(
       b.__proto__.calculate === Foo.prototype.calculate // true 
 );
 ```
-![](http://dmitrysoshnikov.com/wp-content/uploads/constructor-proto-chain.png)
-Каждый конструктор имеет специальное свойство: `prototype`   
-Каждый объект созданный конструктором содержит ссылку на `prototype` своего конструктора, эта ссылка хранится в свойстве `__proto__`.   
-Сначала поиск свойства осуществляется в объекте, если оно не найдено, то поиск продолжается в цепочке прототипов.   
+![](http://dmitrysoshnikov.com/wp-content/uploads/constructor-proto-chain.png)   
 
-Наследование:   
+- Каждый конструктор имеет специальное свойство: `prototype`   
+- Каждый объект созданный конструктором содержит ссылку на `prototype` своего конструктора, эта ссылка хранится в свойстве `__proto__`.   
+- Сначала поиск свойства осуществляется в объекте, если оно не найдено, то поиск продолжается в цепочке прототипов.   
 
 Примечания:   
 Всё, кроме примитивов - объекты   
@@ -498,12 +497,13 @@ http://qaru.site/questions/26391/good-example-of-javascripts-prototype-based-inh
 ***
 ### 11. How to create an object without a prototype?   
 Как создать объект без прототипа:    
-- Для этого надо создать объект без использования констркутора, тоесть просто создать {}.
+- Для этого можно просто создать объект {}.
 ```JS
 let empty = {};
 console.log(empty.constructor);
 empty; 
 ```
+Разные способы создания объектов:
 - Литеральная нотация  
 ```JS
 Man = {
@@ -561,8 +561,12 @@ https://metanit.com/web/javascript/4.1.php
 ***
 ### 12. Array methods that loop over the elements.   
 Методы массива, которые зацикливаются на элементах.   
-не понял, что надо сделать   
-возможно тут про это: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+Вопрос не ясен...    
+
+Методы массива:   
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array   
+не понимаю фразцу `зацикливаются на элементах`   
+возможно тут про это: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach   
 
 ***
 ### 13. “hello world”.repeating(3) -> hello world hello world hello world. How to implement?   
@@ -593,19 +597,42 @@ console.log(repeat("hello world", 3)); // 'hello world hello world hello world'
 http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html   
 
 ***
-### 14. Browser events. Browser default actions abortion.   
-https://learn.javascript.ru/introduction-browser-events   
+### 14. Browser events. Browser default actions abortion.  
+Обозреватель событий. Отмена действий браузера по умолчанию.   
+
+Событие – это сигнал от браузера о том, что что-то произошло.    
+
+Основные:   
+События мыши: click, mouseover, mousedown... https://developer.mozilla.org/ru/docs/Web/API/MouseEvent   
+Клавиатурные события: keydown, keyup... https://developer.mozilla.org/ru/docs/Web/API/KeyboardEvent   
+События документа: load, beforeunload, unload...   
+События на элементах: submit, focus...   
+
+Список событий - https://www.w3schools.com/jsref/dom_obj_event.asp   
+Events list from MDN - https://developer.mozilla.org/en-US/docs/Web/API/Event   
+
+https://learn.javascript.ru/introduction-browser-events    
 https://developer.mozilla.org/ru/docs/Web/Events   
 
+
+
 ***
-### 15. Event bubbling and event capturing.   
+### 15. Event bubbling and event capturing.  
+Всплытие и захват событий   
+
 https://learn.javascript.ru/event-bubbling    
-[Events bubbling и events capturing](https://habr.com/ru/post/126471/)
+[Events bubbling и events capturing](https://habr.com/ru/post/126471/)   
 
 ***
 ### 16. Event delegation. Example.    
-Событие делегирования. Пример.    
+Событие делегирования. Пример.   
+надо разбираться   
+
 https://learn.javascript.ru/event-delegation
+
+читать:   
+https://davidwalsh.name/event-delegate   
+https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation   
 
 ***
 ### 17. Write a function F so new F === F   
@@ -618,20 +645,27 @@ new F() === F // true
 
 ***
 ### 18. Function.prototype.bind polyfill.    
-тоже не понятно, возможно это:    
+надо разбираться   
+
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 
 ***
 ### 19. Object.create polyfill.   
-тоже не понимаю пока, это оно или нет:
+надо разбираться   
+
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create    
 https://learn.javascript.ru/new-prototype - не для этого, но возможно пригодится
 
 ***
-### 20. Event loop.    
+### 20. Event loop.   
+цикл событий или же событийный цикл   
+надо разбираться   
+
+https://www.youtube.com/watch?v=aUigiwN0NEw - Event Loop in the browser Javascript 
+
 [JavaScript event loop в картинках](https://medium.com/@pavelbely/javascript-event-loop-%D0%B2-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%D1%85-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-a19e4d99f242)    
-тоже пока не понимаю
 
 ***
-### 21. Promises.    
+### 21. Promises. 
+надо разбираться   
 https://learn.javascript.ru/promise
