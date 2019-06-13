@@ -598,15 +598,15 @@ http://studyjavascript.blogspot.com/2019/03/hello-worldrepeating3.html
 
 ***
 ### 14. Browser events. Browser default actions abortion.  
-Обозреватель событий. Отмена действий браузера по умолчанию.   
+События браузера. Отмена действий браузера по умолчанию.   
 
 * Событие – это сигнал от браузера о том, что что-то произошло.    
 
 Основные:   
-События мыши: click, mouseover, mousedown... https://developer.mozilla.org/ru/docs/Web/API/MouseEvent   
-Клавиатурные события: keydown, keyup... https://developer.mozilla.org/ru/docs/Web/API/KeyboardEvent   
-События документа: load, beforeunload, unload...   
-События на элементах: submit, focus...   
+<b>События мыши:</b> click, mouseover, mousedown... https://developer.mozilla.org/ru/docs/Web/API/MouseEvent   
+<b>Клавиатурные события:</b> keydown, keyup... https://developer.mozilla.org/ru/docs/Web/API/KeyboardEvent   
+<b>События документа:</b> load, beforeunload, unload...   
+<b>События на элементах:</b> submit, focus...   
 
 Список событий - https://www.w3schools.com/jsref/dom_obj_event.asp   
 Events list from MDN - https://developer.mozilla.org/en-US/docs/Web/API/Event   
@@ -614,15 +614,16 @@ Events list from MDN - https://developer.mozilla.org/en-US/docs/Web/API/Event
 https://learn.javascript.ru/introduction-browser-events    
 https://developer.mozilla.org/ru/docs/Web/Events   
 
-* Действия браузера по умолчанию и как их отменить:  
+* Действия браузера по умолчанию и как их отменить:   
+
 Многие события автоматически влекут за собой действие браузера.   
 Например:   
 Клик по ссылке инициирует переход на новый URL.   
 Нажатие на кнопку «отправить» в форме – отсылку ее на сервер.   
 Двойной клик на тексте – инициирует его выделение.   
 
-Есть два способа отменить действие браузера:   
-Основной способ – это воспользоваться объектом события. Для отмены действия браузера существует стандартный метод event.preventDefault().   
+<b>Есть два способа отменить действие браузера:</b>   
+Основной способ – это воспользоваться объектом события. Для отмены действия браузера существует стандартный метод <b>event.preventDefault()</b>.   
 Если же обработчик назначен через onсобытие (не через addEventListener), то можно просто вернуть false из обработчика.  
 
 Подробно про default browser action -  https://learn.javascript.ru/default-browser-action
