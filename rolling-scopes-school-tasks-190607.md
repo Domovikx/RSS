@@ -560,13 +560,51 @@ https://metanit.com/web/javascript/4.1.php
 
 ***
 ### 12. Array methods that loop over the elements.   
-Методы массива, которые зацикливаются на элементах.   
-Вопрос не ясен...    
+Методы массива, которые зацикливаются на элементах (который перебирают элементы).   
 
-Методы массива:   
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array   
-не понимаю фразцу `зацикливаются на элементах`   
-возможно тут про это: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach   
+Методы массива: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array      
+
+[Метод forEach()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) выполняет указанную функцию один раз для каждого элемента в массиве.   
+```JS
+let array1 = ['a', 'b', 'c'];
+array1.forEach(function(element) {
+  console.log(element);
+});
+// "a"
+// "b"
+// "c"
+```
+[Метод map()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) создаёт новый массив с результатом вызова указанной функции для каждого элемента массива. 
+```JS
+let numbers = [1, 4, 9];
+let doubles = numbers.map(function(num) {
+  return num * 2;
+});
+// теперь doubles равен [2, 8, 18], а numbers всё ещё равен [1, 4, 9]
+```
+[Метод every()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every) проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.  
+```JS
+function isBigEnough(element, index, array) {
+  return element >= 10;
+}
+[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 54, 18, 130, 44].every(isBigEnough); // true
+```
+[Метод reduce()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) применяет функцию к аккумулятору и каждому значению массива (слева-направо), сводя его к одному значению.   
+```JS
+let total = [ 1, 0, 1, 0, 1, 0, 1, 0, 1, 0].reduce(function(a, b) {
+  return a + b;
+}); // total = 5
+```
+[Метод find()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find) возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции. В противном случае возвращается undefined.
+```JS
+let array1 = [5, 12, 8, 130, 44];
+let found = array1.find(function(element) {
+  return element > 10;
+});
+console.log(found); // 12
+```
+Методы массива: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array   
 
 ***
 ### 13. “hello world”.repeating(3) -> hello world hello world hello world. How to implement?   
