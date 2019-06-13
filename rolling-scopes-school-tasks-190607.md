@@ -664,7 +664,7 @@ https://developer.mozilla.org/ru/docs/Web/Events
 Основной способ – это воспользоваться объектом события. Для отмены действия браузера существует стандартный метод <b>event.preventDefault()</b>.   
 Если же обработчик назначен через onсобытие (не через addEventListener), то можно просто вернуть false из обработчика.  
 
-Подробно про default browser action -  https://learn.javascript.ru/default-browser-action
+Подробно про default browser action -  https://learn.javascript.ru/default-browser-action   
 Event.preventDefault() - https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault   
 
 ***
