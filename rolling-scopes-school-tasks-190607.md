@@ -711,11 +711,31 @@ https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
 ***
 ### 16. Event delegation. Example.    
 Событие делегирования. Пример.   
-надо разбираться   
+Делегирование событий в javascript – это возможность обрабатывать дочерние элементы через один родительский.
+```HTML
+  <ul id="ul">
+    <li>пункт 1</li>
+    <li>пункт 2</li>
+    <li>пункт 3</li>
+    <li>пункт 4</li>
+    <li>пункт 5</li>
+  </ul>
 
-https://learn.javascript.ru/event-delegation
+  <script>
+    let ul = document.getElementById('ul');
+    ul.addEventListener('click', addText);
+    function addText() {
+      event.target.innerHTML = event.target.innerHTML + ' !';
+    }
+  </script>
+```
+http://code.mu/books/javascript/dom/prodvinutaya-rabota-s-objektom-event-na-javascript.html (best)   
+[getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)   
+[addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)    
 
-читать:   
+http://qaru.site/questions/172/what-is-dom-event-delegation   
+https://learn.javascript.ru/event-delegation   
+ 
 https://davidwalsh.name/event-delegate   
 https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation   
 
@@ -745,7 +765,7 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Fu
 надо разбираться   
 
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create    
-https://learn.javascript.ru/new-prototype - не для этого, но возможно пригодится
+https://learn.javascript.ru/new-prototype - не для этого, но возможно пригодится   
 
 ***
 ### 20. Event loop.   
