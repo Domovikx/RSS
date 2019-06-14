@@ -701,6 +701,8 @@ P → DIV → FORM (bubbling)
   }
 </script>
 ```
+https://javascript.info/bubbling-and-capturing#capturing
+
 Перехват событий будет происходит в три этапа: 
 Погружение - Цель - Всплытие
 <img src="https://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.svg" width="400" height="" alt="">
