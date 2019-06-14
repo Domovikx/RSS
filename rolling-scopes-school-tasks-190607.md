@@ -45,8 +45,7 @@ Full name and contacts of the mentor who will interview you can be found in this
 
 Руководство по написанию JavaScript-кода от Airbnb:   
 https://github.com/airbnb/javascript   
-https://github.com/leonidlebedev/javascript-airbnb (rus)  
-
+https://github.com/leonidlebedev/javascript-airbnb (rus) 
 [Вопросы и ответы к собеседованию фронтенд-разработчика на JavaScript](https://medium.com/@allaev/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%B8-%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B-%D0%BA-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0-%D0%BD%D0%B0-javascript-9058a75710a)
 
 ### 1. Data types in JS. Type coercion.
@@ -288,10 +287,10 @@ bind - создаёт "обёртку" над функцией, которая �
     bound(); // Renault yellow 100$
 
     bound = showDetails.bind(car2);
-    bound('white', 200); // Renault white 200$
+    bound('white', 200); // BMW white 200$
 
     showDetails.call(car1, 'red', 300); // Renault red 300$
-    showDetails.apply(car2, ['green', 400]); // Renault green 400$
+    showDetails.apply(car2, ['green', 400]); // BMW green 400$    
 ```
 
 https://www.youtube.com/watch?v=OaR9Go75hOY   
@@ -488,6 +487,7 @@ http://dmitrysoshnikov.com/ecmascript/javascript-the-core/ (best)
 https://techshowers.wordpress.com/2013/07/01/javascript-prototype-vs-__proto__/     
 https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript    
 http://qaru.site/questions/26391/good-example-of-javascripts-prototype-based-inheritance
+https://learn.javascript.ru/new-prototype
 
 <details> 
   
@@ -684,7 +684,10 @@ P → DIV → FORM (bubbling)
 -->
 ```
 
-Перехват событий
+Перехват событий, пример:      
+FORM → DIV → P (Capturing)   
+(target)   
+P → DIV → FORM (bubbling)   
 ```html
 <form>FORM
   <div>DIV
@@ -704,7 +707,8 @@ P → DIV → FORM (bubbling)
 
 Метод EventTarget.addEventListener() - https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener   
 
-https://habr.com/ru/post/126471/ (best)   
+http://code.mu/books/javascript/dom/prodvinutaya-rabota-s-objektom-event-na-javascript.html (best)    
+https://habr.com/ru/post/126471/     
 https://learn.javascript.ru/event-bubbling     
 https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing    
 
@@ -756,27 +760,32 @@ new F() === F // true
 
 ***
 ### 18. Function.prototype.bind polyfill.    
-надо разбираться   
+надо разбираться      
 
+возможно тут:   
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Polyfill
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 
 ***
 ### 19. Object.create polyfill.   
 надо разбираться   
 
+возможно тут:   
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create    
 https://learn.javascript.ru/new-prototype - не для этого, но возможно пригодится   
 
 ***
 ### 20. Event loop.   
 цикл событий или же событийный цикл   
-надо разбираться   
+надо разбираться      
 
-https://www.youtube.com/watch?v=aUigiwN0NEw - Event Loop in the browser Javascript 
+возможно тут:   
+https://www.youtube.com/watch?v=aUigiwN0NEw - Event Loop in the browser Javascript   
 
 [JavaScript event loop в картинках](https://medium.com/@pavelbely/javascript-event-loop-%D0%B2-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%D1%85-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-a19e4d99f242)    
 
 ***
 ### 21. Promises. 
 надо разбираться   
+возможно тут:   
 https://learn.javascript.ru/promise
