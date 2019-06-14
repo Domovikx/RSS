@@ -22,6 +22,7 @@
 19. `Object.create` polyfill.
 20. Event loop.
 21. Promises.
+Стрелочная функция + this
   
 Full name and contacts of the mentor who will interview you can be found in this
   
