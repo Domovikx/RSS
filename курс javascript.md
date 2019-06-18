@@ -321,7 +321,7 @@ JS is single-threaded | JS является однопоточным
 one thread = one callstack = one thing at a time | один поток = один стек вызовов = одна вещь за раз   
 
 <table>
-<tr><th>Code</th><th>Callstack</th></tr>
+<tr><th>Code</th><th>Callstack (Стек вызовов)</th></tr>
 <tr><td>
 
 ```JS
@@ -345,7 +345,128 @@ printSquare();
 1. pop  mul
 1. pop  square
 1. pop  printSquare
+</td></tr>  
+<tr><td>
+
+```JS
+function asyncJob() {
+  setTimeout(fucntion job() {
+    console.log("I'm done");
+  }, 5000);
+}
+asyncJob(); 
+``` 
+</td>
+<td>
+
+1. push asyncJob
+1. push setTimeout
+1. push job to callback queue
+1. pop  setTimeout
+1. pop  asyncJob
+1. now WebAPI waits 5000ms
+1. push job
+1. pop  job
 </td></tr>    
+</table>
+
+### Event Loop
+calls functions from callback queue when stack is empty   
+вызывает функции из очереди обратного вызова, когда стек пуст   
+
+<table>
+<tr><th>Code</th><th>Callstack</th></tr>
+<tr><td>
+
+```JS
+console.log('hello');
+
+setTimeout(function () {
+   console.log('!')
+}, 0);
+
+console.log('world');
+```
+</td>
+<td>
+
+1. hello
+1. world
+1. !
+</td></tr>
+<tr><td>
+
+```JS
+var start = Date.now();
+var c;
+
+console.log("start = " + new Date());
+
+setTimeout(function () {
+    console.log("timeout = " + new Date());
+}, 1000);
+
+while (start + 2000 > Date.now()) {
+    var c = 3 + 3 + 3;
+}
+
+console.log("end = " + new Date());
+```
+</td>
+<td>
+
+1. start = Tue Jun 18 2019 09:09:53 GMT+0300 (Москва, стандартное время)
+1. end = Tue Jun 18 2019 09:09:55 GMT+0300 (Москва, стандартное время)
+1. timeout = Tue Jun 18 2019 09:09:55 GMT+0300 (Москва, стандартное время)
+</td></tr>
+<tr><td>
+
+Пример G-кода 
+```JS
+for (var i = 1; i <= 2; i++) {
+    console.log('цикл');
+    setTimeout(function() { console.log('i =', i) }, 100);
+}
+```
+</td>
+<td>
+
+1. цикл
+1. цикл
+1. i = 3
+1. i = 3
+</td></tr>
+<tr><td>
+
+```JS
+for (let i = 1; i <= 2; i++) {  
+    console.log('цикл');  
+    setTimeout(function() { console.log('i =', i) }, 100);
+}
+```
+```JS
+for (var i = 1; i <= 2; i++) {
+    (function () {
+        console.log('цикл');
+        var local = i;
+        setTimeout(function() { console.log('i =', local) }, 100);
+    })();
+}
+```
+
+</td>
+<td>
+
+1. цикл
+1. цикл
+1. i = 1
+1. i = 2
+</td></tr>
+
+
+
+
+
 </table>
 
 </details>
