@@ -1,4 +1,4 @@
-# План-конспект JavaScript (JS) лекции - 2 этап (rolling scopes school)
+# Курс JavaScript (JS) лекции - 2 этап (rolling scopes school)
 
 ## Расписание
 https://docs.google.com/spreadsheets/d/1oM2O8DtjC0HodB3j7hcIResaWBw8P18tXkOl1ymelvE/htmlview?sle=true#
@@ -211,9 +211,9 @@ alex instanceof LegoMan // true
 alex instanceof Object // true
 ```
 
-### INHERITANCE - наследование в js
-В классическом ООП - класс наследуется от класса
-В JS прототипное наследование - объект наследуется от объекта прототипа 
+### INHERITANCE - наследование в js   
+В классическом ООП - класс наследуется от класса   
+В JS прототипное наследование - объект наследуется от объекта прототипа    
 ```JS
 function Foo(y) {
   this.y = y;
@@ -295,10 +295,10 @@ document
 Wednesday, April 24, 2019 
 ## DOM Events
 
-https://youtu.be/G6_YTv78Q1g
-https://youtu.be/vcXehC9JgGU
+https://youtu.be/G6_YTv78Q1g   
+https://youtu.be/vcXehC9JgGU   
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-events.md
+https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-events.md   
 
 Content: Triggers / Event Types / Mouse Events / Keyboard / Events / Drag Events / Focus Events / Touch Events / Event Handling Models / inline / traditional / W3C / Event Object props and methods / Event capturing and bubbling / Event delegation
 
@@ -306,7 +306,7 @@ Content: Triggers / Event Types / Mouse Events / Keyboard / Events / Drag Events
 ---
 Friday, April 26, 2019	
 ## Event Loop. Animation										
-https://youtu.be/dG5ZaHYdre8
+https://youtu.be/dG5ZaHYdre8   
 
 https://github.com/rolling-scopes-school/lectures/blob/master/lectures/event-loop-and-animations.md
 
@@ -314,64 +314,99 @@ Content:
 Event Loop : Call stack / Event Loop / Callback queue / Web APIs 
 Animations : CSS3 Transitions / CSS3 Transforms / requestAnimationFrame / Performance issues / Practical task
 
+<details>
+<summary>Конспект</summary>
+
+JS is single-threaded | JS является однопоточным   
+one thread = one callstack = one thing at a time | один поток = один стек вызовов = одна вещь за раз   
+
+<table>
+<tr><th>Code</th><th>Callstack</th></tr>
+<tr><td>
+
+```JS
+function mul(a, b) {
+	return a * b;
+}
+function square(a) {
+	return mul(a, a);
+}
+function printSquare() {
+	console.log(square(42));
+}
+printSquare();  
+``` 
+</td>
+<td>
+
+1. push printSquare
+1. push square
+1. push mul
+1. pop  mul
+1. pop  square
+1. pop  printSquare
+</td></tr>    
+</table>
+
+</details>
 
 ---
 Thursday, May 2, 2019
 ## Bootstrap												
-https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh
+https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh   
 
 
 ---
 Friday, May 3, 2019	
 ## Modules in JS
 
-https://youtu.be/7e-5P6iPFzY
+https://youtu.be/7e-5P6iPFzY   
 
 https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-modules.md
 
 ## ES6 features. ESLint. Airbnb JavaScript Style Guide
 
-https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG
+https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG   
 
-https://youtu.be/tus1W_1Tx8U?list=PLe--kalBDwjhni4LpATaJscPwZUudxVHS
+https://youtu.be/tus1W_1Tx8U?list=PLe--kalBDwjhni4LpATaJscPwZUudxVHS   
 
 
 ---
 Monday, May 6, 2019		
 ## Самообучение Webpack. Assets management. Project Structure.											
-https://youtu.be/ssORHjHHCzU
+https://youtu.be/ssORHjHHCzU   
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/webpack.md
+https://github.com/rolling-scopes-school/lectures/blob/master/lectures/webpack.md   
 
 
 ---
 Wednesday, May 8, 2019		
 ## Самообучение HTTP / HTTP2 / AJAX / Promises								
-https://youtu.be/x3ByCM78ETw
-https://youtu.be/iTi1bXSJre0 
+https://youtu.be/x3ByCM78ETw   
+https://youtu.be/iTi1bXSJre0    
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md
+https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md   
 
 
 --- 
 Saturday, May 11, 2019	
 ## JS Callbacks & Promises & async/await
-https://www.youtube.com/watch?v=0fFg3c4C9tA 2018
-https://youtu.be/OyQToid6w8E 2017
+https://www.youtube.com/watch?v=0fFg3c4C9tA 2018   
+https://youtu.be/OyQToid6w8E 2017   
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/promises-game-dev.md
+https://github.com/rolling-scopes-school/lectures/blob/master/lectures/promises-game-dev.md   
 
 
 ---
 Tuesday, May 21, 2019	
 ## CSS Preprocessors. SASS CSS frameworks
 
-https://youtu.be/uKLecRul8g4 2017
-https://youtu.be/3en2mA2MJec?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh 2019 
+https://youtu.be/uKLecRul8g4 2017   
+https://youtu.be/3en2mA2MJec?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh 2019    
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-preprocessors.md
+https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-preprocessors.md   
 
 
 ---
 ## Lodash
-https://youtu.be/RIp8cF5yTY0														
+https://youtu.be/RIp8cF5yTY0	   													
