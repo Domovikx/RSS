@@ -55,8 +55,8 @@ What is class / What is object / Classes in JS / typeof / instanceof / Inheritan
 <details>
 <summary>конспект</summary>
 
-### Лексика
 
+### Лексика
 - *property (проперти) - свойства*
 - *instance (инстанс) - объект, экземпляр класса*
 - *polyfill (полифил) (англ. "polyfill") или полифилер (англ. "polyfiller") — это фрагмент кода (либо плагин), предоставляющий некоторый функционал*
@@ -300,7 +300,20 @@ https://youtu.be/vcXehC9JgGU
 
 https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-events.md   
 
-Content: Triggers / Event Types / Mouse Events / Keyboard / Events / Drag Events / Focus Events / Touch Events / Event Handling Models / inline / traditional / W3C / Event Object props and methods / Event capturing and bubbling / Event delegation
+* Triggers
+* Event Types
+  * Mouse Events
+  * Keyboard Events
+  * Drag Events
+  * Focus Events
+  * Touch Events
+* Event Handling Models
+  * inline
+  * traditional
+  * W3C
+* Event Object props and methods
+* Event capturing and bubbling
+* Event delegation
 
 
 ---
@@ -310,19 +323,27 @@ https://youtu.be/dG5ZaHYdre8
 
 https://github.com/rolling-scopes-school/lectures/blob/master/lectures/event-loop-and-animations.md
 
-Content: 
-Event Loop : Call stack / Event Loop / Callback queue / Web APIs 
-Animations : CSS3 Transitions / CSS3 Transforms / requestAnimationFrame / Performance issues / Practical task
+* Event Loop
+  * Call stack
+  * Event Loop
+  * Callback queue
+  * Web APIs
+* Animations
+  * CSS3 Transitions
+  * CSS3 Transforms
+  * requestAnimationFrame
+  * Performance issues
+  * Practical task
 
 <details>
 <summary>Конспект</summary>
 
-Лексика:
-*Event Loop - цикл событий*
-*Callback - функция обраатного вызова*
-*Call stack - стек вызовов*
-*Callback queue или task queue, или event queue - очередь обратных вызовов или очередь задач, или очередь событий* 
-*Web API - https://developer.mozilla.org/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction*
+### Лексика:
+- *Event Loop - цикл событий*
+- *Callback - функция обраатного вызова*
+- *Call stack - стек вызовов*
+- *Callback queue или task queue, или event queue - очередь обратных вызовов или очередь задач, или очередь событий* 
+- *Web API - Интерфейс прикладного программирования (Application Programming Interfaces, APIs)*
 
 JS is single-threaded | JS является однопоточным   
 one thread = one callstack = one thing at a time | один поток = один стек вызовов = одна вещь за раз  
@@ -382,6 +403,7 @@ asyncJob();
 ### Event Loop (цикл событий)
 Event Loop - calls functions from callback queue when stack is empty   
 Цикл событий - вызывает функции из очереди обратного вызова (задач, событий), когда стек пуст   
+Главная задача `Event Loop` следить за `Call stack` и `Callback (Task, Event) queue`, как только Call stack пуст - передать в него задачу из Callback queue.
 
 <table>
 <tr><th>Code</th><th>Callstack</th></tr>
@@ -476,16 +498,100 @@ for (var i = 1; i <= 2; i++) {
 
 <img src="assets/img/687474703a2f2f692e696d6775722e636f6d2f71695a746e48762e676966.gif" alt="" width="700"> <img src="assets/img/event-loop.gif" alt="" width="350">
 
-видео:   
-Про `цикл событий` в JavaScript или "как на самом деле работает асинхронность"? - https://www.youtube.com/watch?v=8cV4ZvHXQL4
-ссылки:   
-https://github.com/Exictos-DCS/watch-your-language/blob/master/async.md
+* видео:   
+Про `цикл событий` в JavaScript или "как на самом деле работает асинхронность"? - https://www.youtube.com/watch?v=8cV4ZvHXQL4   
+* ссылки:  
+web_APIs - https://developer.mozilla.org/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction   
+setTimeout - https://developer.mozilla.org/ru/docs/Web/API/WindowTimers/setTimeout   
+loupe - http://latentflip.com/loupe   
+https://github.com/Exictos-DCS/watch-your-language/blob/master/async.md   
 
+### Animations 
+CSS transitions:   
+https://learn.javascript.ru/css-transitions#css-transition   
 
+CSS animations:   
+https://learn.javascript.ru/css-transitions#css-animations   
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations   
+https://html5book.ru/css3-animation/   
 
+transform:   
+https://www.w3schools.com/css/css3_3dtransforms.asp
+https://html5book.ru/css3-transform/   
 
+### Анимация JS
+Window.getComputedStyle() - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle  
+Метод Window.getComputedStyle() возвращает объект содержащий значения всех CSS свойств элемента, полученные после применения всех активных таблиц стилей и завершения базовых вычислений значений, которые они могут содержать.
 
+Element.getBoundingClientRect() - https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect   
+Метод Element.getBoundingClientRect() возвращает размер элемента и его позицию относительно viewport (точки   просмотра или ширины экрана в пикселях CSS в масштабе 100%.)
 
+HTML:   
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <div class="shape" id="shape"></div>
+    <script src="test.js"></script>
+</body>
+
+</html>
+```
+CSS:   
+```CSS
+.shape {
+  background-color: blue;
+  width: 100px;
+  height: 200px;
+}
+```
+JS:   
+```JS
+function shapeChange() {
+
+    let shape = document.querySelector("#shape");
+    let compStyles = window.getComputedStyle(shape);
+    let boundingClientRect = shape.getBoundingClientRect();
+
+    console.log('shape :', shape); // элемент
+    console.log('compStyles', compStyles); // выводим все стили элемента
+    console.log('boundingClientRect :', boundingClientRect); // размеры и положение элемента
+
+    setInterval(animation, 1500); // задаем интервал анимации    
+    function animation() {
+        const colorRed = 'rgb(255, 0, 0)';
+        const colorGreen = 'rgb(0, 255, 0)';
+
+        let color = compStyles.getPropertyValue('background-color');
+
+        if (color == colorRed) {
+            shape.style.backgroundColor = colorGreen;
+            shape.style.height = '100px';
+            shape.style.width = '100px';
+            shape.style.borderRadius = '20%';
+        } else if (color == colorGreen) {
+            shape.style.backgroundColor = colorRed;
+            shape.style.height = '150px';
+            shape.style.width = '150px';
+            shape.style.borderRadius = '100%';
+        } else {
+            shape.style.backgroundColor = colorGreen;
+        }
+    }
+}
+shapeChange();
+```
+
+![](assets/img/6225055.gif)
 
 
 </details>
