@@ -73,7 +73,7 @@ ES6 по-человечески - https://habr.com/ru/post/305900/
 
 ### WHAT IS CLASS?
   Class is a schema
-  ![](../assets/img/blueprint.jpg)
+  ![](assets/img/blueprint.jpg)
 
 ### CLASSES IN JS (BAD) FUNCTIONS
 ```JS
@@ -112,7 +112,7 @@ technically - a regular JS object / технически это - объект
 property of every function / есть у каждой фенкции   
 created by JS environment / создается средой JS   
 
-![](../assets/img/protolinks-2.png)   
+![](assets/img/protolinks-2.png)   
 синие поля - функции (конструкторы)   
 красные поля - объекты   
 `__proto__` есть у каждого объекта и ссылается всегда на объект   
@@ -237,7 +237,7 @@ console.log(
       b.__proto__.calculate === Foo.prototype.calculate // true 
 );
 ```
-![](../assets/img/constructor-proto-chain.png) 
+![](assets/img/constructor-proto-chain.png) 
 
 ### INHERITANCE ES2015 WAY
 *extends - наследовать, продолжить, расширить*
@@ -267,7 +267,7 @@ class LegoBatMan extends LegoMan {}
 ```	
 Ключевое слово `super()` - ссылается на конструктор родительского класса
 
-![](../assets/img/inheritance-carefull.png)
+![](assets/img/inheritance-carefull.png)
 
 </details>
 
@@ -317,8 +317,13 @@ Animations : CSS3 Transitions / CSS3 Transforms / requestAnimationFrame / Perfor
 <details>
 <summary>Конспект</summary>
 
+Лексика:
+*Event Loop - цикл событий*
+*Callback - функция обра́тного вызова*
+*Call stack - стек вызовов*
+
 JS is single-threaded | JS является однопоточным   
-one thread = one callstack = one thing at a time | один поток = один стек вызовов = одна вещь за раз   
+one thread = one callstack = one thing at a time | один поток = один стек вызовов = одна вещь за раз  
 
 <table>
 <tr><th>Code</th><th>Callstack (Стек вызовов)</th></tr>
@@ -339,12 +344,12 @@ printSquare();
 </td>
 <td>
 
-1. push printSquare
-1. push square
-1. push mul
-1. pop  mul
-1. pop  square
-1. pop  printSquare
+1. +push printSquare
+2. +push square
+3. +push mul
+4. -pop mul
+5. -pop square
+6. -pop printSquare
 </td></tr>  
 <tr><td>
 
@@ -359,18 +364,20 @@ asyncJob();
 </td>
 <td>
 
-1. push asyncJob
-1. push setTimeout
-1. push job to callback queue
-1. pop  setTimeout
-1. pop  asyncJob
-1. now WebAPI waits 5000ms
-1. push job
-1. pop  job
+1. +push asyncJob
+1. +push setTimeout
+1. +push job to callback queue
+1. -pop setTimeout
+1. -pop asyncJob
+1. =now WebAPI waits 5000ms
+1. +push job
+1. +pop job
 </td></tr>    
 </table>
 
-### Event Loop
+![](assets/img/callstack.gif)
+
+### Event Loop (цикл событий)
 calls functions from callback queue when stack is empty   
 вызывает функции из очереди обратного вызова, когда стек пуст   
 
@@ -463,11 +470,24 @@ for (var i = 1; i <= 2; i++) {
 1. i = 2
 </td></tr>
 
-
-
-
-
 </table>
+
+![](assets/img/687474703a2f2f692e696d6775722e636f6d2f71695a746e48762e676966.gif)
+
+<img src="assets/img/event-loop.gif" alt="" width="400">
+
+
+видео:   
+Про `цикл событий` в JavaScript или "как на самом деле работает асинхронность"? - https://www.youtube.com/watch?v=8cV4ZvHXQL4
+ссылки:   
+https://github.com/Exictos-DCS/watch-your-language/blob/master/async.md
+
+
+
+
+
+
+
 
 </details>
 
