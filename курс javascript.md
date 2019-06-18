@@ -319,8 +319,10 @@ Animations : CSS3 Transitions / CSS3 Transforms / requestAnimationFrame / Perfor
 
 Лексика:
 *Event Loop - цикл событий*
-*Callback - функция обра́тного вызова*
+*Callback - функция обраатного вызова*
 *Call stack - стек вызовов*
+*Callback queue или task queue, или event queue - очередь обратных вызовов или очередь задач, или очередь событий* 
+*Web API - https://developer.mozilla.org/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction*
 
 JS is single-threaded | JS является однопоточным   
 one thread = one callstack = one thing at a time | один поток = один стек вызовов = одна вещь за раз  
@@ -375,11 +377,11 @@ asyncJob();
 </td></tr>    
 </table>
 
-![](assets/img/callstack.gif)
+<img src="assets/img/callstack.gif" alt="" width="700"> 
 
 ### Event Loop (цикл событий)
-calls functions from callback queue when stack is empty   
-вызывает функции из очереди обратного вызова, когда стек пуст   
+Event Loop - calls functions from callback queue when stack is empty   
+Цикл событий - вызывает функции из очереди обратного вызова (задач, событий), когда стек пуст   
 
 <table>
 <tr><th>Code</th><th>Callstack</th></tr>
@@ -472,10 +474,7 @@ for (var i = 1; i <= 2; i++) {
 
 </table>
 
-![](assets/img/687474703a2f2f692e696d6775722e636f6d2f71695a746e48762e676966.gif)
-
-<img src="assets/img/event-loop.gif" alt="" width="400">
-
+<img src="assets/img/687474703a2f2f692e696d6775722e636f6d2f71695a746e48762e676966.gif" alt="" width="700"> <img src="assets/img/event-loop.gif" alt="" width="350">
 
 видео:   
 Про `цикл событий` в JavaScript или "как на самом деле работает асинхронность"? - https://www.youtube.com/watch?v=8cV4ZvHXQL4
