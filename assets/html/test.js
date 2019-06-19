@@ -1,4 +1,6 @@
 function shapeChange() {
+    const COLOR_RED = 'rgb(255, 0, 0)';
+    const COLOR_GREEN = 'rgb(0, 255, 0)';
 
     let shape = document.querySelector("#shape");
     let compStyles = window.getComputedStyle(shape);
@@ -10,23 +12,20 @@ function shapeChange() {
 
     setInterval(animation, 1500); // задаем интервал анимации    
     function animation() {
-        const colorRed = 'rgb(255, 0, 0)';
-        const colorGreen = 'rgb(0, 255, 0)';
+        let backgroundColor = compStyles.getPropertyValue('background-color');
 
-        let color = compStyles.getPropertyValue('background-color');
-
-        if (color == colorRed) {
-            shape.style.backgroundColor = colorGreen;
+        if (backgroundColor == COLOR_RED) {
+            shape.style.backgroundColor = COLOR_GREEN;
             shape.style.height = '100px';
             shape.style.width = '100px';
             shape.style.borderRadius = '20%';
-        } else if (color == colorGreen) {
-            shape.style.backgroundColor = colorRed;
+        } else if (backgroundColor == COLOR_GREEN) {
+            shape.style.backgroundColor = COLOR_RED;
             shape.style.height = '150px';
             shape.style.width = '150px';
             shape.style.borderRadius = '100%';
         } else {
-            shape.style.backgroundColor = colorGreen;
+            shape.style.backgroundColor = COLOR_GREEN;
         }
     }
 }

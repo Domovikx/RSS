@@ -520,11 +520,13 @@ https://www.w3schools.com/css/css3_3dtransforms.asp
 https://html5book.ru/css3-transform/   
 
 ### Анимация JS
-Window.getComputedStyle() - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle  
-Метод Window.getComputedStyle() возвращает объект содержащий значения всех CSS свойств элемента, полученные после применения всех активных таблиц стилей и завершения базовых вычислений значений, которые они могут содержать.
+`Window.getComputedStyle()` - https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle   
+Метод Window.getComputedStyle() возвращает объект содержащий значения всех CSS свойств элемента, полученные после применения всех активных таблиц стилей и завершения базовых вычислений значений, которые они могут содержать.   
+`Element.getBoundingClientRect()` - https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect   
+Метод `Element.getBoundingClientRect()` возвращает размер элемента и его позицию относительно viewport (точки   просмотра или ширины экрана в пикселях CSS в масштабе 100%.)   
+`.setInterval()` - https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval   
+`.setTimeout()` - https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 
-Element.getBoundingClientRect() - https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect   
-Метод Element.getBoundingClientRect() возвращает размер элемента и его позицию относительно viewport (точки   просмотра или ширины экрана в пикселях CSS в масштабе 100%.)
 
 HTML:   
 ```html
@@ -547,6 +549,7 @@ HTML:
 </html>
 ```
 CSS:   
+Первоначально shape - синий прямоугольник   
 ```CSS
 .shape {
   background-color: blue;
@@ -557,6 +560,8 @@ CSS:
 JS:   
 ```JS
 function shapeChange() {
+    const COLOR_RED = 'rgb(255, 0, 0)';
+    const COLOR_GREEN = 'rgb(0, 255, 0)';
 
     let shape = document.querySelector("#shape");
     let compStyles = window.getComputedStyle(shape);
@@ -568,23 +573,20 @@ function shapeChange() {
 
     setInterval(animation, 1500); // задаем интервал анимации    
     function animation() {
-        const colorRed = 'rgb(255, 0, 0)';
-        const colorGreen = 'rgb(0, 255, 0)';
+        let backgroundColor = compStyles.getPropertyValue('background-color');
 
-        let color = compStyles.getPropertyValue('background-color');
-
-        if (color == colorRed) {
-            shape.style.backgroundColor = colorGreen;
+        if (backgroundColor == COLOR_RED) {
+            shape.style.backgroundColor = COLOR_GREEN;
             shape.style.height = '100px';
             shape.style.width = '100px';
             shape.style.borderRadius = '20%';
-        } else if (color == colorGreen) {
-            shape.style.backgroundColor = colorRed;
+        } else if (backgroundColor == COLOR_GREEN) {
+            shape.style.backgroundColor = COLOR_RED;
             shape.style.height = '150px';
             shape.style.width = '150px';
             shape.style.borderRadius = '100%';
         } else {
-            shape.style.backgroundColor = colorGreen;
+            shape.style.backgroundColor = COLOR_GREEN;
         }
     }
 }
