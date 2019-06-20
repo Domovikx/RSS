@@ -4,9 +4,9 @@
 - RSSchool 2019Q1: https://www.youtube.com/playlist?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh
 
 ## Содержание:
-- [NPM / Node.js basics](#NPM-/-Node.js-basics)
-- [Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts]()
-- [JS Functions]()
+- [NPM / Node.js basics](#npm--nodejs-basics)
+- [Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts](#responsive-web-design-flexbox-css-grid-layout-css-recipes--layouts)
+- [JS Functions](#js-functions)
 - []()
 - []()
 - []()
