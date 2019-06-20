@@ -3,21 +3,30 @@
 - Расписание: https://docs.google.com/spreadsheets/d/1oM2O8DtjC0HodB3j7hcIResaWBw8P18tXkOl1ymelvE/htmlview?sle=true#
 - RSSchool 2019Q1: https://www.youtube.com/playlist?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh
 
-## Содержание:
+## Course Content
 - [NPM / Node.js basics](#npm--nodejs-basics)
 - [Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts](#responsive-web-design-flexbox-css-grid-layout-css-recipes--layouts)
 - [JS Functions](#js-functions)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Inheritance in JavaScript. ES6 Classes.](#inheritance-in-javascript-es6-classes)
+- [css-methodologies, BEM	Web Typography](#css-methodologies-bemweb-typography)
+- [DOM](#dom)
+- [DOM Events](#dom-events)
+- [Event Loop. Animation](#event-loop-animation)
+- [Bootstrap](#bootstrap)
+- [Modules in JS](#modules-in-js)
+- [ES6 features. ESLint. Airbnb JavaScript Style Guide](#es6-features-eslint-airbnb-javascript-style-guide)
+- [Webpack. Assets management. Project Structure](#webpack-assets-management-project-structure)
+- [HTTP / HTTP2 / AJAX / Promises](#http--http2--ajax--promises)
+- [JS Callbacks & Promises & async/await](#js-callbacks--promises--asyncawait)
+- [CSS Preprocessors. SASS CSS frameworks](#css-preprocessors-sass-css-frameworks)
+- [Lodash](#lodash)
+- [Interview corejs](#interview-corejs)
+
+
 
 --- 
 ## NPM / Node.js basics
+▲ [Course Content](#course-content)
 Friday, March 29, 2019 
 
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/rs-online-development.md
@@ -31,6 +40,7 @@ https://youtu.be/4psWjsQOSAQ
 
 --- 
 ## Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts 
+▲ [Course Content](#course-content)
 Tuesday, April 2, 2019 
 
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-recipies-and-layouts.md
@@ -680,7 +690,7 @@ Friday, May 3, 2019
 
 
 ---	
-## Самообучение Webpack. Assets management. Project Structure.
+## Webpack. Assets management. Project Structure.
 Monday, May 6, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/webpack.md
 - https://youtu.be/ssORHjHHCzU   
@@ -707,7 +717,7 @@ Monday, May 6, 2019
   
 
 ---		
-## Самообучение HTTP / HTTP2 / AJAX / Promises
+## HTTP / HTTP2 / AJAX / Promises
 Wednesday, May 8, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md  							
 - https://youtu.be/x3ByCM78ETw   
@@ -794,3 +804,43 @@ Tuesday, May 21, 2019
 ---
 ## Lodash
 https://youtu.be/RIp8cF5yTY0
+
+---
+## Interview corejs
+### Question examples:
+   * Data types in JS. Type coercion.
+   * What is hoisting?
+   * Let vs var. Const.
+   * Passing data by value and by reference. Exapmles.
+   * `{a: 10} == {a: 10}`. What will the code return?
+   * What is `this`?
+   * Apply, call, bind. What are they used for? What are the differences?
+   * Closure. Give an example.
+   * Sum(1)(2);
+   * Prototype. Differences between `__proto__` and `prototype`. Example of inheritance.
+   * How to create an object without a prototype?
+   * Array methods that loop over the elements.
+   * `“hello world”.repeating(3)` -> `hello world hello world hello world`. How to implement?
+   * Browser events. Browser default actions abortion.
+   * Event bubbling and event capturing.
+   * Event delegation. Example.
+   * Write a function `F` so `new F === F`
+   * `Function.prototype.bind` polyfill.
+   * `Object.create` polyfill.
+   * Event loop.
+   * Promises.
+
+Full name and contacts of the mentor who will interview you can be found in this 
+
+### Passing the interview
+1. You should contact the mentor personally. Contact details will be announced through Discord.
+2. At the request of the mentor, the interview can take place online or face-to-face.
+3. During the interview mentor:
+  - asks questions;
+  - gets answers;
+  - adds/corrects/explains/gives the right answer, if necessary.
+
+The interview should be passed before 16 June 2019. Take into account that mentor can be busy (vacation, business trip, workload and etc.), so contact him as soon as possible.
+
+- Ссыка на таск: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/interview-corejs.md
+- Контакты ментора: http://app.rs.school/mentor-contacts?course=rs-2019-q1
