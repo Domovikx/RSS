@@ -5,12 +5,17 @@ function shapeChange() {
     let shape = document.querySelector("#shape");
     let compStyles = window.getComputedStyle(shape);
     let boundingClientRect = shape.getBoundingClientRect();
+    let count = 0;
 
     console.log('shape :', shape); // элемент
     console.log('compStyles', compStyles); // выводим все стили элемента
     console.log('boundingClientRect :', boundingClientRect); // размеры и положение элемента
 
-    setInterval(animation, 1500); // задаем интервал анимации    
+    setInterval(() => {
+        animation();
+        countInterval();
+    }, 1500); // задаем интервал анимации 
+
     function animation() {
         let backgroundColor = compStyles.getPropertyValue('background-color');
 
@@ -27,6 +32,11 @@ function shapeChange() {
         } else {
             shape.style.backgroundColor = COLOR_GREEN;
         }
+    }
+
+    function countInterval() {
+        count++;
+        document.getElementById("count").innerHTML = count;
     }
 }
 shapeChange();
