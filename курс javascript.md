@@ -1,16 +1,17 @@
 # Курс JavaScript (JS) лекции - 2 этап (rolling scopes school)
 
-## Расписание
-https://docs.google.com/spreadsheets/d/1oM2O8DtjC0HodB3j7hcIResaWBw8P18tXkOl1ymelvE/htmlview?sle=true#
+#### Расписание
+- https://docs.google.com/spreadsheets/d/1oM2O8DtjC0HodB3j7hcIResaWBw8P18tXkOl1ymelvE/htmlview?sle=true#
 
-## RSSchool 2019Q1
-https://www.youtube.com/playlist?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh
-
-Airbnb JavaScript Style Guide - https://github.com/airbnb/javascript
+#### RSSchool 2019Q1
+- https://www.youtube.com/playlist?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh
+#### Полезные ссылки  
+- Airbnb JavaScript Style Guide - https://github.com/airbnb/javascript
 
 --- 
 Friday, March 29, 2019 
 ## NPM / Node.js basics
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/rs-online-development.md
 
 NPM & Node.js basics  
 https://youtu.be/jX9fJwHq6VU
@@ -18,39 +19,48 @@ https://youtu.be/jX9fJwHq6VU
 Типовая стуректура проекта, package.json best practices  
 https://youtu.be/4psWjsQOSAQ
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/rs-online-development.md
-
 
 --- 
 Tuesday, April 2, 2019 
 ## Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts 
-
-https://youtu.be/k2GtDJKC6HQ
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-recipies-and-layouts.md
+- https://youtu.be/k2GtDJKC6HQ
 
 
 ---
 Wednesday, April 3, 2019 
-## JS Functions		
-			
-RSSchool 2018Q1. JS scope + JS functions. Part1 
-https://youtu.be/c_rHAYNBotQ
-
-RSSchool 2018Q1. JS scope + JS functions. Part2 
-https://youtu.be/h5o_tgEMKxY
-
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-scope.md
-
-Scopes defenition / Nested scope / Shadowing / Hoisting / No block scope / Global Scope / Global Object / Global variables are evil / ES6 let and const
+## JS Functions				
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-scope.md            
+- RSSchool 2018Q1. JS scope + JS functions. Part1 - https://youtu.be/c_rHAYNBotQ
+- RSSchool 2018Q1. JS scope + JS functions. Part2 - https://youtu.be/h5o_tgEMKxY
 
 
 ---													
-Wednesday, April 10, 2019 
-## Inheritance in JavaScript. ES6 Classes.	
+Wednesday, April 10, 2019   
+## Inheritance in JavaScript. ES6 Classes.   
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/inheritance-in-js-and-es6-classes.md 
+- https://youtu.be/O462BetYst8   
 
-https://youtu.be/O462BetYst8   
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/inheritance-in-js-and-es6-classes.md   
-
-What is class / What is object / Classes in JS / typeof / instanceof / Inheritance / Why classes are good / Why classes are bad
+#### Content:   
+- What is class
+- What is object
+    - key
+    - value
+- Classes in JS
+    - Object literals
+    - Functions
+    - ES2015 classes
+- typeof
+- instanceof
+- Inheritance
+    - classical
+    - prototypal
+- Inheritance
+    - Crockford way
+    - ES5 way
+    - ES2015 way
+- Why classes are good
+- Why classes are bad
 
 <details>
 <summary>конспект</summary>
@@ -274,32 +284,38 @@ class LegoBatMan extends LegoMan {}
 ---
 Monday, April 15, 2019 
 ## css-methodologies, BEM	Web Typography	
-
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-methodologies.md
-
-https://habr.com/ru/post/256109/
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-methodologies.md
+- https://habr.com/ru/post/256109/
 
 
 ---
 Friday, April 19, 2019 
-## DOM																
-https://youtu.be/TewWd-6ZrmE 
+## DOM			
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom.md								
+- https://youtu.be/TewWd-6ZrmE 
+- Slides - http://rolling-scopes.github.io/slides/school/dom/#/
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom.md
+#### Content:
+* What is DOM?
+* `Node` props & methods
+* `Element` props & methods
+* `ClassList` API
+* `HTMLElement` props & methods
+* `document`
 
-Content: What is DOM? / Node props & methods / Element props & methods / ClassList API / HTMLElement props & methods
-document 
-
+#### Useful links
+- [Custom Elements](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
+- [Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
 
 ---
 Wednesday, April 24, 2019 
 ## DOM Events
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-events.md  
+- https://youtu.be/G6_YTv78Q1g   
+- https://youtu.be/vcXehC9JgGU   
+ 
 
-https://youtu.be/G6_YTv78Q1g   
-https://youtu.be/vcXehC9JgGU   
-
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-events.md   
-
+#### Content
 * Triggers
 * Event Types
   * Mouse Events
@@ -319,10 +335,10 @@ https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-event
 ---
 Friday, April 26, 2019	
 ## Event Loop. Animation										
-https://youtu.be/dG5ZaHYdre8   
+- https://youtu.be/dG5ZaHYdre8   
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/event-loop-and-animations.md
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/event-loop-and-animations.md
-
+#### Content
 * Event Loop
   * Call stack
   * Event Loop
@@ -336,7 +352,7 @@ https://github.com/rolling-scopes-school/lectures/blob/master/lectures/event-loo
   * Practical task
 
 <details>
-<summary>Конспект</summary>
+<summary>конспект</summary>
 
 ### Лексика:
 - *Event Loop - цикл событий*
@@ -527,7 +543,7 @@ https://html5book.ru/css3-transform/
 `.setInterval()` - https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval   
 `.setTimeout()` - https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 
-
+### Examples
 HTML:   
 ```html
 <!DOCTYPE html>
@@ -595,66 +611,172 @@ shapeChange();
 
 ![](assets/img/6225055.gif)
 
-
 </details>
+
 
 ---
 Thursday, May 2, 2019
 ## Bootstrap												
-https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh   
+- https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh   
+- YouTube client task - https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/youtube.md
 
 
 ---
 Friday, May 3, 2019	
 ## Modules in JS
 
-https://youtu.be/7e-5P6iPFzY   
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-modules.md
+- https://youtu.be/7e-5P6iPFzY
+- http://kirilknysh.github.io/js-modules-talk/#/
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-modules.md
+#### Content:
+1. CommonJS modules
+    - Node.js and require
+    - NPM and package.json
+    - Bower and bower.json
+2. Modules in JavaScript
+    - ECMAScript 5 module systems
+    - ECMAScript 6 modules
+3. The basics of ES6 modules
+    - Named exports
+    - Default exports
+    - Cyclic dependencies
+4. Import and Export in details
+    - Babel
+    - System.js
 
+#### Further reading
+- http://exploringjs.com/es6/ch_modules.html
+- http://jsmodules.io/cjs.html
+
+
+---
+Friday, May 3, 2019	
 ## ES6 features. ESLint. Airbnb JavaScript Style Guide
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/es6.md
+- 2018 - https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG   
+- 2017 - https://youtu.be/tus1W_1Tx8U?list=PLe--kalBDwjhni4LpATaJscPwZUudxVHS   
 
-https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG   
+#### ESLint & Styleguides
+- http://slides.com/uladzimirhalushka/deck-2-3
+- http://slides.com/uladzimirhalushka/deck-2
 
-https://youtu.be/tus1W_1Tx8U?list=PLe--kalBDwjhni4LpATaJscPwZUudxVHS   
+#### Useful links
+- http://www.smashingmagazine.com/2015/09/eslint-the-next-generation-javascript-linter/
 
 
 ---
 Monday, May 6, 2019		
-## Самообучение Webpack. Assets management. Project Structure.											
-https://youtu.be/ssORHjHHCzU   
+## Самообучение Webpack. Assets management. Project Structure.
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/webpack.md  						
+- https://youtu.be/ssORHjHHCzU   
+- Slides - https://docs.google.com/presentation/d/1NTxLzTdci-wvVq0GYAMA7BQYPQKnHEBYt0bOZN-SEMo/mobilepresent?slide=id.g29603f67f0_0_50
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/webpack.md   
 
+#### Content:
+- history
+- modules vs flat files (gulp vs webpack)
+- modules & dependences
+- code splitting
+- Webpack vs AMD, CommonJS, ES6, Browserify
+- performance
+- config:
+    - entry
+    - output
+    - plugins
+    - loaders
+    - preLoaders
+- devtool
+- tips & tricks
+- limitations
+- webpack power in real life
+  
 
 ---
 Wednesday, May 8, 2019		
-## Самообучение HTTP / HTTP2 / AJAX / Promises								
-https://youtu.be/x3ByCM78ETw   
-https://youtu.be/iTi1bXSJre0    
+## Самообучение HTTP / HTTP2 / AJAX / Promises	
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md  							
+- https://youtu.be/x3ByCM78ETw   
+- https://youtu.be/iTi1bXSJre0     
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md   
+#### Content:
+- History and basic structure of WWW
+  - CERN, Sir Timothy John «Tim» Berners-Lee, Håkon Wium Lie
+  - Client-Server model
+  - DNS
+  - TCP-IP; Vinton Gray “Vint” Cerf
+  - Model OSI
+  
+- Structure of HTTP protocol
+  - Methods
+  - Parameters
+  - Cookies
+  - Headers
+  - Status codes
 
+- HTTP features
+  - Simple
+  - Stateless
+  - Pull protocol
+  - Scaleable+ a little bit about load balancers
+  - Idempotency
+
+- Web Services
+  - XML-RPC
+  - SOAP
+  - REST
+
+- Security
+  - Session
+  - HTTPS
+
+- Conclusion
+  - Tips & Tricks
+  - Useful programs & commands 
+  - What to read
 
 --- 
 Saturday, May 11, 2019	
 ## JS Callbacks & Promises & async/await
-https://www.youtube.com/watch?v=0fFg3c4C9tA 2018   
-https://youtu.be/OyQToid6w8E 2017   
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/promises-game-dev.md  
+- https://www.youtube.com/watch?v=0fFg3c4C9tA - Game dev. JS Callbacks _ Promises (2018)   
+- https://youtu.be/OyQToid6w8E - RS School 2017Q3. Promises, Animations, GameDev (2017)   
+ 
 
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/promises-game-dev.md   
+#### Slides:
+- http://andrei-yanovich.github.io/ajax-talk/#/
+- http://andrei-yanovich.github.io/promise-talk/#/
+- https://docs.google.com/presentation/d/1jZ-ucWUsklFmbOrMwZNHagR_ABy0zHSv-RSC2KY6kIk/edit#slide=id.p
+
+#### Content:
+* Ajax
+   * WTF is ajax (sync vs async web app model)
+   * History
+   * XHR api (content types, status, readyState, onreadystatechange, props, methods)
+   * JQuery ajax
+   * Same origin policy
+   * JSONP
+   * CORS
+   * COMET, WS
+   * pros/cons
+* Promise:
+   * JQuery deferreds API
+   * Examples
+   * Promise
+   * Promise states
+   * Promise API
+   * Example with ajax
 
 
 ---
 Tuesday, May 21, 2019	
 ## CSS Preprocessors. SASS CSS frameworks
-
-https://youtu.be/uKLecRul8g4 2017   
-https://youtu.be/3en2mA2MJec?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh 2019    
-
-https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-preprocessors.md   
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-preprocessors.md 
+- https://youtu.be/uKLecRul8g4 2017   
+- https://youtu.be/3en2mA2MJec?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh 2019    
 
 
 ---
 ## Lodash
 https://youtu.be/RIp8cF5yTY0	   													
+
