@@ -26,8 +26,7 @@
 
 --- 
 ## NPM / Node.js basics
-▲ [Course Content](#course-content)
-Friday, March 29, 2019 
+▲ [Course Content](#course-content) | Friday, March 29, 2019 
 
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/rs-online-development.md
 
@@ -40,8 +39,7 @@ https://youtu.be/4psWjsQOSAQ
 
 --- 
 ## Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts 
-▲ [Course Content](#course-content)
-Tuesday, April 2, 2019 
+▲ [Course Content](#course-content) | Tuesday, April 2, 2019 
 
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-recipies-and-layouts.md
 - https://youtu.be/k2GtDJKC6HQ
@@ -49,7 +47,7 @@ Tuesday, April 2, 2019
 
 ---
 ## JS Functions	
-Wednesday, April 3, 2019 
+▲ [Course Content](#course-content) | Wednesday, April 3, 2019 
 			
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-scope.md            
 - RSSchool 2018Q1. JS scope + JS functions. Part1 - https://youtu.be/c_rHAYNBotQ
@@ -58,7 +56,7 @@ Wednesday, April 3, 2019
 
 ---										
 ## Inheritance in JavaScript. ES6 Classes.  
-Wednesday, April 10, 2019    
+▲ [Course Content](#course-content) | Wednesday, April 10, 2019    
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/inheritance-in-js-and-es6-classes.md 
 - https://youtu.be/O462BetYst8   
 
@@ -305,14 +303,14 @@ class LegoBatMan extends LegoMan {}
 
 ---
 ## css-methodologies, BEM	Web Typography	
-Monday, April 15, 2019 
+▲ [Course Content](#course-content) | Monday, April 15, 2019 
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-methodologies.md
 - https://habr.com/ru/post/256109/
 
 
 ---
 ## DOM
-Friday, April 19, 2019 			
+▲ [Course Content](#course-content) | Friday, April 19, 2019 			
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom.md								
 - https://youtu.be/TewWd-6ZrmE 
 - Slides - http://rolling-scopes.github.io/slides/school/dom/#/
@@ -331,7 +329,7 @@ Friday, April 19, 2019
 
 --- 
 ## DOM Events
-Wednesday, April 24, 2019
+▲ [Course Content](#course-content) | Wednesday, April 24, 2019
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/dom-events.md  
 - https://youtu.be/G6_YTv78Q1g   
 - https://youtu.be/vcXehC9JgGU   
@@ -356,7 +354,7 @@ Wednesday, April 24, 2019
 
 ---
 ## Event Loop. Animation	
-Friday, April 26, 2019										
+▲ [Course Content](#course-content) | Friday, April 26, 2019										
 - https://youtu.be/dG5ZaHYdre8   
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/event-loop-and-animations.md
 
@@ -638,14 +636,14 @@ shapeChange();
 
 ---
 ## Bootstrap
-Thursday, May 2, 2019												
+▲ [Course Content](#course-content) | Thursday, May 2, 2019												
 - https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh   
 - YouTube client task - https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/youtube.md
 
 
 ---
 ## Modules in JS
-Friday, May 3, 2019	
+▲ [Course Content](#course-content) | Friday, May 3, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-modules.md
 - https://youtu.be/7e-5P6iPFzY
 - http://kirilknysh.github.io/js-modules-talk/#/
@@ -673,7 +671,7 @@ Friday, May 3, 2019
 
 ---
 ## ES6 features. ESLint. Airbnb JavaScript Style Guide
-Friday, May 3, 2019	
+▲ [Course Content](#course-content) | Friday, May 3, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/es6.md
 - 2018 - https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG   
 - 2017 - https://youtu.be/tus1W_1Tx8U?list=PLe--kalBDwjhni4LpATaJscPwZUudxVHS   
@@ -691,7 +689,7 @@ Friday, May 3, 2019
 
 ---	
 ## Webpack. Assets management. Project Structure.
-Monday, May 6, 2019	
+▲ [Course Content](#course-content) | Monday, May 6, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/webpack.md
 - https://youtu.be/ssORHjHHCzU   
 - Slides - https://docs.google.com/presentation/d/1NTxLzTdci-wvVq0GYAMA7BQYPQKnHEBYt0bOZN-SEMo/mobilepresent?slide=id.g29603f67f0_0_50
@@ -718,7 +716,7 @@ Monday, May 6, 2019
 
 ---		
 ## HTTP / HTTP2 / AJAX / Promises
-Wednesday, May 8, 2019	
+▲ [Course Content](#course-content) | Wednesday, May 8, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md  							
 - https://youtu.be/x3ByCM78ETw   
 - https://youtu.be/iTi1bXSJre0     
@@ -762,7 +760,7 @@ Wednesday, May 8, 2019
 
 --- 
 ## JS Callbacks & Promises & async/await
-Saturday, May 11, 2019	
+▲ [Course Content](#course-content) | Saturday, May 11, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/promises-game-dev.md  
 - https://www.youtube.com/watch?v=0fFg3c4C9tA - Game dev. JS Callbacks _ Promises (2018)   
 - https://youtu.be/OyQToid6w8E - RS School 2017Q3. Promises, Animations, GameDev (2017)   
@@ -795,7 +793,7 @@ Saturday, May 11, 2019
 
 ---
 ## CSS Preprocessors. SASS CSS frameworks
-Tuesday, May 21, 2019	
+▲ [Course Content](#course-content) | Tuesday, May 21, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/css-preprocessors.md 
 - https://youtu.be/uKLecRul8g4 2017   
 - https://youtu.be/3en2mA2MJec?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh 2019    
@@ -803,10 +801,12 @@ Tuesday, May 21, 2019
 
 ---
 ## Lodash
+▲ [Course Content](#course-content)
 https://youtu.be/RIp8cF5yTY0
 
 ---
 ## Interview corejs
+▲ [Course Content](#course-content)
 ### Question examples:
    * Data types in JS. Type coercion.
    * What is hoisting?
