@@ -4,24 +4,23 @@
 - RSSchool 2019Q1: https://www.youtube.com/playlist?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh
 
 ## Course Content
-- [NPM / Node.js basics](#npm--nodejs-basics)
-- [Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts](#responsive-web-design-flexbox-css-grid-layout-css-recipes--layouts)
-- [JS Functions](#js-functions)
-- [Inheritance in JavaScript. ES6 Classes.](#inheritance-in-javascript-es6-classes)
-- [css-methodologies, BEM	Web Typography](#css-methodologies-bemweb-typography)
-- [DOM](#dom)
-- [DOM Events](#dom-events)
-- [Event Loop. Animation](#event-loop-animation)
-- [Bootstrap](#bootstrap)
-- [Modules in JS](#modules-in-js)
-- [ES6 features. ESLint. Airbnb JavaScript Style Guide](#es6-features-eslint-airbnb-javascript-style-guide)
-- [Webpack. Assets management. Project Structure](#webpack-assets-management-project-structure)
-- [HTTP / HTTP2 / AJAX / Promises](#http--http2--ajax--promises)
-- [JS Callbacks & Promises & async/await](#js-callbacks--promises--asyncawait)
-- [CSS Preprocessors. SASS CSS frameworks](#css-preprocessors-sass-css-frameworks)
-- [Lodash](#lodash)
-- [Interview corejs](#interview-corejs)
-
+1. [NPM / Node.js basics](#npm--nodejs-basics)
+1. [Responsive Web Design. Flexbox. CSS Grid Layout. CSS Recipes & Layouts](#responsive-web-design-flexbox-css-grid-layout-css-recipes--layouts)
+1. [JS Functions](#js-functions)
+1. [Inheritance in JavaScript. ES6 Classes.](#inheritance-in-javascript-es6-classes)
+1. [css-methodologies, BEM	Web Typography](#css-methodologies-bemweb-typography)
+1. [DOM](#dom)
+1. [DOM Events](#dom-events)
+1. [Event Loop. Animation](#event-loop-animation)
+1. [Bootstrap](#bootstrap)
+1. [Modules in JS](#modules-in-js)
+1. [ES6 features. ESLint. Airbnb JavaScript Style Guide](#es6-features-eslint-airbnb-javascript-style-guide)
+1. [Webpack. Assets management. Project Structure](#webpack-assets-management-project-structure)
+1. [HTTP / HTTP2 / AJAX / Promises](#http--http2--ajax--promises)
+1. [JS Callbacks & Promises & async/await](#js-callbacks--promises--asyncawait)
+1. [CSS Preprocessors. SASS CSS frameworks](#css-preprocessors-sass-css-frameworks)
+1. [Lodash](#lodash)
+1. [Interview corejs](#interview-corejs)
 
 
 --- 
@@ -673,7 +672,7 @@ shapeChange();
 ## ES6 features. ESLint. Airbnb JavaScript Style Guide
 ▲ [Course Content](#course-content) | Friday, May 3, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/es6.md
-- 2018 - https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG   
+- 2018 Airbnb - https://youtu.be/SqC3MQZ2Ndg?list=PLe--kalBDwjhdXudsOpKooP6q9bAl3rPG   
 - 2017 - https://youtu.be/tus1W_1Tx8U?list=PLe--kalBDwjhni4LpATaJscPwZUudxVHS   
 
 ### Airbnb: 
