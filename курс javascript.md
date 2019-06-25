@@ -23,7 +23,6 @@
 - [Interview corejs](#interview-corejs)
 
 
-
 --- 
 ## NPM / Node.js basics
 ▲ [Course Content](#course-content) | Friday, March 29, 2019 
@@ -80,9 +79,6 @@ https://youtu.be/4psWjsQOSAQ
     - ES2015 way
 - Why classes are good
 - Why classes are bad
-
-<details>
-<summary>конспект</summary>
 
 
 ### Лексика
@@ -298,8 +294,6 @@ class LegoBatMan extends LegoMan {}
 
 ![](assets/img/inheritance-carefull.png)
 
-</details>
-
 
 ---
 ## css-methodologies, BEM	Web Typography	
@@ -370,9 +364,6 @@ class LegoBatMan extends LegoMan {}
   * requestAnimationFrame
   * Performance issues
   * Practical task
-
-<details>
-<summary>конспект</summary>
 
 ### Лексика:
 - *Event Loop - цикл событий*
@@ -628,14 +619,11 @@ function shapeChange() {
 }
 shapeChange();
 ```
-
 ![](assets/img/6225055.gif)
-
-</details>
 
 
 ---
-## Bootstrap
+## YouTube Bootstrap client task
 ▲ [Course Content](#course-content) | Thursday, May 2, 2019												
 - https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh   
 - YouTube client task - https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/youtube.md
@@ -802,8 +790,9 @@ shapeChange();
 ---
 ## Lodash
 ▲ [Course Content](#course-content)
-https://youtu.be/RIp8cF5yTY0?t=585
-Содержание лекции:
+- https://youtu.be/RIp8cF5yTY0?t=585
+- https://lodash.com/
+### Содержание лекции:
 - Lodash старт лекции - https://youtu.be/RIp8cF5yTY0?t=585
 - что такое Lodash - https://youtu.be/RIp8cF5yTY0?t=794 
 - установка и использование - https://youtu.be/RIp8cF5yTY0?t=1931
@@ -880,6 +869,7 @@ https://youtu.be/RIp8cF5yTY0?t=585
 - map()- https://youtu.be/RIp8cF5yTY0?t=11447
 - reduce() - https://youtu.be/RIp8cF5yTY0?t=11563
 - orberBy() группировка и сортировка - https://youtu.be/RIp8cF5yTY0?t=11731
+
 
 ---
 ## Interview corejs
