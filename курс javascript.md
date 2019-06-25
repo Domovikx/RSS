@@ -802,7 +802,84 @@ shapeChange();
 ---
 ## Lodash
 ▲ [Course Content](#course-content)
-https://youtu.be/RIp8cF5yTY0
+https://youtu.be/RIp8cF5yTY0?t=585
+Содержание лекции:
+- Lodash старт лекции - https://youtu.be/RIp8cF5yTY0?t=585
+- что такое Lodash - https://youtu.be/RIp8cF5yTY0?t=794 
+- установка и использование - https://youtu.be/RIp8cF5yTY0?t=1931
+- документация - https://youtu.be/RIp8cF5yTY0?t=2119
+- основные категории функций - https://youtu.be/RIp8cF5yTY0?t=2261
+- семейства функций - https://youtu.be/RIp8cF5yTY0?t=2388
+- примеры - https://youtu.be/RIp8cF5yTY0?t=2640
+- noop() - функция которая ничего не делает - https://youtu.be/RIp8cF5yTY0?t=3166
+- identity(value) - возвращает первый аргумент который принимает - https://youtu.be/RIp8cF5yTY0?t=3284
+- stub* Functions - https://youtu.be/RIp8cF5yTY0?t=3383
+- uniqueId() - уникальный ID - https://youtu.be/RIp8cF5yTY0?t=3466
+- простые арифметические функции - https://youtu.be/RIp8cF5yTY0?t=3513
+- round округление - https://youtu.be/RIp8cF5yTY0?t=3577
+- математические функции - https://youtu.be/RIp8cF5yTY0?t=3727
+- Case function - https://youtu.be/RIp8cF5yTY0?t=4000
+- trim functions (обрезка. подрезка строк) - https://youtu.be/RIp8cF5yTY0?t=4093
+- escape/unescape escapeRegExp - https://youtu.be/RIp8cF5yTY0?t=4175
+- pad function заполнение символами строки с указанием ее длины - https://youtu.be/RIp8cF5yTY0?t=4352
+- is* Function - https://youtu.be/RIp8cF5yTY0?t=4493
+- isArray(value) isArrayLike() - https://youtu.be/RIp8cF5yTY0?t=5164
+- isObject() - https://youtu.be/RIp8cF5yTY0?t=5338
+- isUndefined() isNull isNil - https://youtu.be/RIp8cF5yTY0?t=5533
+- JS tricks: undefined & null - https://youtu.be/RIp8cF5yTY0?t=5641
+- isBoolean isNumber isString - https://youtu.be/RIp8cF5yTY0?t=5744
+- JS tricks: string - https://youtu.be/RIp8cF5yTY0?t=5902
+- isFunction(value) - https://youtu.be/RIp8cF5yTY0?t=6137
+- isEmpty(value) - https://youtu.be/RIp8cF5yTY0?t=6258
+- isError(value) - https://youtu.be/RIp8cF5yTY0?t=6326
+- isEqual(value, other) - https://youtu.be/RIp8cF5yTY0?t=6377
+- isMatch(object, source) - https://youtu.be/RIp8cF5yTY0?t=6441
+- escape* unescape Functions - https://youtu.be/RIp8cF5yTY0?t=6523
+- to* Functions - https://youtu.be/RIp8cF5yTY0?t=6530
+- defaultTo(value, defaultValue) - https://youtu.be/RIp8cF5yTY0?t=6618
+- toPath(path) - https://youtu.be/RIp8cF5yTY0?t=6700
+- get(object, path, [defaultValue]) - https://youtu.be/RIp8cF5yTY0?t=6764
+- get + toPath - https://youtu.be/RIp8cF5yTY0?t=6880
+- has(object, path) - https://youtu.be/RIp8cF5yTY0?t=7016
+- hasIn(object, path) - https://youtu.be/RIp8cF5yTY0?t=7091
+- pick(object, [paths]) создает объект из объекта по шаблону - https://youtu.be/RIp8cF5yTY0?t=7101
+- omit(object, [paths]) - https://youtu.be/RIp8cF5yTY0?t=7160
+- at(object, [paths]) - https://youtu.be/RIp8cF5yTY0?t=7216
+- keys(object) - https://youtu.be/RIp8cF5yTY0?t=7257
+- valuesIn(object) - https://youtu.be/RIp8cF5yTY0?t=7324 
+- toPairs(object) - https://youtu.be/RIp8cF5yTY0?t=7363
+- fromPairs(pairs) - https://youtu.be/RIp8cF5yTY0?t=7450
+- set(object, path, value) - https://youtu.be/RIp8cF5yTY0?t=7483
+- unset(object, path) удаление пропертей из объекта - https://youtu.be/RIp8cF5yTY0?t=7596
+- assign(object, [sources]) -  https://youtu.be/RIp8cF5yTY0?t=7712
+- defaultsDeep(object, [sources]) - https://youtu.be/RIp8cF5yTY0?t=7869
+- merge(object, [sources]) - https://youtu.be/RIp8cF5yTY0?t=7909
+- range([start=0], end, [step=1]) создание заполненного массива - https://youtu.be/RIp8cF5yTY0?t=7956
+- Getting Array Items - head last nth - https://youtu.be/RIp8cF5yTY0?t=8041
+- Slicing Arrays - https://youtu.be/RIp8cF5yTY0?t=8154
+- Removing Array Items - https://youtu.be/RIp8cF5yTY0?t=8301
+- Flattening Nested Arrays - https://youtu.be/RIp8cF5yTY0?t=8354
+- Combining Arrays - https://youtu.be/RIp8cF5yTY0?t=8441
+- constant(value) - https://youtu.be/RIp8cF5yTY0?t=8757
+- stubs - https://youtu.be/RIp8cF5yTY0?t=8855
+- update(object, path, updater) - https://youtu.be/RIp8cF5yTY0?t=8944
+- assignInWith(object, sources, [customizer]) - https://youtu.be/RIp8cF5yTY0?t=9078
+- mergeWith(object, sources, customizer) - https://youtu.be/RIp8cF5yTY0?t=9164
+- property(path) - https://youtu.be/RIp8cF5yTY0?t=9238
+- setter functions - https://youtu.be/RIp8cF5yTY0?t=9844
+- partial(func, [partials]) - https://youtu.be/RIp8cF5yTY0?t=10160
+- curry(func, [arity=func.length]) - https://youtu.be/RIp8cF5yTY0?t=10287
+- Predicates - https://youtu.be/RIp8cF5yTY0?t=10453
+- pickBy(object, [predicate=_.identity]) - https://youtu.be/RIp8cF5yTY0?t=10569
+- filter(collection, [predicate=_.identity]) - https://youtu.be/RIp8cF5yTY0?t=10624
+- matches(source) - https://youtu.be/RIp8cF5yTY0?t=10859
+- negate(predicate) - https://youtu.be/RIp8cF5yTY0?t=11014
+- matchesProperty(path, srcValue) - https://youtu.be/RIp8cF5yTY0?t=11130
+- iteratee([func=_.identity]) - https://youtu.be/RIp8cF5yTY0?t=11168
+- filter() - https://youtu.be/RIp8cF5yTY0?t=11224
+- map()- https://youtu.be/RIp8cF5yTY0?t=11447
+- reduce() - https://youtu.be/RIp8cF5yTY0?t=11563
+- orberBy() группировка и сортировка - https://youtu.be/RIp8cF5yTY0?t=11731
 
 ---
 ## Interview corejs
