@@ -12,7 +12,7 @@
 - [DOM](#dom)
 - [DOM Events](#dom-events)
 - [Event Loop. Animation](#event-loop-animation)
-- [Bootstrap](#bootstrap)
+- [YouTube Bootstrap client task](#youtube-bootstrap-client-task)
 - [Modules in JS](#modules-in-js)
 - [ES6 features. ESLint. Airbnb JavaScript Style Guide](#es6-features-eslint-airbnb-javascript-style-guide)
 - [Webpack. Assets management. Project Structure](#webpack-assets-management-project-structure)
@@ -633,8 +633,48 @@ shapeChange();
 ## Modules in JS
 ▲ [Course Content](#course-content) | Friday, May 3, 2019	
 - https://github.com/rolling-scopes-school/lectures/blob/master/lectures/js-modules.md
-- https://youtu.be/7e-5P6iPFzY
 - http://kirilknysh.github.io/js-modules-talk/#/
+
+Лекция : https://youtu.be/7e-5P6iPFzY
+
+- начало лекции - https://youtu.be/7e-5P6iPFzY?t=171
+- зачем нужны модули - https://youtu.be/7e-5P6iPFzY?t=193
+- пример без модульности - https://youtu.be/7e-5P6iPFzY?t=299
+- как организовать модули - https://youtu.be/7e-5P6iPFzY?t=353
+<br>
+- одиночный модуль (самовызывающиеся функции) - https://youtu.be/7e-5P6iPFzY?t=422
+- много-файловый модуль - https://youtu.be/7e-5P6iPFzY?t=633
+<br>
+- commonJS - https://youtu.be/7e-5P6iPFzY?t=893 
+- commonJS loaders - https://youtu.be/7e-5P6iPFzY?t=1083
+<br>
+- AMD - https://youtu.be/7e-5P6iPFzY?t=1337
+- AMD loaders - https://youtu.be/7e-5P6iPFzY?t=1473
+- AMD loaders optimizer - https://youtu.be/7e-5P6iPFzY?t=2029
+<br>
+- ES6 modules - https://youtu.be/7e-5P6iPFzY?t=2258
+  - ES6 modules loaders - https://youtu.be/7e-5P6iPFzY?t=2396
+  - ES6 modules loaders webpack - https://youtu.be/7e-5P6iPFzY?t=2426
+  - ES6 modules подробнее - https://youtu.be/7e-5P6iPFzY?t=2670
+  - ES6 modules exports - https://youtu.be/7e-5P6iPFzY?t=2782
+  - ES6 modules default (function / class) exports - https://youtu.be/7e-5P6iPFzY?t=2870
+  - ES6 modules inline vs clause exports - https://youtu.be/7e-5P6iPFzY?t=3009
+<br>
+- ES6 modules imports - https://youtu.be/7e-5P6iPFzY?t=3177
+  - ES6 modules named imports - https://youtu.be/7e-5P6iPFzY?t=3201
+  - ES6 modules default imports - https://youtu.be/7e-5P6iPFzY?t=3300
+  - ES6 modules empty imports - https://youtu.be/7e-5P6iPFzY?t=3345
+  - ES6 modules imports are hoisted - https://youtu.be/7e-5P6iPFzY?t=3418
+  - ES6 modules imports are read-only views on export - https://youtu.be/7e-5P6iPFzY?t=3479
+  - ES6 modules cyclic dependencies (циклические зависимости это плохо) - https://youtu.be/7e-5P6iPFzY?t=3883
+
+- ES6 modules loader API - https://youtu.be/7e-5P6iPFzY?t=4502
+<br>
+- **лексика :**
+  - require (рекваер) - требовать-запрашивать
+  - resolve - разрешить
+  - parsing - разбираться на части
+  - implementation - (имплементить) - выполненить, осуществить
 
 ### Content:
 1. CommonJS modules
