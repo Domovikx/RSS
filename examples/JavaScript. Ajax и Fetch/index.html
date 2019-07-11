@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Общение с сервером в JavaScript. Ajax и Fetch</title>
+</head>
+
+<body>
+
+  <script>
+    const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+    const metod = 'GET';
+
+    main2();
+
+    function main1() {
+      fetch(url)
+        .then(response => response.json())
+        .then(date => console.log('date :', date))
+        .catch((err) => {
+          console.log('err :', err);
+        });
+    }
+
+    async function main2() {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+      } catch (err) {
+        console.log('err :', err);
+      }
+      console.log('date :', date);
+    }
+  </script>
+
+</body>
+
+</html>

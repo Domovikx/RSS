@@ -22,6 +22,8 @@
 - [Lodash](#lodash)
 - [Interview corejs](#interview-corejs)
 
+дополнение от меня
+- [Общение с сервером в JavaScript. Ajax и Fetch.]()
 
 --- 
 ## NPM / Node.js basics
@@ -1023,3 +1025,56 @@ The interview should be passed before 16 June 2019. Take into account that mento
 
 - Ссыка на таск: https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/interview-corejs.md
 - Контакты ментора: http://app.rs.school/mentor-contacts?course=rs-2019-q1
+
+## Общение с сервером в JavaScript. Ajax и Fetch.
+▲ [Course Content](#course-content)
+1. XMLHttpRequest - https://youtu.be/SF5yHkfiZkY?t=714
+1. JSON.parse() - https://youtu.be/SF5yHkfiZkY?t=1069
+1. jQuery AJAX - https://youtu.be/SF5yHkfiZkY?t=1284
+1. - **AJAX** -  **A**synchronous **J**avascript **A**nd **X**ML - запрос к серверу без перезагрузки страницы
+1. jQuery AJAX упрощаем запрос - https://youtu.be/SF5yHkfiZkY?t=1520
+1. async/await jQuery - https://youtu.be/SF5yHkfiZkY?t=1599
+1. - loupe - посмотреть как работает асинхронность - http://latentflip.com/loupe
+1. fetch() - https://youtu.be/SF5yHkfiZkY?t=1779
+1. fetch() - цепочка обработчиков - https://youtu.be/SF5yHkfiZkY?t=1974
+1. что такое потоки - https://youtu.be/SF5yHkfiZkY?t=2164
+1. где обрабатываются ошибки - https://youtu.be/SF5yHkfiZkY?t=2255
+1. fetch() async/await - https://youtu.be/SF5yHkfiZkY?t=2434
+1. конвертатор валют - https://youtu.be/SF5yHkfiZkY?t=2619
+
+- HTTP-методы : 
+GET — получение ресурса
+POST — создание ресурса
+PUT — обновление ресурса
+DELETE — удаление ресурса
+
+- https://learn.javascript.ru/promise
+- https://habr.com/ru/company/ruvds/blog/414373/ - Конструкция async/await появилась в стандарте ES7.
+
+Пример **main1()** - на промисах:<br>
+Цепочки промисов - «Чейнинг» (chaining), то есть возможность строить асинхронные цепочки из промисов.
+```JS
+    const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+    const metod = 'GET';
+
+    main2();
+
+    function main1() {
+      fetch(url)
+        .then(response => response.json())
+        .then(date => console.log('date :', date))
+        .catch((err) => {
+          console.log('err :', err);
+        });
+    }
+
+    async function main2() {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+      } catch (err) {
+        console.log('err :', err);
+      }
+      console.log('date :', date);
+    }
+```
