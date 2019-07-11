@@ -628,6 +628,40 @@ shapeChange();
 - https://youtu.be/1Nk09Z4ca4A?list=PLe--kalBDwjj81fKdWlvpLsizajSAK-lh   
 - YouTube client task - https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/youtube.md
 
+1. **.editorconfig** - https://youtu.be/1Nk09Z4ca4A?t=1810 <br>
+http://editorconfig.org <br>
+.editorconfig - файл который нужен для плагина EditorConfig - https://editorconfig.org/#download
+```
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.js]
+quote_type = single
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.json]
+insert_final_newline = false
+```
+2. npm - https://youtu.be/1Nk09Z4ca4A?t=2177
+3. lodash - https://youtu.be/1Nk09Z4ca4A?t=2426 <br>
+```npm i lodash``` ( https://www.npmjs.com/package/lodash )
+4. dependencies vs devdependencies - https://youtu.be/1Nk09Z4ca4A?t=2515  
+5. eslint-config-airbnb - https://www.npmjs.com/package/eslint-config-airbnb
+для npm 5+ : ```npx install-peerdeps --dev eslint-config-airbnb```
+6. **.gitignore** - https://youtu.be/1Nk09Z4ca4A?t=2787
+
+
+
+
 
 ---
 ## Modules in JS
@@ -637,9 +671,9 @@ shapeChange();
 
 ### Лекция : https://youtu.be/7e-5P6iPFzY
 1. начало лекции - https://youtu.be/7e-5P6iPFzY?t=171
-1. зачем нужны модули - https://youtu.be/7e-5P6iPFzY?t=193
-1. пример без модульности - https://youtu.be/7e-5P6iPFzY?t=299
-1. как организовать модули - https://youtu.be/7e-5P6iPFzY?t=353
+2. зачем нужны модули - https://youtu.be/7e-5P6iPFzY?t=193
+3. пример без модульности - https://youtu.be/7e-5P6iPFzY?t=299
+4. как организовать модули - https://youtu.be/7e-5P6iPFzY?t=353
 <br><br>
 1. одиночный модуль (самовызывающиеся функции) - https://youtu.be/7e-5P6iPFzY?t=422
 1. много-файловый модуль - https://youtu.be/7e-5P6iPFzY?t=633
@@ -744,9 +778,48 @@ shapeChange();
 ---		
 ## HTTP / HTTP2 / AJAX / Promises
 ▲ [Course Content](#course-content) | Wednesday, May 8, 2019	
-- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md  							
+- https://github.com/rolling-scopes-school/lectures/blob/master/lectures/http.md <br>	
+Лекции: 				
 - https://youtu.be/x3ByCM78ETw   
-- https://youtu.be/iTi1bXSJre0     
+- https://youtu.be/iTi1bXSJre0 <br><br>
+- DNS (Domain Name System) - https://youtu.be/x3ByCM78ETw?t=571
+  - DNS (Lookup time) - https://youtu.be/x3ByCM78ETw?t=677
+  - DNS statistics - https://youtu.be/x3ByCM78ETw?t=795
+  - http - https://youtu.be/x3ByCM78ETw?t=850
+  - http evolution - https://youtu.be/x3ByCM78ETw?t=1004
+  - connection: keep-alive - https://youtu.be/x3ByCM78ETw?t=1206
+  - проблема 6 соединений - https://youtu.be/x3ByCM78ETw?t=1262
+- HTTP 1.1 features - https://youtu.be/x3ByCM78ETw?t=1411
+  - GZIP сжатие информации -  https://youtu.be/x3ByCM78ETw?t=1559
+  - HTTP metods - https://youtu.be/x3ByCM78ETw?t=1615
+  - POST - https://youtu.be/x3ByCM78ETw?t=1748
+- status code defenition - https://youtu.be/x3ByCM78ETw?t=1783
+  - 500 server error - bed practices - https://youtu.be/x3ByCM78ETw?t=1876 
+  - 404 client error - bed practice - https://youtu.be/x3ByCM78ETw?t=1920
+  - 301 redirection - https://youtu.be/x3ByCM78ETw?t=1938
+- cookies - https://youtu.be/x3ByCM78ETw?t=2048
+  - JSON web tokens (jwt) - https://youtu.be/x3ByCM78ETw?t=2520
+  - set cookies - https://youtu.be/x3ByCM78ETw?t=2644
+  - let's imagine - https://youtu.be/x3ByCM78ETw?t=2725
+  - web-services - https://youtu.be/x3ByCM78ETw?t=3086
+  - REST (request/response) - https://youtu.be/x3ByCM78ETw?t=3465
+- AJAX - https://youtu.be/iTi1bXSJre0
+  - XMLHttpRequest - https://youtu.be/iTi1bXSJre0?t=126
+  - example - https://youtu.be/iTi1bXSJre0?t=412
+  - jQuery - Ajax - https://youtu.be/iTi1bXSJre0?t=734
+  - Same Origin Policy - https://youtu.be/iTi1bXSJre0?t=809
+  - CORS - https://youtu.be/iTi1bXSJre0?t=1080
+  - long polling - https://youtu.be/iTi1bXSJre0?t=1413
+  - AJAX pros - https://youtu.be/iTi1bXSJre0?t=1634
+- promise() - https://youtu.be/iTi1bXSJre0?t=1759
+  - промисификация - https://youtu.be/iTi1bXSJre0?t=2316
+  - error handling - https://youtu.be/iTi1bXSJre0?t=2516
+  - Promise.all(array), Promise.race(array) - https://youtu.be/iTi1bXSJre0?t=2744
+  - Fetch () - https://youtu.be/iTi1bXSJre0?t=2945
+
+- лексика:
+  - resolve - разрешить
+  - reject - отклонить
 
 ### Content:
 - History and basic structure of WWW
