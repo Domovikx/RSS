@@ -7,18 +7,14 @@ export default App;
 
 
 class ProgrammingLanguageRating extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: 'frontend',
-      languageRating: [],
-      url: 'https://frontend-test-api.alex93.now.sh/api/languages?group=',
-      urlRespons: 'https://frontend-test-api.alex93.now.sh/api/languages?group=frontend'
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    value: 'frontend',
+    data: [],
+    url: 'https://frontend-test-api.alex93.now.sh/api/languages?group=',
+    urlRespons: 'https://frontend-test-api.alex93.now.sh/api/languages?group=frontend'
+  };
+  handleChange = this.handleChange.bind(this);
+  handleSubmit = this.handleSubmit.bind(this);
 
   handleChange(event) {
     this.setState({
@@ -32,15 +28,14 @@ class ProgrammingLanguageRating extends Component {
 
     const getRequest = async () => {
       const api_url = await fetch(this.state.urlRespons);
-      const languageRating = await api_url.json();
-      await this.setState({ languageRating })
+      const answer = await api_url.json();
+      await this.setState({ data: answer.data })
+      await console.log('data :', this.state.data);
     }
     getRequest();
   }
 
   render() {
-    const { languageRating } = this.state;
-    console.log('languageRating', languageRating)
     return (
       <>
         <form className='form-group' onSubmit={this.handleSubmit}>
@@ -55,24 +50,23 @@ class ProgrammingLanguageRating extends Component {
           </label>
           <input className="btn btn-primary mb-2" type="submit" value="Выбрать" />
         </form>
-        <div>
-          {languageRating.data &&
-            <div>
-              {
-                languageRating.data.map((data, id) =>
-                  <div key={id}>
-                    {data.logo &&
-                      <img src={data.logo} alt="альтернативный текст" width='100px' />}
-                    <p>{data.name}</p>
-                    <p>{data.year}</p>
-                    {data.docs &&
-                      <a href={data.docs}>Документация</a>}
-                  </div>)
-              }
-            </div>
-          }
-        </div>
+        <LanguageRatingList data={this.state.data} />
       </>
     );
+  }
+}
+
+class LanguageRatingList extends Component {
+  render() {
+    const { data } = this.props;
+    return <div>
+      {data && data.map((data, id) => <div key={id}>
+        {data.logo && <img src={data.logo} alt="img" width='100px' />}
+        <p>{data.name}</p>
+        <p>{data.year}</p>
+        {data.docs && <a href={data.docs}>Документация</a>}
+      </div>)
+      }
+    </div>
   }
 }
