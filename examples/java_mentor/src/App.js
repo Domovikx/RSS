@@ -59,13 +59,15 @@ class ProgrammingLanguageRating extends Component {
 class LanguageRatingList extends Component {
   render() {
     const { data } = this.props;
-    return <div>
-      {data && data.map((data, id) => <div key={id}>
-        {data.logo && <img src={data.logo} alt="img" width='100px' />}
-        <p>{data.name}</p>
-        <p>{data.year}</p>
-        {data.docs && <a href={data.docs}>Документация</a>}
-      </div>)
+    return <div class="row">
+      {data && data.map((data, id) =>
+        <div key={id} class="card" width='width: 18rem'>
+          {data.logo && <img src={data.logo} alt="img" class=""
+            width='200px' />}
+          <p>{data.name}</p>
+          <p>{data.year}</p>
+          {data.docs && <a href={data.docs}>Документация</a>}
+        </div>)
       }
     </div>
   }
