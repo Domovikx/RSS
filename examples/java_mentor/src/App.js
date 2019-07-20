@@ -61,7 +61,7 @@ class LanguageRatingList extends Component {
     const { data } = this.props;
     return <div class="row">
       {data && data.map((data, id) =>
-        <div key={id} class="card" width='width: 18rem'>
+        <div key={id} class="card col-sm-6" width='width: 18rem'>
           {data.logo && <img src={data.logo} alt="img" class=""
             width='200px' />}
           <p>{data.name}</p>
