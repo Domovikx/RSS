@@ -53,7 +53,7 @@ class ProgrammingLanguageRating extends Component {
               <option value="mobile">Mobile</option>
             </select>
           </label>
-          <input type="submit" value="Выбрать" />
+          <input class="btn btn-primary mb-2" type="submit" value="Выбрать" />
         </form>
         <div>
           {languageRating.data &&
