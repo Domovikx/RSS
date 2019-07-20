@@ -44,16 +44,16 @@ class ProgrammingLanguageRating extends Component {
     return (
       <>
         <form className='form-group' onSubmit={this.handleSubmit}>
-          <label for="exampleFormControlSelect1">
+          <label htmlFor="exampleFormControlSelect1">
             <p>Programming Language Rating</p>
-            <select class="form-control" id="exampleFormControlSelect1"
+            <select className="form-control" id="exampleFormControlSelect1"
               value={this.state.value} onChange={this.handleChange}>
               <option value="backend">Back-end</option>
               <option value="frontend">Front-end</option>
               <option value="mobile">Mobile</option>
             </select>
           </label>
-          <input class="btn btn-primary mb-2" type="submit" value="Выбрать" />
+          <input className="btn btn-primary mb-2" type="submit" value="Выбрать" />
         </form>
         <div>
           {languageRating.data &&
