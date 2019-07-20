@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
 
-
-const App = () => (<div><ProgrammingLanguageRating /></div>)
+const App = () => (<div className='container'><ProgrammingLanguageRating /></div>)
 export default App;
 
 
@@ -38,17 +36,19 @@ class ProgrammingLanguageRating extends Component {
   render() {
     return (
       <>
-        <form className='form-group' onSubmit={this.handleSubmit}>
-          <label htmlFor="exampleFormControlSelect1">
-            <p>Programming Language Rating</p>
-            <select className="form-control" id="exampleFormControlSelect1"
+        <h1 className='row justify-content-md-center'>Programming Language Rating</h1>
+        <form className='form-group row justify-content-md-center' onSubmit={this.handleSubmit}>
+          <div class="form-inline mb-2">
+            <select class="custom-select" id="inputGroupSelect02"
               value={this.state.value} onChange={this.handleChange}>
               <option value="backend">Back-end</option>
               <option value="frontend">Front-end</option>
               <option value="mobile">Mobile</option>
             </select>
-          </label>
-          <input className="btn btn-primary mb-2" type="submit" value="Выбрать" />
+            <div class="input-group-append">
+              <input class="input-group-text" for="inputGroupSelect02" type="submit" value="Выбрать" />
+            </div>
+          </div>
         </form>
         <LanguageRatingList data={this.state.data} />
       </>
