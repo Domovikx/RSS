@@ -68,7 +68,7 @@ class LanguageRatingList extends Component {
           <div className='card-body'>
             <h4 className='card-title'>{data.name}</h4>
             <h6 class="card-subtitle mb-2 text-muted">{data.year}</h6>
-            {data.docs && <a href={data.docs} target='_blank' class="btn btn-info">Документация</a>}
+            {data.docs && <a href={data.docs} target='_blank' rel='noreferrer noopener' class="btn btn-info">Документация</a>}
           </div>
         </div>)
       }
