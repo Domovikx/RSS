@@ -36,20 +36,22 @@ class ProgrammingLanguageRating extends Component {
   render() {
     return (
       <>
-        <h1 className='row justify-content-md-center'>Programming Language Rating</h1>
-        <form className='form-group row justify-content-md-center' onSubmit={this.handleSubmit}>
-          <div class="form-inline mb-2">
-            <select class="custom-select" id="inputGroupSelect02"
-              value={this.state.value} onChange={this.handleChange}>
-              <option value="backend">Back-end</option>
-              <option value="frontend">Front-end</option>
-              <option value="mobile">Mobile</option>
-            </select>
-            <div class="input-group-append">
-              <input class="input-group-text" for="inputGroupSelect02" type="submit" value="Выбрать" />
+        <div>
+          <h1 className='row justify-content-md-center'>Programming Language Rating</h1>
+          <form className='form-group row justify-content-md-center' onSubmit={this.handleSubmit}>
+            <div class="input-group mb-3 col-sm-6">
+              <select class="custom-select" id="inputGroupSelect02"
+                value={this.state.value} onChange={this.handleChange}>
+                <option value="backend">Back-end</option>
+                <option value="frontend">Front-end</option>
+                <option value="mobile">Mobile</option>
+              </select>
+              <div class="input-group-append">
+                <input class="input-group-text" for="inputGroupSelect02" type="submit" value="Выбрать" />
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
         <LanguageRatingList data={this.state.data} />
       </>
     );
@@ -64,8 +66,8 @@ class LanguageRatingList extends Component {
         <div key={id} class="card">
           {data.logo && <img src={data.logo} alt="img" class="card-img-bottom" />}
           <div className='card-body'>
-            <h2>{data.name}</h2>
-            <p>{data.year}</p>
+            <h4 className='card-title'>{data.name}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">{data.year}</h6>
             {data.docs && <a href={data.docs} target='_blank' class="btn btn-info">Документация</a>}
           </div>
         </div>)
