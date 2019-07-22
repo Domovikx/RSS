@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/RSS/java_mentor/static/css/main.815c0688.chunk.css",
-    "main.js": "/RSS/java_mentor/static/js/main.bd0786b2.chunk.js",
-    "main.js.map": "/RSS/java_mentor/static/js/main.bd0786b2.chunk.js.map",
-    "runtime~main.js": "/RSS/java_mentor/static/js/runtime~main.712433d7.js",
-    "runtime~main.js.map": "/RSS/java_mentor/static/js/runtime~main.712433d7.js.map",
-    "static/css/2.266e55a5.chunk.css": "/RSS/java_mentor/static/css/2.266e55a5.chunk.css",
-    "static/js/2.8f9627ac.chunk.js": "/RSS/java_mentor/static/js/2.8f9627ac.chunk.js",
-    "static/js/2.8f9627ac.chunk.js.map": "/RSS/java_mentor/static/js/2.8f9627ac.chunk.js.map",
-    "index.html": "/RSS/java_mentor/index.html",
-    "precache-manifest.7ec69d9ab896af6335ffb723c077ed08.js": "/RSS/java_mentor/precache-manifest.7ec69d9ab896af6335ffb723c077ed08.js",
-    "service-worker.js": "/RSS/java_mentor/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/RSS/java_mentor/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.815c0688.chunk.css.map": "/RSS/java_mentor/static/css/main.815c0688.chunk.css.map",
-    "static/media/index.css": "/RSS/java_mentor/static/media/desk-background.6a3717a6.jpg"
+    "main.css": "/RSS/static/css/main.fdaa1d08.chunk.css",
+    "main.js": "/RSS/static/js/main.c7d7b844.chunk.js",
+    "main.js.map": "/RSS/static/js/main.c7d7b844.chunk.js.map",
+    "runtime~main.js": "/RSS/static/js/runtime~main.b5737e73.js",
+    "runtime~main.js.map": "/RSS/static/js/runtime~main.b5737e73.js.map",
+    "static/css/2.266e55a5.chunk.css": "/RSS/static/css/2.266e55a5.chunk.css",
+    "static/js/2.8f9627ac.chunk.js": "/RSS/static/js/2.8f9627ac.chunk.js",
+    "static/js/2.8f9627ac.chunk.js.map": "/RSS/static/js/2.8f9627ac.chunk.js.map",
+    "index.html": "/RSS/index.html",
+    "precache-manifest.81aa7500fca34570cadd648f7369a174.js": "/RSS/precache-manifest.81aa7500fca34570cadd648f7369a174.js",
+    "service-worker.js": "/RSS/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/RSS/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.fdaa1d08.chunk.css.map": "/RSS/static/css/main.fdaa1d08.chunk.css.map",
+    "static/media/index.css": "/RSS/static/media/desk-background.6a3717a6.jpg"
   }
 }
