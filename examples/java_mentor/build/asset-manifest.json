@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/RSS/examples/java_mentor/build/static/css/main.3fe48134.chunk.css",
-    "main.js": "/RSS/examples/java_mentor/build/static/js/main.9bb9b300.chunk.js",
-    "main.js.map": "/RSS/examples/java_mentor/build/static/js/main.9bb9b300.chunk.js.map",
-    "runtime~main.js": "/RSS/examples/java_mentor/build/static/js/runtime~main.9f16ab5e.js",
-    "runtime~main.js.map": "/RSS/examples/java_mentor/build/static/js/runtime~main.9f16ab5e.js.map",
-    "static/css/2.266e55a5.chunk.css": "/RSS/examples/java_mentor/build/static/css/2.266e55a5.chunk.css",
-    "static/js/2.8f9627ac.chunk.js": "/RSS/examples/java_mentor/build/static/js/2.8f9627ac.chunk.js",
-    "static/js/2.8f9627ac.chunk.js.map": "/RSS/examples/java_mentor/build/static/js/2.8f9627ac.chunk.js.map",
-    "index.html": "/RSS/examples/java_mentor/build/index.html",
-    "precache-manifest.be8842b9dfc18feda5b7d502193cd980.js": "/RSS/examples/java_mentor/build/precache-manifest.be8842b9dfc18feda5b7d502193cd980.js",
-    "service-worker.js": "/RSS/examples/java_mentor/build/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/RSS/examples/java_mentor/build/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.3fe48134.chunk.css.map": "/RSS/examples/java_mentor/build/static/css/main.3fe48134.chunk.css.map",
-    "static/media/index.css": "/RSS/examples/java_mentor/build/static/media/desk-background.6a3717a6.jpg"
+    "main.css": "/RSS/examples/java_mentor/static/css/main.b289c827.chunk.css",
+    "main.js": "/RSS/examples/java_mentor/static/js/main.49845854.chunk.js",
+    "main.js.map": "/RSS/examples/java_mentor/static/js/main.49845854.chunk.js.map",
+    "runtime~main.js": "/RSS/examples/java_mentor/static/js/runtime~main.6ff1fcc0.js",
+    "runtime~main.js.map": "/RSS/examples/java_mentor/static/js/runtime~main.6ff1fcc0.js.map",
+    "static/css/2.266e55a5.chunk.css": "/RSS/examples/java_mentor/static/css/2.266e55a5.chunk.css",
+    "static/js/2.8f9627ac.chunk.js": "/RSS/examples/java_mentor/static/js/2.8f9627ac.chunk.js",
+    "static/js/2.8f9627ac.chunk.js.map": "/RSS/examples/java_mentor/static/js/2.8f9627ac.chunk.js.map",
+    "index.html": "/RSS/examples/java_mentor/index.html",
+    "precache-manifest.cd4d8d1dc697bb9596583d8bb42a8636.js": "/RSS/examples/java_mentor/precache-manifest.cd4d8d1dc697bb9596583d8bb42a8636.js",
+    "service-worker.js": "/RSS/examples/java_mentor/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/RSS/examples/java_mentor/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.b289c827.chunk.css.map": "/RSS/examples/java_mentor/static/css/main.b289c827.chunk.css.map",
+    "static/media/index.css": "/RSS/examples/java_mentor/static/media/desk-background.6a3717a6.jpg"
   }
 }
