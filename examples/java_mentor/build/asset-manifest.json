@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a31760a.chunk.css",
-    "main.js": "/static/js/main.a2e59bee.chunk.js",
-    "main.js.map": "/static/js/main.a2e59bee.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.266e55a5.chunk.css": "/static/css/2.266e55a5.chunk.css",
-    "static/js/2.8f9627ac.chunk.js": "/static/js/2.8f9627ac.chunk.js",
-    "static/js/2.8f9627ac.chunk.js.map": "/static/js/2.8f9627ac.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.48732fa8698f634e06a22fe72f0c436a.js": "/precache-manifest.48732fa8698f634e06a22fe72f0c436a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.5a31760a.chunk.css.map": "/static/css/main.5a31760a.chunk.css.map",
-    "static/media/index.css": "/static/media/desk-background.6a3717a6.jpg"
+    "main.css": "/RSS/examples/java_mentor/build/static/css/main.3fe48134.chunk.css",
+    "main.js": "/RSS/examples/java_mentor/build/static/js/main.9bb9b300.chunk.js",
+    "main.js.map": "/RSS/examples/java_mentor/build/static/js/main.9bb9b300.chunk.js.map",
+    "runtime~main.js": "/RSS/examples/java_mentor/build/static/js/runtime~main.9f16ab5e.js",
+    "runtime~main.js.map": "/RSS/examples/java_mentor/build/static/js/runtime~main.9f16ab5e.js.map",
+    "static/css/2.266e55a5.chunk.css": "/RSS/examples/java_mentor/build/static/css/2.266e55a5.chunk.css",
+    "static/js/2.8f9627ac.chunk.js": "/RSS/examples/java_mentor/build/static/js/2.8f9627ac.chunk.js",
+    "static/js/2.8f9627ac.chunk.js.map": "/RSS/examples/java_mentor/build/static/js/2.8f9627ac.chunk.js.map",
+    "index.html": "/RSS/examples/java_mentor/build/index.html",
+    "precache-manifest.be8842b9dfc18feda5b7d502193cd980.js": "/RSS/examples/java_mentor/build/precache-manifest.be8842b9dfc18feda5b7d502193cd980.js",
+    "service-worker.js": "/RSS/examples/java_mentor/build/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/RSS/examples/java_mentor/build/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.3fe48134.chunk.css.map": "/RSS/examples/java_mentor/build/static/css/main.3fe48134.chunk.css.map",
+    "static/media/index.css": "/RSS/examples/java_mentor/build/static/media/desk-background.6a3717a6.jpg"
   }
 }
