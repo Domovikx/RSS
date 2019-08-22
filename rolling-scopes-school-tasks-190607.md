@@ -564,8 +564,8 @@ https://metanit.com/web/javascript/4.1.php
 
 ```html
 <body>
-    <!-- Первый этап -->
     <script>
+        document.write(`<h1> Первый этап </h1>`)
         const animal = {
             say() {
                 document.write(`<h2> voice ${this.voice} </h2>`)
@@ -585,9 +585,8 @@ https://metanit.com/web/javascript/4.1.php
         dog.say()
     </script>
 
-    <!-- Второй этап через Object.create() -->
     <script>
-        document.write(`<h1> через Object.create() </h1>`)
+        document.write(`<h1> Второй этап через Object.create() </h1>`)
         const animal_2 = {
             say() {
                 document.write(`<h2> voice  ${this.voice} </h2>`)
@@ -606,7 +605,6 @@ https://metanit.com/web/javascript/4.1.php
         dog_2.say()
     </script>
 
-    <!-- Третий этап выносим логику -->
     <script>
         document.write(`<h1> Третий этап выносим логику </h1>`)
         const animal_3 = {
@@ -628,7 +626,6 @@ https://metanit.com/web/javascript/4.1.php
         dog_3.say()
     </script>
 
-    <!-- Четвертый используем new -->
     <script>
         document.write(`<h1> Четвертый используем new </h1>`)
 
@@ -646,10 +643,40 @@ https://metanit.com/web/javascript/4.1.php
         cat_4.say()
         dog_4.say()
     </script>
+
     <script>
-        // создаст объект без прототипа
-        const objectFree = Object.create(null)
+        const objectFree = Object.create(null) // создаст объект без прототипа
         console.log('objectFree :', objectFree);
+    </script>
+
+    <script>
+        document.write(`<h1> переписываем всё через класс </h1>`)
+        class Animal_5 {
+            constructor(name, voice) {
+                this.name = name
+                this.voice = voice
+            }
+            say() {
+                document.write(`<h2> ${this.name} voice ${this.voice} </h2>`)
+            }
+        }
+        class Bird extends Animal_5 {
+            constructor(name, voice) {
+                super(name, voice)
+                super.say() // можем вызвать метод родителя
+            }
+            // новый метод
+            canFly() {
+                document.write(`<h2> Птица может летать </h2>`)
+            }
+            // переопределение метода
+            say() {
+                document.write(`<h2> Прицы не любят разговаривать </h2>`)
+            }
+        }
+        const duck = new Bird('Утка', 'кря-кря')
+        duck.say()
+        duck.canFly()
     </script>
 </body>
 ```
