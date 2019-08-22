@@ -859,6 +859,20 @@ https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
     }
   </script>
 ```
+
+```HTML
+<!-- Делегирование событий и остановка
+event.preventDefault();
+event.stopPropagation();
+-->
+<div onclick="alert('div')">
+    <ul onclick="alert(event.target.title); event.stopPropagation();">
+        <li title="One">One</li>
+        <li title="Two">Two</li>
+        <li title="Three">Three</li>
+    </ul>
+</div>
+```
 http://code.mu/books/javascript/dom/prodvinutaya-rabota-s-objektom-event-na-javascript.html (best)   
 [getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)   
 [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)    
