@@ -792,3 +792,15 @@ https://www.youtube.com/watch?v=aUigiwN0NEw - Event Loop in the browser Javascri
 надо разбираться   
 возможно тут:   
 https://learn.javascript.ru/promise
+https://medium.com/devschacht/%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D1%82%D0%B5%D0%BA%D1%82%D1%80%D0%B5%D0%B9%D1%81%D1%8B-%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83-await-%D0%BF%D0%BE%D0%B1%D0%B5%D0%B6%D0%B4%D0%B0%D0%B5%D1%82-then-6a5e6dad0584
+
+Нативные промисы (es6)
+const a = () => {
+  b().then(() => c());
+};
+
+async/await (es7)
+const a = async () => {
+  await b();
+  c();
+};
