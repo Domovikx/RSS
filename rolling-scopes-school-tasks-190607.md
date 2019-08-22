@@ -500,6 +500,9 @@ https://learn.javascript.ru/new-prototype
 Как создать объект без прототипа:    
 - Для этого можно просто создать объект {}.
 ```JS
+const objectFree = Object.create(null)
+console.log('objectFree :', objectFree);
+
 let empty = {};
 console.log(empty.constructor);
 empty; 
@@ -558,6 +561,99 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 https://metanit.com/web/javascript/4.5.php
 https://metanit.com/web/javascript/4.1.php
+
+```html
+<body>
+    <!-- Первый этап -->
+    <script>
+        const animal = {
+            say() {
+                document.write(`<h2> voice ${this.voice} </h2>`)
+            }
+        }
+        const dog = {
+            name: 'dog',
+            voice: 'woof',
+        }
+        Object.setPrototypeOf(dog, animal)
+        const cat = {
+            name: 'cat',
+            voice: 'meaw',
+        }
+        Object.setPrototypeOf(cat, animal)
+        cat.say()
+        dog.say()
+    </script>
+
+    <!-- Второй этап через Object.create() -->
+    <script>
+        document.write(`<h1> через Object.create() </h1>`)
+        const animal_2 = {
+            say() {
+                document.write(`<h2> voice  ${this.voice} </h2>`)
+            }
+        }
+
+        const dog_2 = Object.create(animal_2)
+        dog_2.name = 'dog'
+        dog_2.voice = 'woof'
+
+        const cat_2 = Object.create(animal_2)
+        cat_2.name = 'dog'
+        cat_2.voice = 'meaw'
+
+        cat_2.say()
+        dog_2.say()
+    </script>
+
+    <!-- Третий этап выносим логику -->
+    <script>
+        document.write(`<h1> Третий этап выносим логику </h1>`)
+        const animal_3 = {
+            say() {
+                document.write(`<h2> voice  ${this.voice} </h2>`)
+            }
+        }
+
+        function animalConstructor(name, voice) {
+            const resault = Object.create(animal_3)
+            resault.name = name
+            resault.voice = voice
+            return resault
+        }
+        const dog_3 = animalConstructor('dog', 'woof')
+        const cat_3 = animalConstructor('cat', 'meaw')
+
+        cat_3.say()
+        dog_3.say()
+    </script>
+
+    <!-- Четвертый используем new -->
+    <script>
+        document.write(`<h1> Четвертый используем new </h1>`)
+
+        function Animal(name, voice) {
+            this.name = name
+            this.voice = voice
+        }
+        Animal.prototype.say = function () {
+            document.write(`<h2> ${this.name} voice ${this.voice} </h2>`)
+        }
+
+        const dog_4 = new Animal('dog', 'woof')
+        const cat_4 = new Animal('cat', 'meaw')
+
+        cat_4.say()
+        dog_4.say()
+    </script>
+    <script>
+        // создаст объект без прототипа
+        const objectFree = Object.create(null)
+        console.log('objectFree :', objectFree);
+    </script>
+</body>
+```
+
 
 ***
 ### 12. Array methods that loop over the elements.   
