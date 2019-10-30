@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Number system translation</title>
+</head>
+
+<body>
+
+  <script>
+    numberSystemTranslation();
+
+    function numberSystemTranslation() {
+      const div = document.createElement('div');
+      div.innerHTML = "Number system translation <br>";
+
+      decimalToBinary(1234);
+
+      function decimalToBinary(number = 123) {
+        let arr = [];
+        let tempNumber = number;
+        div.innerHTML += `our number: ${number} <br>`;
+
+        for (let i = 0; tempNumber > 0; i++) {
+          let rest = tempNumber % 2;
+          div.innerHTML += `${tempNumber} % 2 = ${rest} <br>`;
+
+          arr.push(rest);
+          if (rest === 1) tempNumber -= 1;
+          tempNumber /= 2;
+        }
+
+        div.innerHTML += `[ ${arr.join(' ')} ] the next step is to reverse the array `;
+
+        arr.reverse();
+        div.innerHTML += `[ ${arr.join(' ')} ] <br>`;
+
+        const result = arr.join('');
+        div.innerHTML += `the number ${number} in the binary system is ${result} <br>`;
+
+        return result;
+      }
+
+      document.body.append(div);
+    }
+  </script>
+
+</body>
+
+</html>
