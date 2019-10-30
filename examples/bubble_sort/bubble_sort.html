@@ -26,8 +26,8 @@
             arr[j] = temp;
           }
         }
+        div.innerHTML += `${i+1} [${arr.join(' ')}] <br>`;
       }
-      div.innerHTML += `${arr.join(' ')} <br>`;
       document.body.append(div);
     }
     bubbleSort();
