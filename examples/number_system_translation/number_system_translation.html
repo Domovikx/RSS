@@ -10,41 +10,75 @@
 
 <body>
 
+  <a href="https://github.com/Domovikx/RSS/tree/master/examples/number_system_translation" target="_blank"
+    rel="noopener noreferrer">https://github.com/Domovikx/RSS/tree/master/examples/number_system_translation</a> <br>
+  <a href="/examples/number_system_translation/" target="_blank"
+    rel="noopener noreferrer">/examples/number_system_translation/</a> <br><br>
+
   <script>
     numberSystemTranslation();
 
     function numberSystemTranslation() {
-      const div = document.createElement('div');
-      div.innerHTML = "Number system translation <br>";
 
       decimalToBinary(1234);
+      decimalToBinary(123);
+      decimalToBinary(12);
 
       function decimalToBinary(number = 123) {
-        let arr = [];
-        let tempNumber = number;
-        div.innerHTML += `our number: ${number} <br>`;
 
-        for (let i = 0; tempNumber > 0; i++) {
-          let rest = tempNumber % 2;
-          div.innerHTML += `${tempNumber} % 2 = ${rest} <br>`;
+        const arr = [];
 
-          arr.push(rest);
-          if (rest === 1) tempNumber -= 1;
-          tempNumber /= 2;
+
+        calculating(number);
+
+        function calculating(num) {
+          if (num === 0) return;
+
+          const remainderOfDivision = num % 2;
+          let restNumber = null;
+
+          remainderOfDivision === 0 ? restNumber = num / 2 : restNumber = (num - 1) / 2;
+
+          arr.push({
+            num,
+            remainderOfDivision,
+            restNumber,
+          })
+
+          return calculating(restNumber);
         }
 
-        div.innerHTML += `[ ${arr.join(' ')} ] the next step is to reverse the array `;
 
-        arr.reverse();
-        div.innerHTML += `[ ${arr.join(' ')} ] <br>`;
+        render(arr);
 
-        const result = arr.join('');
-        div.innerHTML += `the number ${number} in the binary system is ${result} <br>`;
+        function render(arr) {
 
-        return result;
+          const firstNumber = arr[0].num;
+          const arrayOfNumbers = [];
+          let invertedArray = [];
+          let totalNumber = null;
+
+
+          for (const obj of arr) arrayOfNumbers.push(obj.remainderOfDivision);
+          invertedArray = [...arrayOfNumbers].reverse();
+          totalNumber = invertedArray.join('');
+
+
+          const div = document.createElement('div');
+          div.innerHTML = `Decimal ${firstNumber} to binary ${totalNumber}. <br>`;
+
+          for (const obj of arr) {
+            div.innerHTML += `${obj.num} % 2 = ${obj.remainderOfDivision} <br>`;
+          }
+
+          div.innerHTML += `[ ${arrayOfNumbers.join(' ')} ] revers our array [ ${invertedArray.join(' ')} ]<br>`;
+          div.innerHTML += `Total number ${totalNumber} <br><br>`;
+
+          document.body.append(div);
+        }
+
       }
 
-      document.body.append(div);
     }
   </script>
 
