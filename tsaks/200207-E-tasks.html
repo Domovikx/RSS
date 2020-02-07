@@ -21,7 +21,7 @@
     [1, 23, 12, 3, 32, 4, 23, 4] <br />
     1 - посчитать сумму <br />
     2 - максимум и минимум <br />
-    3 - разниза между макс и мин <br />
+    3 - разница между макс и мин <br />
     4 - количество элементов <br />
     5 - проверка на наличие элемента <br />
     6 - количество конкретных <br />
@@ -54,9 +54,11 @@
     - создать, вставить, клонировать, удалить элемент li в ul <br />
     <br />
 
-    <div class="array">
-      <div class="array__task task">
-        1 - посчитать сумму
+    <section class="array">
+      <h2>array</h2>
+
+      <section class="array__task task">
+        <h3>1 - посчитать сумму</h3>
         <input type="text" class="task__1" value="1, 23, 12, 3, 32, 4, 23, 4" />
         <script>
           const arrayTask1 = () => {
@@ -76,11 +78,17 @@
           };
           arrayTask1();
         </script>
-      </div>
+      </section>
 
-      <div class="array__task task">
-        2 - максимум и минимум
-        <input type="text" class="task__2" value="-1 23 -12 3 32 4 23 4" />
+      <!--  -->
+
+      <section class="array__task task">
+        <h3>2 - максимум и минимум + 3 - разница между макс и мин</h3>
+        <input
+          type="text"
+          class="task__2 task__3"
+          value="-1 23 -12 3 32 4 23 4"
+        />
         <script>
           const arrayTask2 = () => {
             console.log("arrayTask2");
@@ -105,13 +113,53 @@
                     min: 0
                   }
                 );
-              div.innerHTML = ` min:${result.min}, max:${result.max}`;
+              div.innerHTML = ` 
+              min:${result.min}, 
+              max:${result.max}, 
+              difference:${result.max - result.min}`;
             }
             getResult();
           };
           arrayTask2();
         </script>
-      </div>
-    </div>
+      </section>
+
+      <!--  -->
+
+      <section class="array__task task">
+        <h3>4 - количество элементов</h3>
+        <input type="text" class="task__4" value="-1 23 -12 3 32 4 23 4" />
+        <script>
+          const arrayTask4 = () => {
+            console.log("arrayTask2");
+            const element = document.querySelector(".array__task .task__4");
+            const div = document.createElement("div");
+            element.after(div);
+            element.addEventListener("change", getResult);
+
+            function getResult() {
+              const result = element.value
+                .replace(/-/g, " -")
+                .split(/[^-0-9]/)
+                .reduce(
+                  ({ max, min }, cur) => {
+                    console.log(max, min);
+                    if (max < Number(cur)) max = cur;
+                    if (min > Number(cur)) min = cur;
+                    return { max, min };
+                  },
+                  {
+                    max: 0,
+                    min: 0
+                  }
+                );
+              div.innerHTML = ` min:${result.min}, max:${result.max}`;
+            }
+            getResult();
+          };
+          arrayTask4();
+        </script>
+      </section>
+    </section>
   </body>
 </html>
