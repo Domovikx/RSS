@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quick sort</title>
+</head>
+
+<body>
+
+  <script>
+    function quickSort() {
+
+      const div = document.createElement('div');
+      div.innerHTML = "Quick sort <br>";
+
+      const arr = [4, 3, 7, 1, 9, 0, -10, -100, 200, -100];
+      div.innerHTML += `${arr.join(' ')} <br>`;
+
+      function qs(arr = []) {
+        if (arr.length < 2) return arr;
+
+        const pivot = arr[0];
+        const left = [];
+        const mid = [];
+        const right = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          const element = arr[i];
+          if (element === pivot) mid.push(element);
+          if (element < pivot) left.push(element);
+          if (element > pivot) right.push(element);
+        }
+        div.innerHTML += `${left.join(' ')} | ${mid.join(' ')} | ${right.join(' ')} <br>`;
+
+        return [...qs(left), ...mid, ...qs(right)];
+      }
+      const sortArr = qs(arr);
+
+      div.innerHTML += `${sortArr.join(' ')} <br>`;
+      document.body.append(div);
+    }
+    quickSort();
+  </script>
+
+</body>
+
+</html>

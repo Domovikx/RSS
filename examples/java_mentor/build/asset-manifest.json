@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/RSS/static/css/main.fdaa1d08.chunk.css",
+    "main.js": "/RSS/static/js/main.c7d7b844.chunk.js",
+    "main.js.map": "/RSS/static/js/main.c7d7b844.chunk.js.map",
+    "runtime~main.js": "/RSS/static/js/runtime~main.b5737e73.js",
+    "runtime~main.js.map": "/RSS/static/js/runtime~main.b5737e73.js.map",
+    "static/css/2.266e55a5.chunk.css": "/RSS/static/css/2.266e55a5.chunk.css",
+    "static/js/2.8f9627ac.chunk.js": "/RSS/static/js/2.8f9627ac.chunk.js",
+    "static/js/2.8f9627ac.chunk.js.map": "/RSS/static/js/2.8f9627ac.chunk.js.map",
+    "index.html": "/RSS/index.html",
+    "precache-manifest.81aa7500fca34570cadd648f7369a174.js": "/RSS/precache-manifest.81aa7500fca34570cadd648f7369a174.js",
+    "service-worker.js": "/RSS/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/RSS/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.fdaa1d08.chunk.css.map": "/RSS/static/css/main.fdaa1d08.chunk.css.map",
+    "static/media/index.css": "/RSS/static/media/desk-background.6a3717a6.jpg"
+  }
+}

@@ -1,0 +1,22 @@
+.shape {
+  background-color: blue;
+  width: 100px;
+  height: 200px;
+}
+.count {
+  display: grid;
+  margin: 0;
+  height: 100%;
+  place-items: center;
+  font-size: 40px;
+  color: white;
+  font-family: "Oxygen";
+}
+@font-face {
+  font-family: "Oxygen";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oxygen"), local("Oxygen-Regular"),
+    url(https://fonts.gstatic.com/s/oxygen/v5/LC4u_jU27qpsdszDEgeU_3-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");
+  unicode-range: U+30-39;
+}
