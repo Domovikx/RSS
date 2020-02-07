@@ -18,18 +18,19 @@
     </style>
   </head>
   <body>
-    [1,23123, 324 ,234 ,] <br />
-    - посчитать сумму <br />
-    - максимум и минимум <br />
-    - разниза между макс и мин <br />
-    - количество элементов <br />
-    - проверка на наличие элемента <br />
-    - количество конкретных <br />
-    - массив уникальных элементов <br />
-    - количество повторяющихся элементов <br />
-    - реверсировать знак положительности элементов <br />
-    - вернуть массив N элементов начиная с X элемента <br />
-    - первых три и последних три элемента массива вывести в один массив <br />
+    [1, 23, 12, 3, 32, 4, 23, 4] <br />
+    1 - посчитать сумму <br />
+    2 - максимум и минимум <br />
+    3 - разниза между макс и мин <br />
+    4 - количество элементов <br />
+    5 - проверка на наличие элемента <br />
+    6 - количество конкретных <br />
+    7 - массив уникальных элементов <br />
+    8 - количество повторяющихся элементов <br />
+    9 - реверсировать знак положительности элементов <br />
+    10 - вернуть массив N элементов начиная с X элемента <br />
+    11 - первых три и последних три элемента массива вывести в один массив
+    <br />
     <br />
     "фываыва ыва" <br />
     - количество слов <br />
@@ -51,5 +52,66 @@
     li data-value = 3 <br />
     - делегирование событий, остановка всплытия <br />
     - создать, вставить, клонировать, удалить элемент li в ul <br />
+    <br />
+
+    <div class="array">
+      <div class="array__task task">
+        1 - посчитать сумму
+        <input type="text" class="task__1" value="1, 23, 12, 3, 32, 4, 23, 4" />
+        <script>
+          const arrayTask1 = () => {
+            const element = document.querySelector(".array__task .task__1");
+            const div = document.createElement("div");
+            element.after(div);
+            element.addEventListener("change", getResult);
+
+            function getResult() {
+              const result = element.value
+                .replace(/-/g, " -")
+                .split(/[^-0-9]/)
+                .reduce((a, b) => Number(a) + Number(b));
+              div.innerHTML = ` Sum: ${result}`;
+            }
+            getResult();
+          };
+          arrayTask1();
+        </script>
+      </div>
+
+      <div class="array__task task">
+        2 - максимум и минимум
+        <input type="text" class="task__2" value="-1 23 -12 3 32 4 23 4" />
+        <script>
+          const arrayTask2 = () => {
+            console.log("arrayTask2");
+            const element = document.querySelector(".array__task .task__2");
+            const div = document.createElement("div");
+            element.after(div);
+            element.addEventListener("change", getResult);
+
+            function getResult() {
+              const result = element.value
+                .replace(/-/g, " -")
+                .split(/[^-0-9]/)
+                .reduce(
+                  ({ max, min }, cur) => {
+                    console.log(max, min);
+                    if (max < Number(cur)) max = cur;
+                    if (min > Number(cur)) min = cur;
+                    return { max, min };
+                  },
+                  {
+                    max: 0,
+                    min: 0
+                  }
+                );
+              div.innerHTML = ` min:${result.min}, max:${result.max}`;
+            }
+            getResult();
+          };
+          arrayTask2();
+        </script>
+      </div>
+    </div>
   </body>
 </html>
