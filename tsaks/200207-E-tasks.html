@@ -24,7 +24,7 @@
     3 - разница между макс и мин <br />
     4 - сколько каких элементов <br />
     5 - проверка на наличие элемента <br />
-    6 - количество конкретных <br />
+    6 - количество конкретных (см.5)<br />
     7 - массив уникальных элементов <br />
     8 - количество первых повторяющихся элементов <br />
     9 - реверсировать знак положительности элементов <br />
@@ -168,7 +168,38 @@
 
       <section class="array__task task">
         <h3>5 - проверка на наличие элемента</h3>
-        <input type="text" class="task__5" value="-1 23 -12 3 32 4 23 4" />
+        <input
+          type="text"
+          class="task__5 task__5--array"
+          value="-1 23 -12 3 32 4 23 4"
+        />
+        <input type="text" class="task__5 task__5--search" value="-12" />
+
+        <script>
+          const task__5 = () => {
+            const inputArray = document.querySelector(
+              ".array__task .task__5--array"
+            );
+            const inputSearch = document.querySelector(
+              ".array__task .task__5--search"
+            );
+
+            const div = document.createElement("div");
+            inputSearch.after(div);
+
+            inputArray.addEventListener("change", getResult);
+            inputSearch.addEventListener("change", getResult);
+
+            function getResult() {
+              const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+              const amount = {};
+              const find = arr.find(item => item === inputSearch.value);
+              div.innerHTML = ` ${!!find ? "есть элемент" : "нет элемента"}`;
+            }
+            getResult();
+          };
+          task__5();
+        </script>
       </section>
     </section>
   </body>
