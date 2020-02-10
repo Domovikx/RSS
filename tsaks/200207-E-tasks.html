@@ -54,6 +54,8 @@
     - делегирование событий, остановка всплытия <br />
     - создать, вставить, клонировать, удалить элемент li в ul <br />
     <br />
+    вопрос статические методы объекта JS <br />
+    data value <br />
 
     <section class="array">
       <h2>array</h2>
@@ -284,6 +286,41 @@
             getResult();
           };
           task__8();
+        </script>
+      </section>
+
+      <!-- 9 -->
+
+      <section class="array__task task">
+        <h3>9 - реверсировать знак положительности элементов</h3>
+        <input
+          type="text"
+          class="task__9 task__9--array"
+          value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+        />
+
+        <script>
+          (function task__9() {
+            const inputArray = document.querySelector(
+              ".array__task .task__9--array"
+            );
+
+            const div = document.createElement("div");
+            inputArray.after(div);
+
+            inputArray.addEventListener("change", getResult);
+
+            function getResult() {
+              const arr = inputArray.value
+                .replace(/-/g, " -")
+                .split(/[^-0-9]/)
+                .filter(item => item != "")
+                .map(item => -item)
+                .join(" ");
+              div.innerHTML = `${arr} - реверс элементов`;
+            }
+            getResult();
+          })();
         </script>
       </section>
     </section>
