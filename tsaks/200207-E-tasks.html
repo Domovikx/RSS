@@ -17,6 +17,7 @@
       }
     </style>
   </head>
+
   <body>
     [1, 23, 12, 3, 32, 4, 23, 4] <br />
     1 - посчитать сумму <br />
@@ -106,7 +107,10 @@
                   ({ max, min }, cur) => {
                     if (max < Number(cur)) max = cur;
                     if (min > Number(cur)) min = cur;
-                    return { max, min };
+                    return {
+                      max,
+                      min
+                    };
                   },
                   {
                     max: 0,
@@ -233,6 +237,53 @@
             getResult();
           };
           task__7();
+        </script>
+      </section>
+
+      <!-- 8 -->
+
+      <section class="array__task task">
+        <h3>8 - количество первых повторяющихся элементов</h3>
+        <input
+          type="text"
+          class="task__8 task__8--array"
+          value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+        />
+
+        <script>
+          const task__8 = () => {
+            const inputArray = document.querySelector(
+              ".array__task .task__8--array"
+            );
+
+            const div = document.createElement("div");
+            inputArray.after(div);
+
+            inputArray.addEventListener("change", getResult);
+
+            function getResult() {
+              const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+              let amount = {};
+              arr.find(cur => {
+                if (cur) {
+                  const count = arr.filter(item => item === cur);
+                  if (count.length > 1) {
+                    amount = {
+                      [cur]: count.length
+                    };
+                    return true;
+                  }
+                }
+              }, amount);
+
+              div.innerHTML = `
+              ${Object.keys(amount)} : 
+              ${Object.values(amount)} 
+              - количество первых повторяющихся элементов`;
+            }
+            getResult();
+          };
+          task__8();
         </script>
       </section>
     </section>
