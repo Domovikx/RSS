@@ -379,5 +379,128 @@
         </script>
       </section>
     </section>
+
+    <!-- DOM -->
+
+    <section class="Dom__tasks task1">
+      <h3>
+        DOM - найти сумму значений атрибута data-value тега li
+      </h3>
+      <ul id="list">
+        <li data-value="500">
+          data-value="500"
+        </li>
+        <li data-value="900">
+          data-value="900"
+        </li>
+        <li data-value="300">
+          data-value="300"
+        </li>
+        <li data-value="200">
+          data-value="900"
+        </li>
+        <li data-value="100">
+          data-value="100"
+        </li>
+        <li data-style="400">
+          data-style="400"
+        </li>
+        <li data-vip="800">
+          data-vip="800"
+        </li>
+      </ul>
+
+      <script>
+        let section = document.querySelector(".Dom__tasks.task1");
+        let ul = document.querySelector("#list");
+        let li = ul.querySelectorAll("li[data-value]");
+        let div = document.createElement("div");
+        let result = 0;
+        li.forEach(item => (result += Number(item.dataset.value)));
+        section.append(div);
+        div.innerHTML = `Sum is ${result}`;
+      </script>
+    </section>
+
+    <section class="Dom__task task">
+      <h3>
+        DOM - поменять цвет текста и значение тега li по клику
+      </h3>
+      <ul id="list1">
+        <li>
+          data-value="500"
+        </li>
+        <li>
+          data-value="900"
+        </li>
+        <li>
+          data-value="300"
+        </li>
+        <li>
+          data-value="900"
+        </li>
+        <li>
+          data-value="100"
+        </li>
+        <li>
+          data-style="400"
+        </li>
+        <li>
+          data-vip="800"
+        </li>
+      </ul>
+
+      <script>
+        let ul1 = document.querySelector("#list1");
+        ul1.addEventListener("click", changeColorAndText);
+
+        function changeColorAndText(event) {
+          let target = event.target;
+          let li = target.closest("li");
+          if (li) {
+            target.style.color = "green";
+            target.innerHTML = "Добрый вечер, я - диспетчер";
+          }
+        }
+      </script>
+    </section>
+
+    <section class="Dom__task task">
+      <h3>
+        DOM - поменять цвет текста и значение тега li по клику кнопки
+      </h3>
+      <button type="button" onclick="addItem()">Добавить строку</button>
+      <button type="button" onclick="removeItem()">Удалить строку</button>
+      <ul id="list2">
+        <li>
+          Некое значение
+        </li>
+        <li>
+          Еще одно значение
+        </li>
+        <li>
+          Некое значение 3
+        </li>
+      </ul>
+
+      <script>
+        let list = document.querySelector("#list2");
+        let lastItem = list.lastElementChild;
+
+        function addItem() {
+          let newItem = document.createElement("li");
+          newItem.innerHTML = `Созданная строка`;
+          list.append(newItem);
+          return (lastItem = list.lastElementChild);
+        }
+
+        function removeItem() {
+          if (lastItem) {
+            lastItem.remove();
+            return (lastItem = list.lastElementChild);
+          }
+        }
+      </script>
+    </section>
   </body>
 </html>
