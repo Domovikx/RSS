@@ -1,240 +1,359 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Задачки, для прокачки</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      body {
-        margin: 0 auto;
-        padding: 15px;
-        max-width: 800px;
-        font-family: monospace;
-        font-size: 1.3rem;
-        background: #333;
-        color: #fff;
-      }
-    </style>
-  </head>
-  <body>
-    [1, 23, 12, 3, 32, 4, 23, 4] <br />
-    1 - посчитать сумму <br />
-    2 - максимум и минимум <br />
-    3 - разница между макс и мин <br />
-    4 - сколько каких элементов <br />
-    5 - проверка на наличие элемента <br />
-    6 - количество конкретных (см.4) <br />
-    7 - массив уникальных элементов <br />
-    8 - количество первых повторяющихся элементов <br />
-    9 - реверсировать знак положительности элементов <br />
-    10 - вернуть массив N элементов начиная с X элемента <br />
-    11 - первых три и последних три элемента массива вывести в один массив
-    <br />
-    <br />
-    "строка стринг string" <br />
-    - количество слов <br />
-    - количество символов в словах <br />
-    - количество символов с большой буквы <br />
-    - сделать из слов аббривиатуру <br />
-    - сделать камел кейс из строки <br />
-    - сделать функцию которая принимает строку и массив символов, которые должны
-    стать заглавными в строке <br />
-    - вывести массив слов с заглавными буквами <br />
-    - напишите функцию, которая возвращает первый повторяющийся символ в строке
-    <br />
-    <br />
-    DOM <br />
-    - найти сумму значений атребута data-value тега li <br />
-    ul id = list <br />
-    li data-value = 1 <br />
-    li data-value = 2 <br />
-    li data-value = 3 <br />
-    - делегирование событий, остановка всплытия <br />
-    - создать, вставить, клонировать, удалить элемент li в ul <br />
-    <br />
 
-    <section class="array">
-      <h2>array</h2>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Задачки, для прокачки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0 auto;
+      padding: 15px;
+      max-width: 800px;
+      font-family: monospace;
+      font-size: 1.3rem;
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
 
-      <!-- 1 -->
+<body>
+  [1, 23, 12, 3, 32, 4, 23, 4] <br />
+  1 - посчитать сумму <br />
+  2 - максимум и минимум <br />
+  3 - разница между макс и мин <br />
+  4 - сколько каких элементов <br />
+  5 - проверка на наличие элемента <br />
+  6 - количество конкретных (см.4) <br />
+  7 - массив уникальных элементов <br />
+  8 - количество первых повторяющихся элементов <br />
+  9 - реверсировать знак положительности элементов <br />
+  10 - вернуть массив N элементов начиная с X элемента <br />
+  11 - первых три и последних три элемента массива вывести в один массив
+  <br />
+  <br />
+  "строка стринг string" <br />
+  - количество слов <br />
+  - количество символов в словах <br />
+  - количество символов с большой буквы <br />
+  - сделать из слов аббривиатуру <br />
+  - сделать камел кейс из строки <br />
+  - сделать функцию которая принимает строку и массив символов, которые должны
+  стать заглавными в строке <br />
+  - вывести массив слов с заглавными буквами <br />
+  - напишите функцию, которая возвращает первый повторяющийся символ в строке
+  <br />
+  <br />
+  DOM <br />
+  - найти сумму значений атребута data-value тега li <br />
+  ul id = list <br />
+  li data-value = 1 <br />
+  li data-value = 2 <br />
+  li data-value = 3 <br />
+  - делегирование событий, остановка всплытия <br />
+  - создать, вставить, клонировать, удалить элемент li в ul <br />
+  <br />
 
-      <section class="array__task task">
-        <h3>1 - посчитать сумму</h3>
-        <input type="text" class="task__1" value="1, 23, 12, 3, 32, 4, 23, 4" />
-        <script>
-          const arrayTask1 = () => {
-            const element = document.querySelector(".array__task .task__1");
-            const div = document.createElement("div");
-            element.after(div);
-            element.addEventListener("change", getResult);
+  <section class="array">
+    <h2>array</h2>
 
-            function getResult() {
-              const result = element.value
-                .replace(/-/g, " -")
-                .split(/[^-0-9]/)
-                .reduce((a, b) => Number(a) + Number(b));
-              div.innerHTML = ` Sum: ${result}`;
-            }
-            getResult();
-          };
-          arrayTask1();
-        </script>
-      </section>
+    <!-- 1 -->
 
-      <!-- 2 3 -->
+    <section class="array__task task">
+      <h3>1 - посчитать сумму</h3>
+      <input type="text" class="task__1" value="1, 23, 12, 3, 32, 4, 23, 4" />
+      <script>
+        const arrayTask1 = () => {
+          const element = document.querySelector(".array__task .task__1");
+          const div = document.createElement("div");
+          element.after(div);
+          element.addEventListener("change", getResult);
 
-      <section class="array__task task">
-        <h3>2 - максимум и минимум + 3 - разница между макс и мин</h3>
-        <input
-          type="text"
-          class="task__2 task__3"
-          value="-1 23 -12 3 32 4 23 4"
-        />
-        <script>
-          const arrayTask2 = () => {
-            const element = document.querySelector(".array__task .task__2");
-            const div = document.createElement("div");
-            element.after(div);
-            element.addEventListener("change", getResult);
+          function getResult() {
+            const result = element.value
+              .replace(/-/g, " -")
+              .split(/[^-0-9]/)
+              .reduce((a, b) => Number(a) + Number(b));
+            div.innerHTML = ` Sum: ${result}`;
+          }
+          getResult();
+        };
+        arrayTask1();
+      </script>
+    </section>
 
-            function getResult() {
-              const result = element.value
-                .replace(/-/g, " -")
-                .split(/[^-0-9]/)
-                .reduce(
-                  ({ max, min }, cur) => {
-                    if (max < Number(cur)) max = cur;
-                    if (min > Number(cur)) min = cur;
-                    return { max, min };
-                  },
-                  {
-                    max: 0,
-                    min: 0
-                  }
-                );
-              div.innerHTML = ` 
+    <!-- 2 3 -->
+
+    <section class="array__task task">
+      <h3>2 - максимум и минимум + 3 - разница между макс и мин</h3>
+      <input type="text" class="task__2 task__3" value="-1 23 -12 3 32 4 23 4" />
+      <script>
+        const arrayTask2 = () => {
+          const element = document.querySelector(".array__task .task__2");
+          const div = document.createElement("div");
+          element.after(div);
+          element.addEventListener("change", getResult);
+
+          function getResult() {
+            const result = element.value
+              .replace(/-/g, " -")
+              .split(/[^-0-9]/)
+              .reduce(
+                ({
+                  max,
+                  min
+                }, cur) => {
+                  if (max < Number(cur)) max = cur;
+                  if (min > Number(cur)) min = cur;
+                  return {
+                    max,
+                    min
+                  };
+                }, {
+                  max: 0,
+                  min: 0
+                }
+              );
+            div.innerHTML = ` 
               min:${result.min}, 
               max:${result.max}, 
               difference:${result.max - result.min}`;
-            }
-            getResult();
-          };
-          arrayTask2();
-        </script>
-      </section>
-
-      <!-- 4 -->
-
-      <section class="array__task task">
-        <h3>4 - сколько каких элементов</h3>
-        <input type="text" class="task__4" value="-1 23 -12 3 32 4 23 4" />
-        <script>
-          const task__4 = () => {
-            const element = document.querySelector(".array__task .task__4");
-            const div = document.createElement("div");
-            element.after(div);
-            element.addEventListener("change", getResult);
-
-            function getResult() {
-              const arr = element.value.replace(/-/g, " -").split(/[^-0-9]/);
-              const amount = {};
-
-              arr.reduce((prev, cur) => {
-                if (cur) {
-                  !amount[cur] ? (amount[cur] = 1) : (amount[cur] += 1);
-                }
-              }, amount);
-
-              const keys = Object.keys(amount);
-              keys.sort((a, b) => a - b);
-
-              const fragment = document.createDocumentFragment();
-              keys.map(key => {
-                const li = document.createElement("li");
-                li.textContent = `${key} = ${amount[key]}`;
-                fragment.appendChild(li);
-              });
-              div.innerHTML = ``;
-              div.appendChild(fragment);
-            }
-            getResult();
-          };
-          task__4();
-        </script>
-      </section>
-
-      <!-- 5 -->
-
-      <section class="array__task task">
-        <h3>5 - проверка на наличие элемента</h3>
-        <input
-          type="text"
-          class="task__5 task__5--array"
-          value="-1 23 -12 3 32 4 23 4"
-        />
-        <input type="text" class="task__5 task__5--search" value="-12" />
-
-        <script>
-          const task__5 = () => {
-            const inputArray = document.querySelector(
-              ".array__task .task__5--array"
-            );
-            const inputSearch = document.querySelector(
-              ".array__task .task__5--search"
-            );
-
-            const div = document.createElement("div");
-            inputSearch.after(div);
-
-            inputArray.addEventListener("change", getResult);
-            inputSearch.addEventListener("change", getResult);
-
-            function getResult() {
-              const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
-              const amount = {};
-              const find = arr.find(item => item === inputSearch.value);
-              div.innerHTML = ` ${!!find ? "есть элемент" : "нет элемента"}`;
-            }
-            getResult();
-          };
-          task__5();
-        </script>
-      </section>
-
-      <!-- 6 - количество конкретных (см.4)-->
-
-      <!-- 7 -->
-
-      <section class="array__task task">
-        <h3>7 - массив уникальных элементов</h3>
-        <input
-          type="text"
-          class="task__7 task__7--array"
-          value="-1 23 -12 3 32 4 23 4 0 0 0 1"
-        />
-
-        <script>
-          const task__7 = () => {
-            const inputArray = document.querySelector(
-              ".array__task .task__7--array"
-            );
-
-            const div = document.createElement("div");
-            inputArray.after(div);
-
-            inputArray.addEventListener("change", getResult);
-
-            function getResult() {
-              const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
-              const set = new Set(arr.filter(item => !!item));
-              div.innerHTML = `${[...set].join(" ")} - уникальные значения`;
-            }
-            getResult();
-          };
-          task__7();
-        </script>
-      </section>
+          }
+          getResult();
+        };
+        arrayTask2();
+      </script>
     </section>
-  </body>
+
+    <!-- 4 -->
+
+    <section class="array__task task">
+      <h3>4 - сколько каких элементов</h3>
+      <input type="text" class="task__4" value="-1 23 -12 3 32 4 23 4" />
+      <script>
+        const task__4 = () => {
+          const element = document.querySelector(".array__task .task__4");
+          const div = document.createElement("div");
+          element.after(div);
+          element.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = element.value.replace(/-/g, " -").split(/[^-0-9]/);
+            const amount = {};
+
+            arr.reduce((prev, cur) => {
+              if (cur) {
+                !amount[cur] ? (amount[cur] = 1) : (amount[cur] += 1);
+              }
+            }, amount);
+
+            const keys = Object.keys(amount);
+            keys.sort((a, b) => a - b);
+
+            const fragment = document.createDocumentFragment();
+            keys.map(key => {
+              const li = document.createElement("li");
+              li.textContent = `${key} = ${amount[key]}`;
+              fragment.appendChild(li);
+            });
+            div.innerHTML = ``;
+            div.appendChild(fragment);
+          }
+          getResult();
+        };
+        task__4();
+      </script>
+    </section>
+
+    <!-- 5 -->
+
+    <section class="array__task task">
+      <h3>5 - проверка на наличие элемента</h3>
+      <input type="text" class="task__5 task__5--array" value="-1 23 -12 3 32 4 23 4" />
+      <input type="text" class="task__5 task__5--search" value="-12" />
+
+      <script>
+        const task__5 = () => {
+          const inputArray = document.querySelector(
+            ".array__task .task__5--array"
+          );
+          const inputSearch = document.querySelector(
+            ".array__task .task__5--search"
+          );
+
+          const div = document.createElement("div");
+          inputSearch.after(div);
+
+          inputArray.addEventListener("change", getResult);
+          inputSearch.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+            const amount = {};
+            const find = arr.find(item => item === inputSearch.value);
+            div.innerHTML = ` ${!!find ? "есть элемент" : "нет элемента"}`;
+          }
+          getResult();
+        };
+        task__5();
+      </script>
+    </section>
+
+    <!-- 6 - количество конкретных (см.4)-->
+
+    <!-- 7 -->
+
+    <section class="array__task task">
+      <h3>7 - массив уникальных элементов</h3>
+      <input type="text" class="task__7 task__7--array" value="-1 23 -12 3 32 4 23 4 0 0 0 1" />
+
+      <script>
+        const task__7 = () => {
+          const inputArray = document.querySelector(
+            ".array__task .task__7--array"
+          );
+
+          const div = document.createElement("div");
+          inputArray.after(div);
+
+          inputArray.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+            const set = new Set(arr.filter(item => !!item));
+            div.innerHTML = `${[...set].join(" ")} - уникальные значения`;
+          }
+          getResult();
+        };
+        task__7();
+      </script>
+    </section>
+
+
+    <section class="Dom__tasks task1">
+      <h3>
+        DOM - найти сумму значений атрибута data-value тега li
+      </h3>
+      <ul id="list">
+        <li data-value="500">
+          data-value="500"
+        </li>
+        <li data-value="900">
+          data-value="900"
+        </li>
+        <li data-value="300">
+          data-value="300"
+        </li>
+        <li data-value="200">
+          data-value="900"
+        </li>
+        <li data-value="100">
+          data-value="100"
+        </li>
+        <li data-style="400">
+          data-style="400"
+        </li>
+        <li data-vip="800">
+          data-vip="800"
+        </li>
+      </ul>
+
+      <script>
+        let section = document.querySelector(".Dom__tasks.task1");
+        let ul = document.querySelector("#list");
+        let li = ul.querySelectorAll("li[data-value]");
+        let div = document.createElement("div");
+        let result = 0;
+        li.forEach(item => result += Number(item.dataset.value))
+        section.append(div);
+        div.innerHTML = `Sum is ${result}`;
+      </script>
+    </section>
+
+    <section class="Dom__task task">
+      <h3>
+        DOM - поменять цвет текста и значение тега li по клику
+      </h3>
+      <ul id="list1">
+        <li>
+          data-value="500"
+        </li>
+        <li>
+          data-value="900"
+        </li>
+        <li>
+          data-value="300"
+        </li>
+        <li>
+          data-value="900"
+        </li>
+        <li>
+          data-value="100"
+        </li>
+        <li>
+          data-style="400"
+        </li>
+        <li>
+          data-vip="800"
+        </li>
+      </ul>
+
+      <script>
+        let ul1 = document.querySelector("#list1");
+        ul1.addEventListener('click', changeColorAndText);
+
+        function changeColorAndText(event) {
+          let target = event.target;
+          let li = target.closest("li")
+          if (li) {
+            target.style.color = 'green'
+            target.innerHTML = "Добрый вечер, я - диспетчер"
+          }
+        }
+      </script>
+    </section>
+
+    <section class="Dom__task task">
+      <h3>
+        DOM - поменять цвет текста и значение тега li по клику кнопки
+      </h3>
+      <button type="button" onclick="addItem()">Добавить строку</button>
+      <button type="button" onclick="removeItem()">Удалить строку</button>
+      <ul id="list2">
+        <li>
+          Некое значение
+        </li>
+        <li>
+          Еще одно значение
+        </li>
+        <li>
+          Некое значение 3
+        </li>
+      </ul>
+
+      <script>
+        let list = document.querySelector("#list2");
+        let lastItem = list.lastElementChild;
+
+
+        function addItem() {
+          let newItem = document.createElement("li");
+          newItem.innerHTML = `Созданная строка`
+          list.append(newItem);
+          return lastItem = list.lastElementChild
+        }
+
+        function removeItem() {
+          if (lastItem) {
+            lastItem.remove()
+            return lastItem = list.lastElementChild
+          }
+        }
+      </script>
+    </section>
+  </section>
+</body>
+
 </html>
