@@ -24,7 +24,7 @@
     3 - разница между макс и мин <br />
     4 - сколько каких элементов <br />
     5 - проверка на наличие элемента <br />
-    6 - количество конкретных (см.5)<br />
+    6 - количество конкретных (см.4) <br />
     7 - массив уникальных элементов <br />
     8 - количество первых повторяющихся элементов <br />
     9 - реверсировать знак положительности элементов <br />
@@ -32,7 +32,7 @@
     11 - первых три и последних три элемента массива вывести в один массив
     <br />
     <br />
-    "фываыва ыва" <br />
+    "строка стринг string" <br />
     - количество слов <br />
     - количество символов в словах <br />
     - количество символов с большой буквы <br />
@@ -199,6 +199,40 @@
             getResult();
           };
           task__5();
+        </script>
+      </section>
+
+      <!-- 6 - количество конкретных (см.4)-->
+
+      <!-- 7 -->
+
+      <section class="array__task task">
+        <h3>7 - массив уникальных элементов</h3>
+        <input
+          type="text"
+          class="task__7 task__7--array"
+          value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+        />
+
+        <script>
+          const task__7 = () => {
+            const inputArray = document.querySelector(
+              ".array__task .task__7--array"
+            );
+
+            const div = document.createElement("div");
+            inputArray.after(div);
+
+            inputArray.addEventListener("change", getResult);
+
+            function getResult() {
+              const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+              const set = new Set(arr.filter(item => !!item));
+              div.innerHTML = `${[...set].join(" ")} - уникальные значения`;
+            }
+            getResult();
+          };
+          task__7();
         </script>
       </section>
     </section>
