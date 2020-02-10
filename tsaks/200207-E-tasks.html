@@ -22,11 +22,11 @@
     1 - посчитать сумму <br />
     2 - максимум и минимум <br />
     3 - разница между макс и мин <br />
-    4 - количество элементов <br />
+    4 - сколько каких элементов <br />
     5 - проверка на наличие элемента <br />
     6 - количество конкретных <br />
     7 - массив уникальных элементов <br />
-    8 - количество повторяющихся элементов <br />
+    8 - количество первых повторяющихся элементов <br />
     9 - реверсировать знак положительности элементов <br />
     10 - вернуть массив N элементов начиная с X элемента <br />
     11 - первых три и последних три элемента массива вывести в один массив
@@ -57,6 +57,8 @@
     <section class="array">
       <h2>array</h2>
 
+      <!-- 1 -->
+
       <section class="array__task task">
         <h3>1 - посчитать сумму</h3>
         <input type="text" class="task__1" value="1, 23, 12, 3, 32, 4, 23, 4" />
@@ -80,7 +82,7 @@
         </script>
       </section>
 
-      <!--  -->
+      <!-- 2 3 -->
 
       <section class="array__task task">
         <h3>2 - максимум и минимум + 3 - разница между макс и мин</h3>
@@ -91,7 +93,6 @@
         />
         <script>
           const arrayTask2 = () => {
-            console.log("arrayTask2");
             const element = document.querySelector(".array__task .task__2");
             const div = document.createElement("div");
             element.after(div);
@@ -103,7 +104,6 @@
                 .split(/[^-0-9]/)
                 .reduce(
                   ({ max, min }, cur) => {
-                    console.log(max, min);
                     if (max < Number(cur)) max = cur;
                     if (min > Number(cur)) min = cur;
                     return { max, min };
@@ -124,41 +124,51 @@
         </script>
       </section>
 
-      <!--  -->
+      <!-- 4 -->
 
       <section class="array__task task">
-        <h3>4 - количество элементов</h3>
+        <h3>4 - сколько каких элементов</h3>
         <input type="text" class="task__4" value="-1 23 -12 3 32 4 23 4" />
         <script>
-          const arrayTask4 = () => {
-            console.log("arrayTask2");
+          const task__4 = () => {
             const element = document.querySelector(".array__task .task__4");
             const div = document.createElement("div");
             element.after(div);
             element.addEventListener("change", getResult);
 
             function getResult() {
-              const result = element.value
-                .replace(/-/g, " -")
-                .split(/[^-0-9]/)
-                .reduce(
-                  ({ max, min }, cur) => {
-                    console.log(max, min);
-                    if (max < Number(cur)) max = cur;
-                    if (min > Number(cur)) min = cur;
-                    return { max, min };
-                  },
-                  {
-                    max: 0,
-                    min: 0
-                  }
-                );
-              div.innerHTML = ` min:${result.min}, max:${result.max}`;
+              const arr = element.value.replace(/-/g, " -").split(/[^-0-9]/);
+              const amount = {};
+
+              arr.reduce((prev, cur) => {
+                if (cur) {
+                  !amount[cur] ? (amount[cur] = 1) : (amount[cur] += 1);
+                }
+              }, amount);
+
+              const keys = Object.keys(amount);
+              keys.sort((a, b) => a - b);
+
+              const fragment = document.createDocumentFragment();
+              keys.map(key => {
+                const li = document.createElement("li");
+                li.textContent = `${key} = ${amount[key]}`;
+                fragment.appendChild(li);
+              });
+              div.innerHTML = ``;
+              div.appendChild(fragment);
             }
             getResult();
           };
-          arrayTask4();
+          task__4();
         </script>
+      </section>
+
+      <!-- 5 -->
+
+      <section class="array__task task">
+        <h3>5 - проверка на наличие элемента</h3>
+        <input type="text" class="task__5" value="-1 23 -12 3 32 4 23 4" />
       </section>
     </section>
   </body>
