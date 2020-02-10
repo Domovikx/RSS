@@ -323,6 +323,61 @@
           })();
         </script>
       </section>
+
+      <!-- 10 -->
+
+      <section class="array__task task">
+        <h3>10 - вернуть массив N элементов начиная с X элемента</h3>
+        <input
+          type="text"
+          class="task__10 task__10--array"
+          value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+        />
+        <input
+          type="number"
+          class="task__10 task__10--startElement"
+          value="3"
+        />
+        <input
+          type="number"
+          class="task__10 task__10--amountElement"
+          value="2"
+        />
+
+        <script>
+          (function task__10() {
+            const inputArray = document.querySelector(
+              ".array__task .task__10--array"
+            );
+            const startElement = document.querySelector(
+              ".array__task .task__10--startElement"
+            );
+            const amountElement = document.querySelector(
+              ".array__task .task__10--amountElement"
+            );
+
+            const div = document.createElement("div");
+            amountElement.after(div);
+
+            inputArray.addEventListener("change", getResult);
+            startElement.addEventListener("change", getResult);
+            amountElement.addEventListener("change", getResult);
+
+            function getResult() {
+              const start = startElement.value;
+              const amount = amountElement.value;
+              const arr = inputArray.value
+                .replace(/-/g, " -")
+                .split(/[^-0-9]/)
+                .filter(item => item != "");
+
+              const result = arr.slice(start, Number(start) + Number(amount));
+              div.innerHTML = `${result.join(" ")} - реверс элементов`;
+            }
+            getResult();
+          })();
+        </script>
+      </section>
     </section>
   </body>
 </html>
