@@ -582,6 +582,36 @@
       </script>
     </section>
 
+    <!--  7  -->
+
+    <section class="string__task task task--7">
+      <h3>7 - вывести массив слов с заглавными буквами <br /></h3>
+
+      <script>
+        (function runTask() {
+          const textarea = document.getElementById("taskTextarea");
+          const section = document.querySelector(".string__task.task--7");
+
+          const div = document.createElement("div");
+          section.append(div);
+
+          textarea.addEventListener("input", getResult);
+
+          function getResult() {
+            const clearText = textarea.value
+              .replace(/[^A-Za-zА-Яа-яЁё]/g, " ")
+              .split(" ")
+              .filter(item => item && item[0] === item[0].toUpperCase());
+
+            div.innerHTML = `
+            ${clearText.join(" ")} 
+            - массив слов с заглавными буквами`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
     <!-- DOM -->
 
     <section class="Dom__tasks task1">
