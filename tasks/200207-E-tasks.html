@@ -613,6 +613,223 @@
       </ul>
 
       <script>
+        (function runTask() {
+          const inputArray = document.querySelector(
+            ".array__task .task__5--array"
+          );
+          const inputSearch = document.querySelector(
+            ".array__task .task__5--search"
+          );
+
+          const div = document.createElement("div");
+          inputSearch.after(div);
+
+          inputArray.addEventListener("change", getResult);
+          inputSearch.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+            const amount = {};
+            const find = arr.find(item => item === inputSearch.value);
+            div.innerHTML = ` ${!!find ? "есть элемент" : "нет элемента"}`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- 6 - количество конкретных (см.4)-->
+
+    <!-- 7 -->
+
+    <section class="array__task task">
+      <h3>7 - массив уникальных элементов</h3>
+      <input
+        type="text"
+        class="task__7 task__7--array"
+        value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+      />
+
+      <script>
+        (function runTask() {
+          const inputArray = document.querySelector(
+            ".array__task .task__7--array"
+          );
+
+          const div = document.createElement("div");
+          inputArray.after(div);
+
+          inputArray.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+            const set = new Set(arr.filter(item => !!item));
+            div.innerHTML = `${[...set].join(" ")} - уникальные значения`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- 8 -->
+
+    <section class="array__task task">
+      <h3>8 - количество первых повторяющихся элементов</h3>
+      <input
+        type="text"
+        class="task__8 task__8--array"
+        value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+      />
+
+      <script>
+        (function runTask() {
+          const inputArray = document.querySelector(
+            ".array__task .task__8--array"
+          );
+
+          const div = document.createElement("div");
+          inputArray.after(div);
+
+          inputArray.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = inputArray.value.replace(/-/g, " -").split(/[^-0-9]/);
+            let amount = {};
+            arr.find(cur => {
+              if (cur) {
+                const count = arr.filter(item => item === cur);
+                if (count.length > 1) {
+                  amount = {
+                    [cur]: count.length
+                  };
+                  return true;
+                }
+              }
+            }, amount);
+
+            div.innerHTML = `
+              ${Object.keys(amount)} : 
+              ${Object.values(amount)} 
+              - количество первых повторяющихся элементов`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- 9 -->
+
+    <section class="array__task task">
+      <h3>9 - реверсировать знак положительности элементов</h3>
+      <input
+        type="text"
+        class="task__9 task__9--array"
+        value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+      />
+
+      <script>
+        (function task__9() {
+          const inputArray = document.querySelector(
+            ".array__task .task__9--array"
+          );
+
+          const div = document.createElement("div");
+          inputArray.after(div);
+
+          inputArray.addEventListener("change", getResult);
+
+          function getResult() {
+            const arr = inputArray.value
+              .replace(/-/g, " -")
+              .split(/[^-0-9]/)
+              .filter(item => item != "")
+              .map(item => -item)
+              .join(" ");
+            div.innerHTML = `${arr} - реверс элементов`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- 10 -->
+
+    <section class="array__task task">
+      <h3>10 - вернуть массив N элементов начиная с X элемента</h3>
+      <input
+        type="text"
+        class="task__10 task__10--array"
+        value="-1 23 -12 3 32 4 23 4 0 0 0 1"
+      />
+      <input type="number" class="task__10 task__10--startElement" value="3" />
+      <input type="number" class="task__10 task__10--amountElement" value="2" />
+
+      <script>
+        (function task__10() {
+          const inputArray = document.querySelector(
+            ".array__task .task__10--array"
+          );
+          const startElement = document.querySelector(
+            ".array__task .task__10--startElement"
+          );
+          const amountElement = document.querySelector(
+            ".array__task .task__10--amountElement"
+          );
+
+          const div = document.createElement("div");
+          amountElement.after(div);
+
+          inputArray.addEventListener("change", getResult);
+          startElement.addEventListener("change", getResult);
+          amountElement.addEventListener("change", getResult);
+
+          function getResult() {
+            const start = startElement.value;
+            const amount = amountElement.value;
+            const arr = inputArray.value
+              .replace(/-/g, " -")
+              .split(/[^-0-9]/)
+              .filter(item => item != "");
+
+            const result = arr.slice(start, Number(start) + Number(amount));
+            div.innerHTML = `${result.join(" ")} - реверс элементов`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- DOM -->
+
+    <section class="Dom__tasks task1">
+      <h3>
+        DOM - найти сумму значений атрибута data-value тега li
+      </h3>
+      <ul id="list">
+        <li data-value="500">
+          data-value="500"
+        </li>
+        <li data-value="900">
+          data-value="900"
+        </li>
+        <li data-value="300">
+          data-value="300"
+        </li>
+        <li data-value="200">
+          data-value="900"
+        </li>
+        <li data-value="100">
+          data-value="100"
+        </li>
+        <li data-style="400">
+          data-style="400"
+        </li>
+        <li data-vip="800">
+          data-vip="800"
+        </li>
+      </ul>
+
+      <script>
         let section = document.querySelector(".Dom__tasks.task1");
         let ul = document.querySelector("#list");
         let li = ul.querySelectorAll("li[data-value]");
@@ -624,7 +841,7 @@
       </script>
     </section>
 
-    <section class="Dom__task task">
+    <section class="Dom__task task2">
       <h3>
         DOM - поменять цвет текста и значение тега li по клику
       </h3>
@@ -660,17 +877,26 @@
           let target = event.target;
           let li = target.closest("li");
           if (li) {
-            target.style.color = "green";
-            target.innerHTML = "Добрый вечер, я - диспетчер";
+            if (
+              target.style.color !== "green" &&
+              target.innerHTML !== "Добрый вечер, я - диспетчер"
+            ) {
+              target.style.color = "green";
+              target.innerHTML = "Добрый вечер, я - диспетчер";
+            } else {
+              target.style.color = "red";
+              target.innerHTML = "Не тут то было, парень";
+            }
           }
         }
       </script>
     </section>
 
-    <section class="Dom__task task">
+    <section class="Dom__task task3">
       <h3>
-        DOM - поменять цвет текста и значение тега li по клику кнопки
+        DOM - добавить(удалить) строку в список по клику кнопки
       </h3>
+      <input type="text" id="text6" />
       <button type="button" onclick="addItem()">Добавить строку</button>
       <button type="button" onclick="removeItem()">Удалить строку</button>
       <ul id="list2">
@@ -690,8 +916,9 @@
         let lastItem = list.lastElementChild;
 
         function addItem() {
+          let value = document.querySelector("#text6").value;
           let newItem = document.createElement("li");
-          newItem.innerHTML = `Созданная строка`;
+          newItem.innerHTML = `${value}`;
           list.append(newItem);
           return (lastItem = list.lastElementChild);
         }
@@ -700,6 +927,135 @@
           if (lastItem) {
             lastItem.remove();
             return (lastItem = list.lastElementChild);
+          }
+        }
+      </script>
+    </section>
+
+    <section class="Dom__task task4">
+      <h3>
+        DOM - клонировать заданный список
+      </h3>
+
+      <ul id="cloned__list">
+        <li>
+          Я элемент списка и хочу, чтобы меня склонировали
+        </li>
+        <li>
+          Я элемент списка и хочу, чтобы меня склонировали
+        </li>
+        <li>
+          Я элемент списка и хочу, чтобы меня склонировали
+        </li>
+        <li>
+          Я элемент списка и хочу, чтобы меня склонировали
+        </li>
+        <li>
+          Я элемент списка и хочу, чтобы меня склонировали
+        </li>
+      </ul>
+
+      <button type="button" onclick="cloneList()">Клонировать список</button>
+      <button type="button" id="clone" onclick="removeCloneList()">
+        Удалить список
+      </button>
+
+      <script>
+        let task4 = document.querySelector(".Dom__task.task4");
+        let clonedList = document.querySelector("#cloned__list");
+        let button = document.querySelector("#clone");
+        let h4 = document.createElement("h4");
+        h4.innerHTML = "Здесь будут клонированные списки:";
+        button.after(h4);
+
+        function cloneList() {
+          let newList = clonedList.cloneNode(true);
+          h4.after(newList);
+        }
+
+        function removeCloneList() {
+          let allUl = task4.querySelectorAll("ul");
+          let lastElement = allUl[allUl.length - 1];
+
+          if (allUl.length !== 1) {
+            lastElement.remove();
+          }
+        }
+      </script>
+    </section>
+
+    <section class="Dom__task task5">
+      <h3>
+        DOM - вставить и удалить заданный фрагмент
+      </h3>
+      <textarea id="text12">
+Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</textarea
+      >
+      <button type="button" onclick="pasteFragment()">Вставить</button>
+      <button type="button" onclick="removeFragment()">Удалить</button>
+
+      <script>
+        let task5 = document.querySelector(".Dom__task.task5");
+        let script = task5.querySelector("script");
+
+        function pasteFragment() {
+          let newFragment = new DocumentFragment();
+          let textArea = document.querySelector("#text12");
+          textArea.style.height = "0px";
+          textArea.style.height = textArea.scrollHeight + 2 + "px";
+          let textAreaValue = textArea.value;
+          let h5 = document.createElement("h5");
+          h5.innerHTML = `${textAreaValue}`;
+          newFragment.append(h5);
+          script.before(newFragment);
+        }
+
+        function removeFragment() {
+          let allH5 = task5.querySelectorAll("h5");
+          if (allH5.length) {
+            allH5[allH5.length - 1].remove();
+          }
+        }
+      </script>
+    </section>
+
+    <section class="Dom__task task6">
+      <h3>
+        DOM - вставить таблицу по заданным параметрам
+      </h3>
+      <label for="input12">Колонки:</label>
+      <input type="text" id="input12" value="5" />
+      <label for="input13">Строки:</label>
+      <input type="text" id="input13" value="3" />
+      <label for="text14">Текст:</label>
+      <input type="text" id="text14" value="xxx" />
+      <button type="button" onclick="createTable()">Вставить</button>
+      <button type="button" onclick="removeTable()">Удалить</button>
+      <script>
+        let task6 = document.querySelector(".Dom__task.task6");
+
+        function createTable() {
+          let table = document.createElement("table");
+          let cols = Number(document.querySelector("#input12").value);
+          let rows = Number(document.querySelector("#input13").value);
+          let tableText = document.querySelector("#text14").value;
+
+          for (let i = 1; i <= rows; i++) {
+            let tr = document.createElement("tr");
+            for (let j = 1; j <= cols; j++) {
+              let td = document.createElement("td");
+              td.innerHTML = `${tableText}`;
+              tr.append(td);
+            }
+            table.prepend(tr);
+            task6.append(table);
+          }
+        }
+
+        function removeTable() {
+          let allTable = task6.querySelectorAll("table");
+          if (allTable.length) {
+            allTable[allTable.length - 1].remove();
           }
         }
       </script>
