@@ -43,7 +43,6 @@
     7 - вывести массив слов с заглавными буквами <br />
     8 - напишите функцию, которая возвращает первый повторяющийся символ в
     строке <br />
-    9 - сделать из строки камэлкейс.
     <br />
     <br />
     DOM <br />
@@ -498,7 +497,6 @@
     </section>
 
     <!-- 5 -->
-    5 - сделать камел кейс из строки
 
     <section class="string__task task task--5">
       <h3>5 - сделать камел кейс из строки <br /></h3>
@@ -530,6 +528,54 @@
             });
 
             div.innerHTML = `${wordsArr.join("")} - camalCase`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- 6 -->
+
+    <section class="string__task task task--6">
+      <h3>
+        6 - сделать функцию которая принимает строку и массив символов, которые
+        должны стать заглавными в строке <br />
+      </h3>
+
+      <input
+        type="text"
+        class="task__6 task__6--array"
+        value="-1 o 23 -12 3 a o e F"
+      />
+
+      <script>
+        (function runTask() {
+          const textarea = document.getElementById("taskTextarea");
+          const section = document.querySelector(".string__task.task--6");
+          const input = document.querySelector(".string__task .task__6--array");
+
+          const div = document.createElement("div");
+          section.append(div);
+
+          textarea.addEventListener("input", getResult);
+          input.addEventListener("input", getResult);
+
+          const getArrayFromInput = () => {
+            return input.value
+              .replace(/[^-0-9A-Za-zА-Яа-яЁё]/g, " ")
+              .split(" ")
+              .filter(item => !!item);
+          };
+
+          function getResult() {
+            const replacementSymbols = getArrayFromInput();
+            let str = textarea.value;
+
+            replacementSymbols.forEach(item => {
+              str = str.replace(new RegExp(item, "g"), item.toUpperCase());
+            });
+
+            div.innerHTML = `${str} - строка с заглаыными символами в строке`;
           }
           getResult();
         })();
