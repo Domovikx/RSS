@@ -42,3 +42,7 @@ input {
   font-size: 1.05rem;
   outline: none;
 }
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+}
