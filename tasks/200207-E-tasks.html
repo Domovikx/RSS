@@ -430,6 +430,8 @@
     scelerisque."
     </textarea>
 
+    <!-- 1, 2 -->
+
     <section class="string__task task task--1">
       <h3>
         1 - посчитать количество слов, 2 - количество букв
@@ -439,7 +441,6 @@
         (function runTask() {
           const textarea = document.getElementById("taskTextarea");
           const section = document.querySelector(".string__task.task--1");
-          console.log("section :", section);
 
           const div = document.createElement("div");
           section.append(div);
@@ -464,16 +465,18 @@
       </script>
     </section>
 
+    <!-- 3, 4 -->
+
     <section class="string__task task task--3">
       <h3>
-        3 - количество символов - больших букв
+        3 - количество символов - больших букв, <br />
+        4 - сделать из слов аббривиатуру <br />
       </h3>
 
       <script>
         (function runTask() {
           const textarea = document.getElementById("taskTextarea");
           const section = document.querySelector(".string__task.task--3");
-          console.log("section :", section);
 
           const div = document.createElement("div");
           section.append(div);
@@ -481,13 +484,52 @@
           textarea.addEventListener("input", getResult);
 
           function getResult() {
-            const clearText = textarea.value.replace(/[^A-ZА-ЯЁ]/g, "");
-            // const clearText = textarea.value.match(/[A-ZА-ЯЁ]/g); // или так
+            // const clearText = textarea.value.replace(/[^A-ZА-ЯЁ]/g, ""); // можно так
+            const match = textarea.value.match(/[A-ZА-ЯЁ]/g);
 
-            console.log("clearText :", clearText);
             div.innerHTML = `
-            ${clearText.length} - количество букв;
+            ${match.length} - количество букв;
+            ${match.join("")} - аббривиатура больших букв;
             `;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <!-- 5 -->
+    5 - сделать камел кейс из строки
+
+    <section class="string__task task task--5">
+      <h3>5 - сделать камел кейс из строки <br /></h3>
+
+      <script>
+        (function runTask() {
+          const textarea = document.getElementById("taskTextarea");
+          const section = document.querySelector(".string__task.task--5");
+
+          const div = document.createElement("div");
+          section.append(div);
+
+          textarea.addEventListener("input", getResult);
+
+          function getResult() {
+            const clearText = textarea.value
+              .replace(/[^A-Za-zА-Яа-яЁё]/g, " ")
+              .split(" ");
+
+            const wordsArr = [];
+            const res = clearText.forEach(item => {
+              if (item) {
+                if (wordsArr.length === 0) {
+                  wordsArr.push(item[0].toLowerCase() + item.slice(1));
+                } else {
+                  wordsArr.push(item[0].toUpperCase() + item.slice(1));
+                }
+              }
+            });
+
+            div.innerHTML = `${wordsArr.join("")} - camalCase`;
           }
           getResult();
         })();
