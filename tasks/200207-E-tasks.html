@@ -42,7 +42,8 @@
     должны стать заглавными в строке <br />
     7 - вывести массив слов с заглавными буквами <br />
     8 - напишите функцию, которая возвращает первый повторяющийся символ в
-    строке
+    строке <br />
+    9 - сделать из строки камэлкейс.
     <br />
     <br />
     DOM <br />
@@ -435,7 +436,7 @@
       </h3>
 
       <script>
-        (function task__11() {
+        (function runTask() {
           const textarea = document.getElementById("taskTextarea");
           const section = document.querySelector(".string__task.task--1");
           console.log("section :", section);
@@ -456,6 +457,36 @@
             ${words.length} - количество слов;
             ${symbols.length} - количество символов;
             ${latters.length} - количество букв;
+            `;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
+    <section class="string__task task task--3">
+      <h3>
+        3 - количество символов - больших букв
+      </h3>
+
+      <script>
+        (function runTask() {
+          const textarea = document.getElementById("taskTextarea");
+          const section = document.querySelector(".string__task.task--3");
+          console.log("section :", section);
+
+          const div = document.createElement("div");
+          section.append(div);
+
+          textarea.addEventListener("input", getResult);
+
+          function getResult() {
+            const clearText = textarea.value.replace(/[^A-ZА-ЯЁ]/g, "");
+            // const clearText = textarea.value.match(/[A-ZА-ЯЁ]/g); // или так
+
+            console.log("clearText :", clearText);
+            div.innerHTML = `
+            ${clearText.length} - количество букв;
             `;
           }
           getResult();
