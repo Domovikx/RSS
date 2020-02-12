@@ -612,6 +612,48 @@
       </script>
     </section>
 
+    <!-- 8 -->
+
+    <section class="string__task task task--8">
+      <h3>
+        8 - напишите функцию, которая возвращает первую повторяющуюся букву в
+        строке <br />
+      </h3>
+
+      <script>
+        (function runTask() {
+          const textarea = document.getElementById("taskTextarea");
+          const section = document.querySelector(".string__task.task--8");
+
+          const div = document.createElement("div");
+          section.append(div);
+
+          textarea.addEventListener("input", getResult);
+
+          function getResult() {
+            const letters = textarea.value
+              .replace(/[^A-Za-zА-Яа-яЁё]/g, " ")
+              .split("");
+
+            let filter = [];
+            const firstMatch = letters.find(letter => {
+              if (letter != " ") {
+                filter = letters.filter(item =>
+                  item.toLowerCase() === letter.toLowerCase() ? item : false
+                );
+                if (filter.length > 1) return filter;
+              }
+            });
+
+            div.innerHTML = `
+            ${filter[0]}
+            - первая повторяющаяся буква, повторов - ${filter.length}`;
+          }
+          getResult();
+        })();
+      </script>
+    </section>
+
     <!-- DOM -->
 
     <section class="Dom__tasks task1">
